@@ -1,1279 +1,949 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="theme-color" content="#F3EBFF">
-    <title>Nikah Invitation · Mohamed Usman & Saidhuma Banu · 19 July 2026</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cinzel:wght@400;500;600&family=Amiri:ital,wght@0,400;0,700&family=Jost:wght@300;400;500&family=Noto+Serif+Tamil:wght@300;400;500;600&family=Great+Vibes&display=swap"
-        rel="stylesheet">
-    <style>
-        :root {
-            /* Light lavender + cream + gold palette */
-            --bg: #FBF7FF;
-            --bg-2: #F3EBFF;
-            --bg-3: #E9DCFB;
-            --cream: #FFF8EC;
-            --ivory: #FFFCF5;
-            --lav-50: #F6EEFF;
-            --lav-100: #E7D6FA;
-            --lav-200: #CFB3F2;
-            --lav-300: #B591E5;
-            --lav-400: #9A75D1;
-            --lav-500: #7B57B8;
-            --gold: #C8A24A;
-            --gold-soft: #E0C684;
-            --gold-deep: #A57F2F;
-            --ink: #3A2A55;
-            --ink-2: #5B477A;
-            --ink-3: #7E6B9A;
-            --line: rgba(155, 117, 209, 0.22);
-            --shadow: 0 18px 50px -22px rgba(123, 87, 184, 0.32);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#FBF7F2">
+<title>Nikah Invitation · F. Mohamed Usman & A. Saidhuma Banu · 19 July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Italiana&family=Tangerine:wght@400;700&family=Pinyon+Script&family=Cinzel:wght@400;500;600&family=Amiri:ital,wght@0,400;0,700&family=Noto+Serif+Tamil:wght@300;400;500;600&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF7F2;
+  --bg-2:#F5EFE6;
+  --paper:#FFFDF8;
+  --ink:#2E2438;
+  --ink-2:#5A4B6A;
+  --ink-3:#8B7A9A;
+  --gold:#C9A14A;
+  --gold-soft:#E5C97C;
+  --gold-deep:#9A7826;
+  --blush:#F4D5D0;
+  --blush-2:#E8B8B3;
+  --rose:#D9A7A1;
+  --leaf:#B8A878;
+  --lav:#D9CBE9;
+  --line:rgba(201,161,74,.32);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Cormorant Garamond','Noto Serif Tamil',serif;
+  overflow-x:hidden;line-height:1.55;
+  background-image:
+    radial-gradient(800px 500px at 50% -100px,#FFF3E5 0%,transparent 70%),
+    radial-gradient(700px 500px at 100% 80%,#FBE8E5 0%,transparent 70%),
+    radial-gradient(600px 500px at 0% 40%,#F0E6F6 0%,transparent 70%);
+}
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+/* Paper grain */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.35;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.78 0 0 0 0 0.66 0 0 0 0 0.42 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
 
-        body {
-            background:
-                radial-gradient(1200px 600px at 50% -150px, #EADCFB 0%, transparent 60%),
-                radial-gradient(900px 500px at 100% 30%, #FFF0D6 0%, transparent 55%),
-                linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-            color: var(--ink);
-            font-family: 'Jost', 'Noto Serif Tamil', system-ui, sans-serif;
-            overflow-x: hidden;
-            line-height: 1.5;
-            min-height: 100vh;
-        }
+#pb{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--gold-soft),var(--gold),var(--rose));z-index:1000;transition:width .1s}
 
-        /* PROGRESS BAR */
-        #pb {
-            position: fixed; top: 0; left: 0; height: 3px; width: 0%;
-            background: linear-gradient(90deg, var(--lav-300), var(--gold));
-            z-index: 1000; transition: width 0.1s;
-            box-shadow: 0 0 12px rgba(200, 162, 74, 0.4);
-        }
+/* Language toggle */
+.lt{position:fixed;top:14px;right:14px;z-index:999;display:flex;gap:2px;
+  background:rgba(255,253,248,.85);border:1px solid var(--line);
+  border-radius:999px;padding:4px;backdrop-filter:blur(10px);
+  box-shadow:0 8px 24px -12px rgba(154,120,38,.3)}
+.lb{padding:6px 14px;border:none;border-radius:999px;
+  font-family:'Cinzel',serif;font-size:10px;letter-spacing:2px;
+  cursor:pointer;transition:all .3s;color:var(--ink-2);background:transparent}
+.lb.active{background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#fff;letter-spacing:1.5px}
+body.le .ta-only{display:none!important}
+body.lt2 .en-only{display:none!important}
+body.le .ita{display:none!important}
+body.lt2 .ien{display:none!important}
+.ita,.ien{display:inline}
 
-        /* LANG TOGGLE */
-        .lt {
-            position: fixed; top: 14px; right: 14px; z-index: 999;
-            display: flex; gap: 3px;
-            background: rgba(255, 255, 255, 0.85);
-            border: 1px solid var(--lav-100);
-            border-radius: 999px; padding: 4px;
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            box-shadow: 0 8px 24px -10px rgba(123, 87, 184, 0.25);
-        }
-        .lb {
-            padding: 6px 14px; border: none; border-radius: 999px;
-            font-family: 'Cinzel', 'Noto Serif Tamil', serif;
-            font-size: 11px; letter-spacing: 1px; cursor: pointer;
-            transition: all 0.3s; color: var(--ink-2); background: transparent;
-        }
-        .lb.active {
-            background: linear-gradient(135deg, var(--lav-300), var(--lav-400));
-            color: white; box-shadow: 0 4px 14px -4px rgba(155, 117, 209, 0.6);
-        }
+/* ============ HERO CARD ============ */
+#hero{
+  position:relative;min-height:100svh;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+  padding:30px 14px;overflow:hidden;
+}
 
-        /* Language switching: keep tamil names as subtitles always visible (.ta-sub) */
-        body.le .ta-only { display: none !important; }
-        body.le .en-only { display: block; }
-        body.lt2 .en-only { display: none !important; }
-        body.lt2 .ta-only { display: block; }
-        .ita, .ien { display: inline; }
-        body.le .ita { display: none !important; }
-        body.lt2 .ien { display: none !important; }
+/* Petals falling */
+.petals{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden}
+.pt{position:absolute;width:14px;height:14px;
+  background:radial-gradient(ellipse at 30% 30%,#fff 0%,var(--blush) 60%,var(--rose) 100%);
+  border-radius:60% 40% 50% 50%;opacity:.7;
+  animation:fall var(--d,14s) linear infinite;
+  filter:drop-shadow(0 2px 4px rgba(217,167,161,.4))}
+@keyframes fall{
+  0%{transform:translateY(-10vh) translateX(0) rotate(0);opacity:0}
+  10%{opacity:.8}
+  100%{transform:translateY(110vh) translateX(var(--x,60px)) rotate(540deg);opacity:0}
+}
 
-        /* ============== HERO ============== */
-        #hero {
-            position: relative; min-height: 100svh;
-            display: flex; flex-direction: column; align-items: center;
-            overflow: hidden;
-            background:
-                radial-gradient(60% 80% at 50% 0%, #FFF8E3 0%, transparent 60%),
-                radial-gradient(80% 60% at 50% 100%, #E0CCF8 0%, transparent 70%),
-                linear-gradient(180deg, #FBF7FF 0%, #F3E8FF 55%, #EADBFB 100%);
-        }
+/* The invitation card */
+.card{
+  position:relative;z-index:5;
+  width:100%;max-width:520px;
+  background:var(--paper);
+  border-radius:6px;
+  box-shadow:
+    0 30px 80px -30px rgba(94,60,33,.25),
+    0 10px 30px -10px rgba(94,60,33,.12),
+    inset 0 0 0 1px rgba(201,161,74,.15);
+  padding:80px 26px 90px;
+  text-align:center;
+  margin:8px auto;
+}
 
-        /* floating petals */
-        .petals { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
-        .pt {
-            position: absolute; width: 10px; height: 10px; border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #fff, rgba(200,162,74,0.6));
-            opacity: 0.6; animation: float var(--d, 14s) linear infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(-10vh) translateX(0) rotate(0); opacity: 0; }
-            10% { opacity: 0.7; }
-            100% { transform: translateY(110vh) translateX(var(--x, 40px)) rotate(360deg); opacity: 0; }
-        }
+/* Gold inner frame */
+.frame{
+  position:absolute;inset:18px;
+  border:1px solid var(--line);
+  pointer-events:none;
+  border-radius:4px;
+}
+.frame::before,.frame::after{
+  content:'';position:absolute;width:22px;height:22px;
+  border:1.5px solid var(--gold);
+}
+.frame::before{top:-2px;left:-2px;border-right:none;border-bottom:none}
+.frame::after{bottom:-2px;right:-2px;border-left:none;border-top:none}
 
-        /* ornaments */
-        .orn {
-            position: absolute; opacity: 0.35;
-            animation: drift 8s ease-in-out infinite alternate;
-        }
-        .orn.o1 { top: 8%; left: 5%; }
-        .orn.o2 { top: 12%; right: 6%; animation-delay: -2s; }
-        .orn.o3 { top: 38%; left: 10%; animation-delay: -4s; }
-        .orn.o4 { top: 42%; right: 8%; animation-delay: -1s; }
-        @keyframes drift {
-            from { transform: translateY(-6px) rotate(-4deg); }
-            to { transform: translateY(8px) rotate(6deg); }
-        }
+/* Floral arch SVG container */
+.arch{position:absolute;top:-10px;left:0;right:0;height:240px;pointer-events:none;z-index:3;
+  display:flex;justify-content:center}
+.arch svg{width:100%;height:100%}
+.corner{position:absolute;width:140px;height:140px;pointer-events:none;z-index:3;opacity:.95}
+.corner.tl{top:-10px;left:-10px}
+.corner.br{bottom:-10px;right:-10px;transform:rotate(180deg)}
+.corner.tr{top:-10px;right:-10px;transform:scaleX(-1)}
+.corner.bl{bottom:-10px;left:-10px;transform:scaleY(-1)}
 
-        .hc {
-            position: relative; z-index: 10;
-            text-align: center; padding: 60px 22px 30px;
-            width: 100%; max-width: 760px; margin: 0 auto;
-        }
+/* Initials on arch */
+.initials{
+  position:absolute;top:30px;left:0;right:0;
+  display:flex;justify-content:space-between;
+  padding:0 38px;z-index:6;pointer-events:none;
+}
+.ini{
+  font-family:'Italiana',serif;
+  font-size:34px;letter-spacing:2px;
+  background:linear-gradient(135deg,#E8C97C 0%,#C9A14A 40%,#9A7826 70%,#E8C97C 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 1px 0 rgba(154,120,38,.15);
+  filter:drop-shadow(0 2px 3px rgba(154,120,38,.25));
+}
 
-        .crest {
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 76px; height: 76px; border-radius: 50%;
-            background: radial-gradient(circle, #fff 30%, #FFF3D5 100%);
-            border: 1px solid var(--gold-soft);
-            box-shadow: 0 12px 36px -14px rgba(200, 162, 74, 0.55), inset 0 0 0 6px rgba(255,255,255,0.6);
-            margin-bottom: 22px;
-        }
+/* Card content */
+.bism{
+  font-family:'Amiri',serif;direction:rtl;
+  font-size:clamp(18px,4.6vw,24px);color:var(--gold-deep);
+  letter-spacing:.5px;line-height:1.8;
+  margin-bottom:18px;
+}
+.invite-line{
+  font-family:'Cinzel',serif;
+  font-size:clamp(10px,2.4vw,12px);
+  letter-spacing:5px;color:var(--ink-2);
+  text-transform:uppercase;line-height:1.9;
+  margin:32px auto 0;max-width:280px;
+}
+.invite-line-ta{
+  font-family:'Noto Serif Tamil',serif;
+  font-size:clamp(11px,2.6vw,13px);
+  color:var(--ink-2);letter-spacing:1px;line-height:1.9;
+  margin:32px auto 0;max-width:300px;
+}
 
-        .bism {
-            font-family: 'Amiri', serif;
-            font-size: clamp(20px, 4.6vw, 32px);
-            color: var(--lav-500); direction: rtl;
-            letter-spacing: 1px; line-height: 1.8;
-            text-shadow: 0 2px 10px rgba(155, 117, 209, 0.15);
-        }
+/* The big names */
+.couple{margin:36px 0 14px;position:relative}
+.bigname{
+  font-family:'Italiana',serif;
+  font-weight:400;
+  font-size:clamp(42px,11vw,68px);
+  line-height:.95;letter-spacing:3px;
+  background:linear-gradient(180deg,#E8C97C 0%,#C9A14A 35%,#9A7826 65%,#C9A14A 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 4px rgba(154,120,38,.2));
+  text-shadow:0 1px 0 rgba(154,120,38,.1);
+}
+.bigname-ta{
+  font-family:'Noto Serif Tamil',serif;
+  font-weight:500;
+  font-size:clamp(20px,5vw,28px);
+  color:var(--gold-deep);
+  margin-top:6px;letter-spacing:1px;
+  opacity:.85;
+}
+.and{
+  font-family:'Tangerine',cursive;font-weight:400;
+  font-size:clamp(72px,18vw,118px);
+  color:var(--ink);line-height:.4;
+  display:block;margin:6px 0 14px;
+  font-style:italic;
+}
+.and-sub{
+  font-family:'Cinzel',serif;font-size:9px;letter-spacing:6px;
+  color:var(--gold-deep);text-transform:uppercase;
+  display:flex;align-items:center;justify-content:center;gap:14px;
+  margin:-12px 0 8px;
+}
+.and-sub::before,.and-sub::after{content:'';height:1px;width:36px;background:var(--gold-soft)}
 
-        .hs {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(10px, 2vw, 12px);
-            letter-spacing: 6px;
-            color: var(--gold-deep);
-            text-transform: uppercase;
-            margin-top: 14px;
-            display: flex; align-items: center; justify-content: center; gap: 12px;
-        }
-        .hs::before, .hs::after {
-            content: ''; height: 1px; width: 32px;
-            background: linear-gradient(90deg, transparent, var(--gold-soft));
-        }
-        .hs::after { background: linear-gradient(90deg, var(--gold-soft), transparent); }
+.you-invited{
+  font-family:'Cinzel',serif;font-size:11px;letter-spacing:5px;
+  color:var(--ink-2);text-transform:uppercase;line-height:2;
+  margin-bottom:6px;
+}
+.qual{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(12px,2.6vw,14px);color:var(--ink-3);
+  letter-spacing:1px;margin-top:4px;
+}
 
-        .couple-block { margin-top: 26px; }
+/* Date row — large clear, no ambiguity */
+.date-row{
+  display:flex;align-items:center;justify-content:center;
+  gap:18px;margin:36px auto 8px;
+  font-family:'Italiana',serif;
+}
+.dr-piece{display:flex;flex-direction:column;align-items:center}
+.dr-num{
+  font-size:clamp(28px,7vw,40px);
+  color:var(--ink);line-height:1;letter-spacing:1px;
+}
+.dr-lbl{
+  font-family:'Cinzel',serif;
+  font-size:8px;letter-spacing:3px;
+  color:var(--gold-deep);text-transform:uppercase;
+  margin-top:6px;
+}
+.dr-dot{
+  width:5px;height:5px;border-radius:50%;background:var(--gold);
+  margin-bottom:14px;
+}
+.day-line{
+  font-family:'Cinzel',serif;font-size:11px;letter-spacing:5px;
+  color:var(--gold-deep);text-transform:uppercase;margin-top:12px;
+}
+.time-line{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(15px,3.5vw,19px);color:var(--ink-2);
+  margin-top:6px;letter-spacing:1px;
+}
 
-        .name-main {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-            font-size: clamp(28px, 7vw, 52px);
-            color: var(--ink);
-            line-height: 1.1;
-            letter-spacing: 1px;
-        }
-        .name-ta {
-            font-family: 'Noto Serif Tamil', serif;
-            font-size: clamp(15px, 3.6vw, 22px);
-            color: var(--lav-500);
-            margin-top: 6px;
-            font-weight: 400;
-            opacity: 0.92;
-        }
+.venue-block{
+  margin-top:28px;font-family:'Cinzel',serif;
+  font-size:11px;letter-spacing:4px;color:var(--ink-2);
+  text-transform:uppercase;line-height:1.9;
+}
+.venue-block .vname{
+  font-family:'Cormorant Garamond',serif;font-weight:500;
+  font-style:italic;
+  font-size:clamp(14px,3.2vw,17px);color:var(--ink);
+  letter-spacing:1px;text-transform:none;
+  display:block;margin-bottom:3px;
+}
 
-        .amp {
-            font-family: 'Great Vibes', cursive;
-            font-size: clamp(54px, 14vw, 96px);
-            color: var(--gold);
-            line-height: 0.8;
-            margin: 14px 0 10px;
-            display: block;
-            text-shadow: 0 4px 20px rgba(200, 162, 74, 0.3);
-        }
+.scroll-hint{
+  text-align:center;margin:30px auto 0;
+  font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;
+  color:var(--gold-deep);text-transform:uppercase;
+  animation:bnc 2.4s ease-in-out infinite;
+}
+.scroll-hint::after{
+  content:'';display:block;width:1px;height:30px;
+  background:linear-gradient(180deg,var(--gold),transparent);
+  margin:8px auto 0;
+}
+@keyframes bnc{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 
-        .htag {
-            display: inline-block; margin-top: 28px;
-            border: 1px solid var(--gold-soft);
-            background: rgba(255, 255, 255, 0.55);
-            padding: 9px 26px;
-            font-family: 'Cinzel', serif;
-            font-size: clamp(10px, 2.2vw, 12px);
-            letter-spacing: 4px;
-            color: var(--gold-deep);
-            border-radius: 999px;
-            backdrop-filter: blur(6px);
-        }
+/* Reveal */
+.rv,.rv2,.rv3{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s ease}
+.rv2{transition-delay:.15s}
+.rv3{transition-delay:.3s}
+.rv.vis,.rv2.vis,.rv3.vis{opacity:1;transform:translateY(0)}
 
-        /* Beautiful date plate — no ambiguous separators */
-        .date-plate {
-            margin: 26px auto 0;
-            display: inline-flex; align-items: stretch;
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid var(--lav-100);
-            border-radius: 14px;
-            padding: 4px;
-            box-shadow: var(--shadow);
-            backdrop-filter: blur(8px);
-        }
-        .dp-cell {
-            padding: 10px 14px;
-            display: flex; flex-direction: column; align-items: center;
-            min-width: 56px;
-        }
-        .dp-num {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-            font-size: clamp(22px, 5.6vw, 30px);
-            color: var(--ink);
-            line-height: 1;
-        }
-        .dp-lbl {
-            font-family: 'Cinzel', serif;
-            font-size: 9px;
-            letter-spacing: 2px;
-            color: var(--gold-deep);
-            margin-top: 6px;
-            text-transform: uppercase;
-        }
-        .dp-divider {
-            width: 1px; align-self: stretch;
-            background: linear-gradient(180deg, transparent, var(--lav-100), transparent);
-            margin: 6px 0;
-        }
+/* ============ SECTIONS ============ */
+section{padding:60px 16px;position:relative;z-index:5}
+.sec-card{
+  max-width:520px;margin:0 auto;
+  background:var(--paper);
+  border-radius:6px;
+  padding:60px 24px;
+  position:relative;
+  box-shadow:0 20px 60px -30px rgba(94,60,33,.18),inset 0 0 0 1px rgba(201,161,74,.12);
+}
+.sec-card .frame{inset:14px}
 
-        .venue-pill {
-            margin-top: 16px;
-            display: inline-flex; align-items: center; gap: 8px;
-            font-family: 'Cinzel', serif;
-            font-size: clamp(10px, 2vw, 11px);
-            letter-spacing: 4px;
-            color: var(--lav-500);
-        }
-        .venue-pill svg { opacity: 0.7; }
+.stag{
+  font-family:'Cinzel',serif;font-size:10px;letter-spacing:5px;
+  color:var(--gold-deep);text-transform:uppercase;
+  text-align:center;margin-bottom:14px;
+  display:flex;align-items:center;justify-content:center;gap:12px;
+}
+.stag::before,.stag::after{content:'';height:1px;width:28px;background:var(--gold-soft)}
+.stitle{
+  font-family:'Italiana',serif;
+  font-size:clamp(28px,7vw,40px);
+  color:var(--ink);text-align:center;
+  letter-spacing:2px;line-height:1.1;margin-bottom:6px;
+}
+.stitle-script{
+  font-family:'Tangerine',cursive;font-style:italic;
+  font-size:clamp(40px,10vw,60px);
+  color:var(--gold);text-align:center;line-height:.7;margin:-4px 0 14px;
+}
+.stitle-ta{
+  font-family:'Noto Serif Tamil',serif;
+  font-size:clamp(14px,3.2vw,18px);
+  color:var(--ink-2);text-align:center;margin-bottom:18px;opacity:.85;
+}
 
-        /* Mosque (lightened) */
-        .mosque-wrap {
-            position: relative; width: 100%;
-            margin-top: 26px;
-            display: flex; justify-content: center; align-items: flex-end;
-            pointer-events: none;
-        }
-        .mosque-wrap svg { width: 100%; max-width: 880px; height: auto; }
+/* Blessing */
+.sal-ar{font-family:'Amiri',serif;direction:rtl;color:var(--gold-deep);
+  font-size:clamp(17px,4vw,24px);text-align:center;margin-bottom:8px;line-height:1.7}
+.sal-en{font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--ink-3);font-size:clamp(11px,2.5vw,13px);
+  text-align:center;letter-spacing:1.2px;margin-bottom:6px}
+.sal-ta{font-family:'Noto Serif Tamil',serif;font-style:italic;
+  color:var(--ink-3);font-size:clamp(11px,2.5vw,13px);
+  text-align:center;letter-spacing:.5px;margin-bottom:24px}
 
-        .sh {
-            display: flex; flex-direction: column; align-items: center;
-            gap: 6px; margin: 16px 0 24px;
-            animation: bnc 2.2s ease-in-out infinite;
-        }
-        .sh span {
-            font-family: 'Cinzel', serif;
-            font-size: 9px; letter-spacing: 4px;
-            color: var(--lav-400); text-transform: uppercase;
-        }
-        .sha {
-            width: 14px; height: 14px;
-            border-right: 1.5px solid var(--lav-300);
-            border-bottom: 1.5px solid var(--lav-300);
-            transform: rotate(45deg);
-        }
-        @keyframes bnc {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(7px); }
-        }
+.open-text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(14px,3vw,16px);
+  color:var(--ink-2);line-height:2;text-align:center;
+  margin:0 auto;max-width:440px;
+}
+.open-text.ta-only{font-family:'Noto Serif Tamil',serif;line-height:2.1}
 
-        /* REVEAL */
-        .rv, .rv2, .rv3 {
-            opacity: 0; transform: translateY(28px);
-            transition: opacity .9s ease, transform .9s ease;
-        }
-        .rv2 { transition-delay: .15s; }
-        .rv3 { transition-delay: .3s; }
-        .rv.vis, .rv2.vis, .rv3.vis { opacity: 1; transform: translateY(0); }
+.mini-div{display:flex;align-items:center;justify-content:center;gap:10px;margin:30px auto;max-width:240px}
+.mini-div::before,.mini-div::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-soft),transparent)}
+.mini-div svg{flex-shrink:0}
 
-        /* DIVIDER */
-        .idv {
-            display: flex; align-items: center; gap: 16px;
-            justify-content: center; padding: 28px 24px;
-        }
-        .dl {
-            flex: 1; max-width: 160px; height: 1px;
-            background: linear-gradient(90deg, transparent, var(--gold-soft), transparent);
-        }
+/* Person blocks */
+.person{margin:30px 0;text-align:center}
+.person .role{
+  font-family:'Cinzel',serif;font-size:9px;letter-spacing:5px;
+  color:var(--gold-deep);text-transform:uppercase;margin-bottom:10px;
+  display:inline-flex;align-items:center;gap:12px;
+}
+.person .role::before,.person .role::after{content:'';width:20px;height:1px;background:var(--gold-soft)}
+.person .name-en{
+  font-family:'Italiana',serif;
+  font-size:clamp(26px,6vw,36px);color:var(--ink);
+  letter-spacing:2px;line-height:1.1;
+}
+.person .name-ta{
+  font-family:'Noto Serif Tamil',serif;font-weight:500;
+  font-size:clamp(15px,3.5vw,20px);color:var(--gold-deep);
+  margin-top:6px;letter-spacing:1px;opacity:.85;
+}
+.person .nq{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:13px;color:var(--ink-3);margin-top:6px;letter-spacing:.8px;
+}
+.amp-mid{
+  font-family:'Tangerine',cursive;font-style:italic;
+  font-size:clamp(54px,12vw,80px);color:var(--gold);
+  text-align:center;line-height:.4;margin:10px 0;
+}
 
-        section { padding: 70px 22px; position: relative; }
+/* Parents grid */
+.pg{display:grid;grid-template-columns:1fr;gap:18px;margin-top:30px}
+@media(min-width:480px){.pg{grid-template-columns:1fr 1fr}}
+.pc{
+  background:linear-gradient(180deg,#FFFDF8 0%,#FCF6EC 100%);
+  border:1px solid var(--line);
+  padding:20px 18px;border-radius:4px;text-align:center;
+  position:relative;
+}
+.pc::before{
+  content:'';position:absolute;top:8px;left:8px;right:8px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-soft),transparent);
+}
+.pc .pl{
+  font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;
+  color:var(--gold-deep);text-transform:uppercase;margin-bottom:14px;padding-top:8px;
+}
+.pc .pp{margin-bottom:10px}
+.pc .pp-role{
+  font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;
+  color:var(--ink-3);text-transform:uppercase;margin-bottom:2px;
+}
+.pc .pp-en{font-family:'Cormorant Garamond',serif;font-weight:500;
+  font-size:15px;color:var(--ink);letter-spacing:.5px}
+.pc .pp-ta{font-family:'Noto Serif Tamil',serif;font-size:12px;
+  color:var(--gold-deep);opacity:.85;margin-top:1px}
+.pc .pa{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:12px;color:var(--ink-3);line-height:1.7;margin-top:12px;
+  padding-top:12px;border-top:1px dashed var(--line);
+}
+.pc .pa.ta-only{font-family:'Noto Serif Tamil',serif;font-style:normal}
 
-        .stag {
-            font-family: 'Cinzel', serif; font-size: 10px;
-            letter-spacing: 5px; color: var(--gold-deep);
-            text-transform: uppercase; margin-bottom: 12px;
-            text-align: center;
-        }
-        .stitle {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-            font-size: clamp(26px, 6vw, 40px);
-            color: var(--ink); margin-bottom: 8px;
-            text-align: center; line-height: 1.2;
-        }
-        .stitle-ta {
-            font-family: 'Noto Serif Tamil', serif;
-            font-size: clamp(14px, 3vw, 18px);
-            color: var(--lav-500);
-            text-align: center; margin-bottom: 18px;
-            opacity: 0.85;
-        }
+/* Events */
+.event-card{
+  background:linear-gradient(180deg,#FFFDF8 0%,#FCF6EC 100%);
+  border:1px solid var(--line);border-radius:4px;
+  padding:30px 22px;text-align:center;
+  margin-bottom:18px;position:relative;
+}
+.event-card::before,.event-card::after{
+  content:'';position:absolute;width:16px;height:16px;border:1px solid var(--gold);
+}
+.event-card::before{top:6px;left:6px;border-right:none;border-bottom:none}
+.event-card::after{bottom:6px;right:6px;border-left:none;border-top:none}
+.event-icon{
+  width:48px;height:48px;margin:0 auto 14px;
+  border-radius:50%;border:1px solid var(--gold-soft);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold-deep);background:radial-gradient(circle,#FFFDF8,#F8EDD8);
+}
+.event-title{
+  font-family:'Italiana',serif;font-size:clamp(20px,4.5vw,26px);
+  color:var(--ink);letter-spacing:2px;margin-bottom:4px;
+}
+.event-title-ta{
+  font-family:'Noto Serif Tamil',serif;font-size:13px;
+  color:var(--gold-deep);opacity:.85;margin-bottom:14px;
+}
+.event-date{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+  font-size:clamp(18px,4.2vw,22px);color:var(--gold-deep);
+  letter-spacing:1px;margin:12px 0 4px;
+}
+.event-day{
+  font-family:'Cinzel',serif;font-size:10px;letter-spacing:4px;
+  color:var(--ink-2);text-transform:uppercase;margin-bottom:14px;
+}
+.event-time{
+  display:inline-block;font-family:'Italiana',serif;
+  font-size:clamp(15px,3.6vw,19px);color:var(--ink);
+  padding:7px 18px;border:1px solid var(--gold-soft);
+  border-radius:999px;letter-spacing:2px;
+  background:rgba(255,253,248,.6);
+}
+.event-venue{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;color:var(--ink-2);line-height:1.7;margin-top:14px;
+}
 
-        /* BLESSING */
-        #blessing {
-            background:
-                radial-gradient(60% 60% at 50% 0%, #FFF6E1 0%, transparent 60%),
-                linear-gradient(180deg, #FBF7FF 0%, #F6EEFF 100%);
-        }
+/* RSVP */
+.wab{
+  display:inline-flex;align-items:center;gap:12px;
+  background:linear-gradient(135deg,#1FA855 0%,#138A3C 100%);
+  color:#fff;text-decoration:none;padding:14px 28px;
+  border-radius:999px;font-family:'Cinzel',serif;
+  font-size:11px;letter-spacing:3px;transition:all .35s;
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:0 12px 30px -10px rgba(31,168,85,.45);
+  margin-top:8px;
+}
+.wab:hover{transform:translateY(-3px);box-shadow:0 20px 40px -12px rgba(31,168,85,.55)}
+.wai{width:18px;height:18px}
+.contact-sig{
+  font-family:'Tangerine',cursive;font-style:italic;
+  font-size:clamp(26px,6vw,34px);color:var(--gold);
+  margin-top:24px;line-height:.9;
+}
+.contact-num{font-family:'Italiana',serif;font-size:clamp(14px,3.4vw,18px);
+  color:var(--ink);letter-spacing:3px;margin-top:2px}
 
-        .sal-ar {
-            font-family: 'Amiri', serif;
-            font-size: clamp(18px, 4.2vw, 28px);
-            direction: rtl; color: var(--lav-500);
-            margin-bottom: 8px; text-align: center;
-            line-height: 1.6;
-        }
-        .sal-en, .sal-ta {
-            font-size: clamp(11px, 2.5vw, 13px);
-            color: var(--ink-3); font-style: italic;
-            letter-spacing: 1.5px; margin-bottom: 6px; text-align: center;
-        }
-        .sal-ta { font-family: 'Noto Serif Tamil', serif; margin-bottom: 28px; }
+/* Countdown */
+.cg{display:flex;justify-content:center;gap:8px;margin-top:24px;flex-wrap:nowrap}
+.ci{
+  flex:1;max-width:90px;text-align:center;
+  padding:14px 4px;
+  background:linear-gradient(180deg,#FFFDF8,#F8EDD8);
+  border:1px solid var(--line);border-radius:4px;position:relative;
+}
+.ci::before{content:'';position:absolute;top:4px;left:4px;right:4px;height:1px;background:var(--gold-soft);opacity:.5}
+.cn{
+  font-family:'Italiana',serif;
+  font-size:clamp(28px,7.5vw,42px);
+  color:var(--ink);line-height:1;letter-spacing:1px;
+}
+.cl{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;
+  color:var(--gold-deep);text-transform:uppercase;margin-top:8px}
 
-        .open-text {
-            max-width: 640px; margin: 0 auto;
-            font-size: clamp(13px, 2.8vw, 15px);
-            line-height: 2; color: var(--ink-2);
-            text-align: center;
-        }
-        .open-text.ta-only { font-family: 'Noto Serif Tamil', serif; line-height: 2.2; }
+/* Footer */
+footer{padding:50px 16px 40px;text-align:center;position:relative;z-index:5}
+.footer-card{
+  max-width:520px;margin:0 auto;
+  background:var(--paper);border-radius:6px;
+  padding:50px 24px;position:relative;
+  box-shadow:0 20px 60px -30px rgba(94,60,33,.18),inset 0 0 0 1px rgba(201,161,74,.12);
+}
+.f-ornament{
+  width:40px;height:40px;margin:0 auto 18px;
+  border-radius:50%;border:1px solid var(--gold-soft);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold-deep);
+}
+.f-couple{
+  font-family:'Italiana',serif;font-size:clamp(20px,5vw,28px);
+  color:var(--ink);letter-spacing:2px;margin-bottom:4px;line-height:1.3;
+}
+.f-couple-ta{font-family:'Noto Serif Tamil',serif;font-size:14px;
+  color:var(--gold-deep);opacity:.85;margin-bottom:16px}
+.f-date{font-family:'Cinzel',serif;font-size:11px;letter-spacing:4px;
+  color:var(--ink-2);text-transform:uppercase;margin-bottom:22px}
+.f-dua{font-family:'Amiri',serif;direction:rtl;color:var(--gold-deep);
+  font-size:clamp(15px,3.4vw,19px);margin-bottom:6px;line-height:1.7}
+.f-dua-tr{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:13px;color:var(--ink-3);margin-bottom:18px}
+.f-loc{font-family:'Cinzel',serif;font-size:10px;letter-spacing:5px;
+  color:var(--ink-3);text-transform:uppercase;opacity:.7}
 
-        /* Couple names block */
-        .cn-blk { margin: 40px auto 18px; text-align: center; max-width: 600px; }
-        .nlabel {
-            font-family: 'Cinzel', serif;
-            font-size: 10px; letter-spacing: 5px;
-            color: var(--gold-deep); text-transform: uppercase;
-            margin-bottom: 12px;
-            display: inline-flex; align-items: center; gap: 12px;
-        }
-        .nlabel::before, .nlabel::after {
-            content: ''; width: 24px; height: 1px;
-            background: var(--gold-soft);
-        }
-        .nben {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-            font-size: clamp(24px, 5.5vw, 38px);
-            color: var(--ink); line-height: 1.2;
-        }
-        .nbta {
-            font-family: 'Noto Serif Tamil', serif;
-            font-size: clamp(16px, 3.6vw, 22px);
-            color: var(--lav-500); margin-top: 6px;
-        }
-        .nqual {
-            font-size: 12px; color: var(--ink-3);
-            letter-spacing: 1.5px; margin-top: 8px;
-            font-style: italic;
-        }
-        .nsep {
-            font-family: 'Great Vibes', cursive;
-            font-size: clamp(58px, 14vw, 96px);
-            color: var(--gold); line-height: 0.8;
-            text-align: center; margin: 6px 0;
-        }
-
-        /* Parents */
-        .pg {
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 18px; max-width: 680px;
-            margin: 40px auto 0;
-        }
-        @media (max-width: 560px) {
-            .pg { grid-template-columns: 1fr; }
-        }
-        .pc {
-            background: rgba(255, 255, 255, 0.65);
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 22px 20px;
-            text-align: left;
-            box-shadow: 0 8px 24px -14px rgba(123, 87, 184, 0.25);
-            backdrop-filter: blur(6px);
-            position: relative;
-            overflow: hidden;
-        }
-        .pc::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--lav-200), var(--gold-soft), var(--lav-200));
-        }
-        .pclabel {
-            font-family: 'Cinzel', serif;
-            font-size: 10px; letter-spacing: 3px;
-            color: var(--gold-deep); text-transform: uppercase;
-            margin-bottom: 14px; padding-bottom: 12px;
-            border-bottom: 1px dashed var(--line);
-        }
-        .pr {
-            font-size: 13px; color: var(--ink-2);
-            line-height: 1.9;
-        }
-        .pr strong {
-            color: var(--ink); font-weight: 500;
-            font-size: 11px; letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .pr .nm-en {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 16px; color: var(--ink);
-            font-weight: 500; display: block;
-        }
-        .pr .nm-ta {
-            font-family: 'Noto Serif Tamil', serif;
-            font-size: 12px; color: var(--lav-500);
-            opacity: 0.85; display: block; margin-top: 2px;
-        }
-        .pa {
-            font-size: 12px; color: var(--ink-3);
-            line-height: 1.7; margin-top: 14px;
-            padding-top: 12px;
-            border-top: 1px dashed var(--line);
-        }
-        .pa .ta-only { font-family: 'Noto Serif Tamil', serif; }
-
-        /* EVENTS */
-        #events {
-            background:
-                radial-gradient(60% 60% at 50% 100%, #FFF1DA 0%, transparent 60%),
-                linear-gradient(180deg, #F6EEFF 0%, #EFE2FB 100%);
-        }
-        .eg {
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 20px; max-width: 720px;
-            margin: 32px auto 0;
-        }
-        @media (max-width: 560px) {
-            .eg { grid-template-columns: 1fr; }
-        }
-        .ec {
-            background: linear-gradient(155deg, #FFFFFF 0%, #FBF3FF 100%);
-            border: 1px solid var(--lav-100);
-            border-radius: 18px;
-            padding: 30px 22px;
-            text-align: center;
-            position: relative; overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform .35s ease, box-shadow .35s ease;
-        }
-        .ec:hover { transform: translateY(-4px); box-shadow: 0 24px 60px -22px rgba(123, 87, 184, 0.45); }
-        .ec::before {
-            content: ''; position: absolute; inset: 0;
-            background: radial-gradient(80px 80px at 100% 0%, rgba(200, 162, 74, 0.18), transparent);
-            pointer-events: none;
-        }
-        .ec-icon {
-            width: 56px; height: 56px; margin: 0 auto 14px;
-            display: flex; align-items: center; justify-content: center;
-            background: radial-gradient(circle, #fff, var(--lav-50));
-            border-radius: 50%;
-            border: 1px solid var(--gold-soft);
-            color: var(--gold-deep);
-        }
-        .ec-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-            font-size: clamp(18px, 4vw, 22px);
-            color: var(--ink); margin-bottom: 6px;
-            letter-spacing: 1px;
-        }
-        .ec-subtitle {
-            font-family: 'Noto Serif Tamil', serif;
-            font-size: 13px; color: var(--lav-500);
-            margin-bottom: 16px; opacity: 0.85;
-        }
-        .ec-date-full {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-            font-size: clamp(20px, 4.6vw, 26px);
-            color: var(--gold-deep);
-            margin: 10px 0 4px;
-            letter-spacing: 1px;
-        }
-        .ec-day {
-            font-family: 'Cinzel', serif;
-            font-size: 11px; color: var(--ink-3);
-            letter-spacing: 3px; margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-        .ec-time {
-            display: inline-block;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-            font-size: clamp(16px, 3.6vw, 20px);
-            color: var(--ink);
-            background: rgba(232, 219, 250, 0.4);
-            padding: 6px 16px;
-            border-radius: 999px;
-            border: 1px solid var(--lav-100);
-        }
-        .ec-venue {
-            font-size: 13px; color: var(--ink-2);
-            line-height: 1.7; margin-top: 14px;
-        }
-        .ec-tag {
-            display: inline-block; margin-top: 14px;
-            background: rgba(200, 162, 74, 0.12);
-            border: 1px solid var(--gold-soft);
-            color: var(--gold-deep);
-            font-family: 'Cinzel', serif;
-            font-size: 10px; letter-spacing: 2px;
-            padding: 5px 14px;
-            border-radius: 999px;
-            text-transform: uppercase;
-        }
-
-        /* RSVP */
-        #rsvp {
-            background:
-                radial-gradient(60% 60% at 50% 0%, #FFF3D5 0%, transparent 60%),
-                linear-gradient(180deg, #EFE2FB 0%, #F6EEFF 100%);
-        }
-        .ri { max-width: 520px; margin: 0 auto; text-align: center; }
-        .rt {
-            font-size: clamp(13px, 3vw, 15px);
-            color: var(--ink-2); line-height: 1.9;
-            margin: 14px auto 28px; max-width: 460px;
-        }
-        .rt.ta-only { font-family: 'Noto Serif Tamil', serif; }
-
-        .wab {
-            display: inline-flex; align-items: center; gap: 12px;
-            background: linear-gradient(135deg, #1FA855 0%, #128C3B 100%);
-            color: white; text-decoration: none;
-            padding: 16px 30px;
-            border-radius: 999px;
-            font-family: 'Cinzel', serif;
-            font-size: clamp(11px, 2.5vw, 13px);
-            letter-spacing: 2px;
-            transition: all 0.35s;
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 14px 36px -10px rgba(31, 168, 85, 0.5);
-        }
-        .wab:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 22px 50px -10px rgba(31, 168, 85, 0.6);
-        }
-        .wai { width: 20px; height: 20px; }
-
-        .csig {
-            margin-top: 32px;
-            font-family: 'Great Vibes', cursive;
-            color: var(--lav-500);
-            font-size: clamp(20px, 4vw, 26px);
-        }
-        .cnum {
-            margin-top: 4px;
-            font-family: 'Cinzel', serif;
-            font-size: clamp(13px, 3vw, 17px);
-            color: var(--ink); letter-spacing: 2px;
-        }
-
-        /* COUNTDOWN */
-        #countdown {
-            background:
-                radial-gradient(60% 60% at 50% 50%, #FFF8E3 0%, transparent 70%),
-                linear-gradient(180deg, #F6EEFF 0%, #EADBFB 100%);
-            text-align: center;
-        }
-        .cg {
-            display: flex; justify-content: center; align-items: flex-end;
-            gap: clamp(8px, 2.4vw, 22px);
-            margin-top: 28px; flex-wrap: nowrap;
-        }
-        .ci {
-            display: flex; flex-direction: column; align-items: center;
-            min-width: 64px;
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid var(--lav-100);
-            border-radius: 14px;
-            padding: 14px 8px;
-            box-shadow: var(--shadow);
-            backdrop-filter: blur(6px);
-        }
-        .cn {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-            font-size: clamp(28px, 7vw, 52px);
-            color: var(--ink); line-height: 1;
-        }
-        .cl {
-            font-family: 'Cinzel', serif;
-            font-size: 9px; letter-spacing: 2px;
-            color: var(--gold-deep);
-            text-transform: uppercase; margin-top: 8px;
-        }
-
-        /* FOOTER */
-        footer {
-            background:
-                radial-gradient(60% 60% at 50% 0%, #FFF6E1 0%, transparent 60%),
-                linear-gradient(180deg, #EADBFB 0%, #DCC7F5 100%);
-            padding: 56px 22px 40px;
-            text-align: center;
-            border-top: 1px solid var(--line);
-        }
-        .fc {
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 54px; height: 54px;
-            border-radius: 50%;
-            background: radial-gradient(circle, #fff, #FFF3D5);
-            border: 1px solid var(--gold-soft);
-            margin-bottom: 18px;
-            color: var(--gold-deep);
-        }
-        .fn {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-            font-size: clamp(18px, 4.4vw, 26px);
-            color: var(--ink); margin-bottom: 6px; line-height: 1.4;
-        }
-        .fn-ta {
-            font-family: 'Noto Serif Tamil', serif;
-            font-size: clamp(13px, 3vw, 16px);
-            color: var(--lav-500); margin-bottom: 14px;
-            opacity: 0.9;
-        }
-        .fd {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(12px, 2.6vw, 14px);
-            color: var(--gold-deep);
-            letter-spacing: 4px; margin-bottom: 22px;
-        }
-        .fdua {
-            font-family: 'Amiri', serif;
-            font-size: clamp(15px, 3.4vw, 20px);
-            direction: rtl; color: var(--lav-500);
-            margin-bottom: 8px; line-height: 1.7;
-        }
-        .fdt {
-            font-size: 12px; color: var(--ink-3);
-            font-style: italic; margin-bottom: 22px;
-        }
-        .fdt.ta-only { font-family: 'Noto Serif Tamil', serif; }
-        .floc {
-            font-family: 'Cinzel', serif;
-            font-size: 11px; letter-spacing: 5px;
-            color: var(--ink-3); text-transform: uppercase;
-            opacity: 0.75;
-        }
-
-        @media (max-width: 380px) {
-            .dp-cell { padding: 8px 10px; min-width: 48px; }
-            .ci { min-width: 56px; padding: 12px 6px; }
-        }
-    </style>
+@media(max-width:380px){
+  .card{padding:70px 18px 80px}
+  .initials{padding:0 30px}
+  .ini{font-size:28px}
+  .ci{padding:12px 2px;max-width:78px}
+}
+</style>
 </head>
 
 <body class="le">
 
-    <div id="pb"></div>
+<div id="pb"></div>
 
-    <!-- Language toggle -->
-    <div class="lt" data-testid="lang-toggle">
-        <button class="lb" data-testid="lang-ta" onclick="setL('ta')">தமிழ்</button>
-        <button class="lb active" data-testid="lang-en" onclick="setL('en')">English</button>
+<div class="lt">
+  <button class="lb" onclick="setL('ta')">தமிழ்</button>
+  <button class="lb active" onclick="setL('en')">English</button>
+</div>
+
+<!-- ====== HERO INVITATION CARD ====== -->
+<section id="hero">
+  <div class="petals" id="petals"></div>
+
+  <div class="card">
+    <div class="frame"></div>
+
+    <!-- Initials -->
+    <div class="initials">
+      <span class="ini">M</span>
+      <span class="ini">S</span>
     </div>
 
-    <!-- ========== HERO ========== -->
-    <section id="hero" data-testid="hero-section">
+    <!-- Floral arch (top) -->
+    <svg class="arch" viewBox="0 0 520 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <!-- Gold arch line -->
+      <path d="M40 230 Q40 40 260 40 Q480 40 480 230" stroke="#C9A14A" stroke-width="1.5" fill="none" opacity="0.85"/>
+      <!-- left flowers -->
+      <g transform="translate(50,40)">
+        <circle cx="0" cy="0" r="14" fill="#F4D5D0" opacity=".9"/>
+        <circle cx="0" cy="0" r="8" fill="#fff" opacity=".7"/>
+        <circle cx="3" cy="0" r="3" fill="#D9A7A1"/>
+        <circle cx="-18" cy="14" r="10" fill="#F8E6E3" opacity=".95"/>
+        <circle cx="-18" cy="14" r="5" fill="#fff" opacity=".7"/>
+        <circle cx="14" cy="20" r="11" fill="#F4D5D0" opacity=".9"/>
+        <circle cx="14" cy="20" r="6" fill="#fff" opacity=".7"/>
+        <circle cx="16" cy="20" r="2.5" fill="#C9A14A"/>
+        <!-- leaves -->
+        <ellipse cx="-25" cy="-8" rx="9" ry="3" fill="#B8A878" opacity=".7" transform="rotate(-25 -25 -8)"/>
+        <ellipse cx="22" cy="-5" rx="8" ry="2.5" fill="#B8A878" opacity=".6" transform="rotate(35 22 -5)"/>
+      </g>
+      <g transform="translate(95,15)">
+        <circle cx="0" cy="0" r="12" fill="#F8E6E3" opacity=".9"/>
+        <circle cx="0" cy="0" r="6" fill="#fff"/>
+        <circle cx="0" cy="0" r="2" fill="#C9A14A"/>
+        <ellipse cx="15" cy="10" rx="7" ry="2.5" fill="#B8A878" opacity=".6" transform="rotate(20 15 10)"/>
+      </g>
+      <!-- center top flowers -->
+      <g transform="translate(240,18)">
+        <circle cx="0" cy="0" r="16" fill="#F4D5D0" opacity=".95"/>
+        <circle cx="0" cy="0" r="9" fill="#fff" opacity=".7"/>
+        <circle cx="0" cy="0" r="3" fill="#D9A7A1"/>
+        <circle cx="22" cy="6" r="11" fill="#F8E6E3" opacity=".9"/>
+        <circle cx="22" cy="6" r="5" fill="#fff" opacity=".7"/>
+        <circle cx="-22" cy="8" r="10" fill="#F4D5D0" opacity=".85"/>
+        <circle cx="-22" cy="8" r="5" fill="#fff" opacity=".7"/>
+        <ellipse cx="35" cy="-4" rx="9" ry="3" fill="#B8A878" opacity=".7" transform="rotate(30 35 -4)"/>
+        <ellipse cx="-32" cy="-6" rx="9" ry="3" fill="#B8A878" opacity=".6" transform="rotate(-30 -32 -6)"/>
+      </g>
+      <!-- right top flowers -->
+      <g transform="translate(420,40)">
+        <circle cx="0" cy="0" r="14" fill="#F4D5D0" opacity=".9"/>
+        <circle cx="0" cy="0" r="7" fill="#fff" opacity=".7"/>
+        <circle cx="0" cy="0" r="2.5" fill="#D9A7A1"/>
+        <circle cx="18" cy="14" r="10" fill="#F8E6E3" opacity=".95"/>
+        <circle cx="18" cy="14" r="5" fill="#fff" opacity=".7"/>
+        <circle cx="-14" cy="20" r="11" fill="#F4D5D0" opacity=".9"/>
+        <circle cx="-14" cy="20" r="6" fill="#fff" opacity=".7"/>
+        <circle cx="-14" cy="20" r="2" fill="#C9A14A"/>
+        <ellipse cx="25" cy="-8" rx="9" ry="3" fill="#B8A878" opacity=".7" transform="rotate(25 25 -8)"/>
+        <ellipse cx="-22" cy="-5" rx="8" ry="2.5" fill="#B8A878" opacity=".6" transform="rotate(-35 -22 -5)"/>
+      </g>
+      <g transform="translate(465,80)">
+        <circle cx="0" cy="0" r="9" fill="#F8E6E3" opacity=".85"/>
+        <circle cx="0" cy="0" r="4" fill="#fff"/>
+        <ellipse cx="-12" cy="10" rx="7" ry="2.5" fill="#B8A878" opacity=".6" transform="rotate(-25 -12 10)"/>
+      </g>
+      <g transform="translate(60,110)">
+        <circle cx="0" cy="0" r="8" fill="#F4D5D0" opacity=".8"/>
+        <circle cx="0" cy="0" r="3.5" fill="#fff"/>
+        <ellipse cx="12" cy="6" rx="6" ry="2" fill="#B8A878" opacity=".55" transform="rotate(20 12 6)"/>
+      </g>
+    </svg>
 
-        <!-- Floating petals -->
-        <div class="petals" id="petals"></div>
+    <!-- bottom corner florals -->
+    <svg class="corner bl" viewBox="0 0 140 140" aria-hidden="true">
+      <path d="M5 135 Q5 80 50 70 Q90 60 95 5" stroke="#C9A14A" stroke-width="1" fill="none" opacity=".7"/>
+      <g transform="translate(20,118)">
+        <circle r="11" fill="#F4D5D0" opacity=".9"/>
+        <circle r="5" fill="#fff" opacity=".8"/>
+        <circle r="2" fill="#D9A7A1"/>
+      </g>
+      <g transform="translate(48,98)">
+        <circle r="9" fill="#F8E6E3" opacity=".85"/>
+        <circle r="4" fill="#fff" opacity=".75"/>
+      </g>
+      <g transform="translate(75,75)">
+        <circle r="10" fill="#F4D5D0" opacity=".85"/>
+        <circle r="5" fill="#fff" opacity=".75"/>
+        <circle r="2" fill="#C9A14A"/>
+      </g>
+      <ellipse cx="40" cy="118" rx="9" ry="3" fill="#B8A878" opacity=".6" transform="rotate(-30 40 118)"/>
+      <ellipse cx="65" cy="95" rx="9" ry="3" fill="#B8A878" opacity=".55" transform="rotate(35 65 95)"/>
+      <ellipse cx="90" cy="58" rx="7" ry="2.5" fill="#B8A878" opacity=".5" transform="rotate(-50 90 58)"/>
+    </svg>
+    <svg class="corner br" viewBox="0 0 140 140" aria-hidden="true">
+      <path d="M5 135 Q5 80 50 70 Q90 60 95 5" stroke="#C9A14A" stroke-width="1" fill="none" opacity=".7"/>
+      <g transform="translate(22,120)">
+        <circle r="12" fill="#F4D5D0" opacity=".9"/>
+        <circle r="6" fill="#fff" opacity=".8"/>
+        <circle r="2.5" fill="#D9A7A1"/>
+      </g>
+      <g transform="translate(50,98)">
+        <circle r="10" fill="#F8E6E3" opacity=".88"/>
+        <circle r="4.5" fill="#fff" opacity=".75"/>
+      </g>
+      <g transform="translate(78,72)">
+        <circle r="11" fill="#F4D5D0" opacity=".85"/>
+        <circle r="5" fill="#fff" opacity=".75"/>
+        <circle r="2" fill="#C9A14A"/>
+      </g>
+      <ellipse cx="42" cy="118" rx="9" ry="3" fill="#B8A878" opacity=".6" transform="rotate(-30 42 118)"/>
+      <ellipse cx="68" cy="93" rx="9" ry="3" fill="#B8A878" opacity=".55" transform="rotate(35 68 93)"/>
+    </svg>
 
-        <!-- Decorative ornaments -->
-        <div class="orn o1">
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-                <circle cx="22" cy="22" r="18" stroke="#C8A24A" stroke-width="0.7" opacity="0.7" fill="none"/>
-                <path d="M22 4 L24 20 L40 22 L24 24 L22 40 L20 24 L4 22 L20 20 Z" fill="#C8A24A" opacity="0.4"/>
-            </svg>
+    <!-- Content (pushed below arch) -->
+    <div style="margin-top:170px"></div>
+
+    <div class="bism rv">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+
+    <div class="you-invited rv2">
+      <span class="ien">You're invited<br>to the Nikah of</span>
+      <span class="ita">நீங்கள் அழைக்கப்படுகிறீர்கள்<br>நிக்காஹ் திருமணத்திற்கு</span>
+    </div>
+
+    <div class="couple rv2">
+      <div class="bigname">MOHAMED USMAN</div>
+      <div class="bigname-ta">F. முகமது உஸ்மான்</div>
+
+      <div class="and-sub">and</div>
+      <div class="and">and</div>
+
+      <div class="bigname">SAIDHUMA BANU</div>
+      <div class="bigname-ta">A. சயிதுமா பானு</div>
+      <div class="qual">B.Sc. (CS) · Software Developer  ·  Aalima</div>
+    </div>
+
+    <!-- DATE — large, unambiguous -->
+    <div class="date-row rv3">
+      <div class="dr-piece">
+        <div class="dr-num">19</div>
+        <div class="dr-lbl">Day</div>
+      </div>
+      <div class="dr-dot"></div>
+      <div class="dr-piece">
+        <div class="dr-num">July</div>
+        <div class="dr-lbl">Month</div>
+      </div>
+      <div class="dr-dot"></div>
+      <div class="dr-piece">
+        <div class="dr-num">2026</div>
+        <div class="dr-lbl">Year</div>
+      </div>
+    </div>
+    <div class="day-line rv3">
+      <span class="ien">Sunday Morning</span>
+      <span class="ita">ஞாயிற்றுக்கிழமை</span>
+    </div>
+    <div class="time-line rv3">at eleven o'clock in the morning</div>
+
+    <div class="venue-block rv3">
+      <span class="vname">Sri Kamala Thirumana Mahal</span>
+      Virattikuppam Road · Villupuram
+    </div>
+
+    <div class="scroll-hint">scroll</div>
+  </div>
+</section>
+
+<!-- ====== BLESSING ====== -->
+<section>
+  <div class="sec-card">
+    <div class="frame"></div>
+    <div class="stag rv">
+      <span class="ien">In the Name of Allah</span>
+      <span class="ita">அல்லாஹ்வின் பெயரால்</span>
+    </div>
+    <div class="sal-ar rv2">السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</div>
+    <div class="sal-en rv2">Assalamu Alaikum Wa Rahmathullahi Wa Barakathuhu</div>
+    <div class="sal-ta rv2">அஸ்ஸலாமு அலைக்கும் வ ரஹ்மத்துல்லாஹி வ பரகாத்துஹு</div>
+
+    <div class="mini-div rv3">
+      <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2 L13.8 8.2 L20 8.2 L14.9 11.8 L16.7 18 L12 14.4 L7.3 18 L9.1 11.8 L4 8.2 L10.2 8.2 Z" fill="none" stroke="#C9A14A" stroke-width="1"/></svg>
+    </div>
+
+    <p class="open-text en-only rv3">
+      Dear Friends &amp; Family, with the blessings of Allah and following the noble traditions of the Holy Prophet (SAW), we joyfully invite you to celebrate the Nikah ceremony on the 4th of Muharram 1448 AH, which corresponds to Sunday, 19th July 2026, at 11:00 AM.
+    </p>
+    <p class="open-text ta-only rv3">
+      "அன்பான நண்பர்கள் மற்றும் குடும்பத்தினரே! அல்லாஹ்வின் பேரருளாலும், அகிலத்தின் அருட்கொடை நபிகள் நாயகம் (ஸல்) அவர்களின் மேன்மையான வழிமுறையைப் பேணியும், இன்ஷா அல்லாஹ் ஹிஜ்ரி 1448-ஆம் ஆண்டு முஹர்ரம் மாதம் பிறை 4-ஆம் நாள் (19-07-2026), ஞாயிற்றுக்கிழமை காலை 11:00 மணி அளவில் நடைபெறும் நிக்காஹ் (திருமண) நிகழ்விலும் உடன் நடைபெறும் வலிமா விருந்து உபசரிப்பிலும் கலந்து கொண்டு சிறப்பிக்குமாறு உங்களை அன்புடன் அழைக்கிறோம்."
+    </p>
+
+    <!-- Groom -->
+    <div class="person rv">
+      <div class="role">
+        <span class="ien">The Groom</span>
+        <span class="ita">மணமகன்</span>
+      </div>
+      <div class="name-en">F. Mohamed Usman</div>
+      <div class="name-ta">F. முகமது உஸ்மான்</div>
+      <div class="nq">B.Sc. (CS) · Software Developer</div>
+    </div>
+
+    <div class="amp-mid rv2">and</div>
+
+    <!-- Bride -->
+    <div class="person rv3">
+      <div class="role">
+        <span class="ien">The Bride</span>
+        <span class="ita">மணமகள்</span>
+      </div>
+      <div class="name-en">A. Saidhuma Banu</div>
+      <div class="name-ta">A. சயிதுமா பானு (ஆலிமா)</div>
+      <div class="nq">Aalima</div>
+    </div>
+
+    <!-- Parents -->
+    <div class="pg rv">
+      <div class="pc">
+        <div class="pl">
+          <span class="ien">Groom's Family</span>
+          <span class="ita">மணமகன் குடும்பம்</span>
         </div>
-        <div class="orn o2">
-            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
-                <path d="M19 3 Q26 12 19 19 Q12 12 19 3 Z M19 35 Q26 26 19 19 Q12 26 19 35 Z M3 19 Q12 12 19 19 Q12 26 3 19 Z M35 19 Q26 12 19 19 Q26 26 35 19 Z" fill="#B591E5" opacity="0.4"/>
-                <circle cx="19" cy="19" r="3" fill="#C8A24A" opacity="0.6"/>
-            </svg>
+        <div class="pp">
+          <div class="pp-role"><span class="ien">Father</span><span class="ita">தந்தை</span></div>
+          <div class="pp-en">M. Fajilur Rahman</div>
+          <div class="pp-ta">M. பஜீலுர் ரஹ்மான்</div>
         </div>
-        <div class="orn o3">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <circle cx="16" cy="16" r="12" stroke="#C8A24A" stroke-width="0.6" opacity="0.6" fill="none"/>
-                <circle cx="16" cy="16" r="6" stroke="#B591E5" stroke-width="0.6" opacity="0.6" fill="none"/>
-                <circle cx="16" cy="16" r="2" fill="#C8A24A" opacity="0.7"/>
-            </svg>
+        <div class="pp">
+          <div class="pp-role"><span class="ien">Mother</span><span class="ita">தாய்</span></div>
+          <div class="pp-en">F. Shamshad Begum</div>
+          <div class="pp-ta">F. சம்ஷாத் பேகம்</div>
         </div>
-        <div class="orn o4">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <polygon points="20,3 23,14 35,14 25,21 28,33 20,26 12,33 15,21 5,14 17,14" stroke="#C8A24A" stroke-width="0.7" fill="none" opacity="0.7"/>
-            </svg>
+        <div class="pa en-only">No. 40/24 Muthoppu,<br>Villupuram - 605 602</div>
+        <div class="pa ta-only">எண். 40/24 முத்தோப்பு,<br>விழுப்புரம் - 605 602</div>
+      </div>
+      <div class="pc">
+        <div class="pl">
+          <span class="ien">Bride's Family</span>
+          <span class="ita">மணமகள் குடும்பம்</span>
         </div>
-
-        <div class="hc">
-            <div class="crest rv">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                    <path d="M28 20 a10 10 0 1 1 -8 -10 a8 8 0 1 0 8 10 Z" fill="#C8A24A" opacity="0.85"/>
-                    <circle cx="30" cy="13" r="2" fill="#C8A24A" opacity="0.7"/>
-                </svg>
-            </div>
-
-            <div class="bism rv">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
-
-            <div class="hs rv2">
-                <span class="ita">நிக்காஹ் அழைப்பிதழ்</span>
-                <span class="ien">Nikah · Wedding Invitation</span>
-            </div>
-
-            <div class="couple-block rv2">
-                <div class="name-main">F. Mohamed Usman</div>
-                <div class="name-ta">F. முகமது உஸ்மான்</div>
-
-                <span class="amp">&amp;</span>
-
-                <div class="name-main">A. Saidhuma Banu</div>
-                <div class="name-ta">A. சயிதுமா பானு</div>
-            </div>
-
-            <div class="htag rv3">
-                <span class="ita">நிக்காஹ் திருமணம்</span>
-                <span class="ien">Nikah Ceremony</span>
-            </div>
-
-            <!-- Beautiful date plate replacing "19 · 07 · 2026 | VILLUPURAM" -->
-            <div class="date-plate rv3" data-testid="date-plate">
-                <div class="dp-cell">
-                    <div class="dp-num">19</div>
-                    <div class="dp-lbl">Day</div>
-                </div>
-                <div class="dp-divider"></div>
-                <div class="dp-cell">
-                    <div class="dp-num">July</div>
-                    <div class="dp-lbl">Month</div>
-                </div>
-                <div class="dp-divider"></div>
-                <div class="dp-cell">
-                    <div class="dp-num">2026</div>
-                    <div class="dp-lbl">Year</div>
-                </div>
-            </div>
-
-            <div class="venue-pill rv3">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2a8 8 0 0 0-8 8c0 5.5 8 12 8 12s8-6.5 8-12a8 8 0 0 0-8-8Z" stroke="currentColor" stroke-width="1.5"/>
-                    <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-                <span>Villupuram · Tamil Nadu</span>
-            </div>
+        <div class="pp">
+          <div class="pp-role"><span class="ien">Father</span><span class="ita">தந்தை</span></div>
+          <div class="pp-en">A. Anwar Deen</div>
+          <div class="pp-ta">A. அன்வர் தீன்</div>
         </div>
-
-        <!-- Mosque (lightened) -->
-        <div class="mosque-wrap">
-            <svg viewBox="0 0 960 340" xmlns="http://www.w3.org/2000/svg" fill="none">
-                <defs>
-                    <linearGradient id="wallg" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#FBF7FF" />
-                        <stop offset="100%" stop-color="#EADBFB" />
-                    </linearGradient>
-                    <linearGradient id="domeg" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#E7D6FA" />
-                        <stop offset="100%" stop-color="#CFB3F2" />
-                    </linearGradient>
-                    <linearGradient id="goldg" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#E0C684" />
-                        <stop offset="100%" stop-color="#C8A24A" />
-                    </linearGradient>
-                </defs>
-
-                <!-- Ground glow -->
-                <ellipse cx="480" cy="305" rx="380" ry="14" fill="#C8A24A" opacity="0.1"/>
-
-                <!-- LEFT MINARET -->
-                <rect x="100" y="220" width="44" height="80" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.8"/>
-                <rect x="104" y="180" width="36" height="42" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <rect x="97" y="176" width="50" height="6" rx="1" fill="url(#goldg)" opacity="0.85"/>
-                <rect x="108" y="120" width="28" height="60" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <rect x="102" y="116" width="40" height="5" rx="1" fill="url(#goldg)" opacity="0.85"/>
-                <rect x="114" y="92" width="16" height="28" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <ellipse cx="122" cy="90" rx="14" ry="8" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <path d="M108 90 Q122 60 136 90" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <line x1="122" y1="60" x2="122" y2="50" stroke="#C8A24A" stroke-width="1"/>
-                <path d="M118 44 Q122 38 128 44 Q124 50 118 44" fill="#C8A24A" opacity="0.9"/>
-                <path d="M110 140 Q122 130 134 140 L134 155 L110 155 Z" fill="#B591E5" opacity="0.2" stroke="#C8A24A" stroke-width="0.6"/>
-                <path d="M110 200 Q122 193 134 200 L134 212 L110 212 Z" fill="#B591E5" opacity="0.2" stroke="#C8A24A" stroke-width="0.6"/>
-
-                <!-- RIGHT MINARET -->
-                <rect x="816" y="220" width="44" height="80" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.8"/>
-                <rect x="820" y="180" width="36" height="42" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <rect x="813" y="176" width="50" height="6" rx="1" fill="url(#goldg)" opacity="0.85"/>
-                <rect x="824" y="120" width="28" height="60" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <rect x="818" y="116" width="40" height="5" rx="1" fill="url(#goldg)" opacity="0.85"/>
-                <rect x="830" y="92" width="16" height="28" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <ellipse cx="838" cy="90" rx="14" ry="8" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <path d="M824 90 Q838 60 852 90" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <line x1="838" y1="60" x2="838" y2="50" stroke="#C8A24A" stroke-width="1"/>
-                <path d="M834 44 Q838 38 844 44 Q840 50 834 44" fill="#C8A24A" opacity="0.9"/>
-                <path d="M826 140 Q838 130 850 140 L850 155 L826 155 Z" fill="#B591E5" opacity="0.2" stroke="#C8A24A" stroke-width="0.6"/>
-                <path d="M826 200 Q838 193 850 200 L850 212 L826 212 Z" fill="#B591E5" opacity="0.2" stroke="#C8A24A" stroke-width="0.6"/>
-
-                <!-- SIDE MINARETS -->
-                <rect x="230" y="240" width="30" height="60" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <rect x="226" y="236" width="38" height="5" rx="1" fill="url(#goldg)" opacity="0.7"/>
-                <rect x="234" y="200" width="22" height="40" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.6"/>
-                <rect x="229" y="196" width="32" height="5" rx="1" fill="url(#goldg)" opacity="0.7"/>
-                <rect x="238" y="172" width="14" height="28" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.6"/>
-                <ellipse cx="245" cy="170" rx="10" ry="6" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.6"/>
-                <path d="M235 170 Q245 148 255 170" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.6"/>
-                <line x1="245" y1="148" x2="245" y2="140" stroke="#C8A24A" stroke-width="0.9"/>
-                <path d="M242 135 Q245 130 249 135 Q246 140 242 135" fill="#C8A24A" opacity="0.85"/>
-
-                <rect x="700" y="240" width="30" height="60" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <rect x="696" y="236" width="38" height="5" rx="1" fill="url(#goldg)" opacity="0.7"/>
-                <rect x="704" y="200" width="22" height="40" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.6"/>
-                <rect x="699" y="196" width="32" height="5" rx="1" fill="url(#goldg)" opacity="0.7"/>
-                <rect x="708" y="172" width="14" height="28" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.6"/>
-                <ellipse cx="715" cy="170" rx="10" ry="6" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.6"/>
-                <path d="M705 170 Q715 148 725 170" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.6"/>
-                <line x1="715" y1="148" x2="715" y2="140" stroke="#C8A24A" stroke-width="0.9"/>
-                <path d="M712 135 Q715 130 719 135 Q716 140 712 135" fill="#C8A24A" opacity="0.85"/>
-
-                <!-- MAIN WALL -->
-                <rect x="144" y="200" width="672" height="100" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.8"/>
-                <rect x="144" y="200" width="672" height="5" fill="url(#goldg)" opacity="0.5"/>
-                <rect x="144" y="293" width="672" height="4" fill="url(#goldg)" opacity="0.5"/>
-                <path d="M180 240 Q200 228 220 240 L220 270 L180 270 Z" fill="#B591E5" opacity="0.18" stroke="#C8A24A" stroke-width="0.6"/>
-                <path d="M240 240 Q260 228 280 240 L280 270 L240 270 Z" fill="#B591E5" opacity="0.18" stroke="#C8A24A" stroke-width="0.6"/>
-                <path d="M680 240 Q700 228 720 240 L720 270 L680 270 Z" fill="#B591E5" opacity="0.18" stroke="#C8A24A" stroke-width="0.6"/>
-                <path d="M740 240 Q760 228 780 240 L780 270 L740 270 Z" fill="#B591E5" opacity="0.18" stroke="#C8A24A" stroke-width="0.6"/>
-
-                <!-- CENTRAL IWAN -->
-                <rect x="380" y="160" width="200" height="140" fill="url(#wallg)" stroke="#C8A24A" stroke-width="1"/>
-                <path d="M380 200 Q480 130 580 200" fill="url(#domeg)" stroke="#C8A24A" stroke-width="1.1"/>
-                <path d="M390 205 Q480 145 570 205" fill="#E9DCFB" stroke="#C8A24A" stroke-width="0.6" opacity="0.7"/>
-                <path d="M420 210 Q480 175 540 210 L540 300 L420 300 Z" fill="#F6EEFF" stroke="#C8A24A" stroke-width="0.6" opacity="0.85"/>
-                <rect x="445" y="245" width="70" height="55" rx="2" fill="#E7D6FA" stroke="#C8A24A" stroke-width="0.8"/>
-                <path d="M445 260 Q480 245 515 260" fill="#E7D6FA" stroke="#C8A24A" stroke-width="0.8"/>
-                <circle cx="508" cy="270" r="2.5" fill="#C8A24A" opacity="0.85"/>
-                <rect x="378" y="200" width="8" height="100" fill="#C8A24A" opacity="0.25"/>
-                <rect x="574" y="200" width="8" height="100" fill="#C8A24A" opacity="0.25"/>
-                <polygon points="480,155 486,168 500,168 489,176 493,190 480,182 467,190 471,176 460,168 474,168" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.7"/>
-
-                <!-- MAIN DOME -->
-                <rect x="430" y="110" width="100" height="55" rx="4" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.8"/>
-                <path d="M443 128 Q460 118 477 128 L477 145 L443 145 Z" fill="#B591E5" opacity="0.2" stroke="#C8A24A" stroke-width="0.5"/>
-                <path d="M483 128 Q500 118 517 128 L517 145 L483 145 Z" fill="#B591E5" opacity="0.2" stroke="#C8A24A" stroke-width="0.5"/>
-                <ellipse cx="480" cy="110" rx="60" ry="15" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.9"/>
-                <path d="M420 110 Q480 45 540 110" fill="url(#domeg)" stroke="#C8A24A" stroke-width="1"/>
-                <path d="M460 108 Q480 62 480 45" stroke="#C8A24A" stroke-width="0.5" opacity="0.5"/>
-                <path d="M500 108 Q480 62 480 45" stroke="#C8A24A" stroke-width="0.5" opacity="0.5"/>
-                <rect x="476" y="38" width="8" height="10" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.6"/>
-                <line x1="480" y1="38" x2="480" y2="26" stroke="#C8A24A" stroke-width="1.4"/>
-                <path d="M474 20 Q480 12 488 20 Q483 27 474 20" fill="#C8A24A" opacity="0.95"/>
-                <circle cx="484" cy="14" r="2" fill="#C8A24A" opacity="0.7"/>
-
-                <!-- SIDE DOMES -->
-                <rect x="300" y="185" width="70" height="25" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <ellipse cx="335" cy="185" rx="40" ry="10" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <path d="M295 185 Q335 148 375 185" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.8"/>
-                <line x1="335" y1="148" x2="335" y2="138" stroke="#C8A24A" stroke-width="0.9"/>
-                <path d="M331 134 Q335 128 340 134 Q336 139 331 134" fill="#C8A24A" opacity="0.85"/>
-
-                <rect x="590" y="185" width="70" height="25" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <ellipse cx="625" cy="185" rx="40" ry="10" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.7"/>
-                <path d="M585 185 Q625 148 665 185" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.8"/>
-                <line x1="625" y1="148" x2="625" y2="138" stroke="#C8A24A" stroke-width="0.9"/>
-                <path d="M621 134 Q625 128 630 134 Q626 139 621 134" fill="#C8A24A" opacity="0.85"/>
-
-                <rect x="60" y="295" width="840" height="10" fill="url(#wallg)" opacity="0.85"/>
-                <rect x="144" y="296" width="672" height="3" fill="url(#goldg)" opacity="0.4"/>
-            </svg>
+        <div class="pp">
+          <div class="pp-role"><span class="ien">Mother</span><span class="ita">தாய்</span></div>
+          <div class="pp-en">A. Sabira Begum</div>
+          <div class="pp-ta">A. சாபிரா பேகம்</div>
         </div>
+        <div class="pa en-only">No. 97 Muthoppu,<br>Villupuram - 605 602</div>
+        <div class="pa ta-only">எண். 97 முத்தோப்பு,<br>விழுப்புரம் - 605 602</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="sh">
-            <span>scroll</span>
-            <div class="sha"></div>
-        </div>
-    </section>
+<!-- ====== EVENTS ====== -->
+<section>
+  <div class="sec-card">
+    <div class="frame"></div>
+    <div class="stag rv">
+      <span class="ien">Wedding Events</span>
+      <span class="ita">திருமண நிகழ்வுகள்</span>
+    </div>
+    <div class="stitle rv">NIKAH</div>
+    <div class="stitle-script rv">and walima</div>
 
-    <!-- DIVIDER -->
-    <div class="idv rv">
-        <div class="dl"></div>
-        <svg width="48" height="48" viewBox="0 0 52 52" fill="none">
-            <polygon points="26,4 29.5,17 42,10 35.5,22 50,24 37,28.5 44,42 31,35 28,48 24,35 11,42 18,28.5 2,24 17,22 10.5,10 23,17" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.85"/>
-            <circle cx="26" cy="26" r="6" fill="none" stroke="#B591E5" stroke-width="0.8" opacity="0.6"/>
-            <circle cx="26" cy="26" r="2" fill="#C8A24A" opacity="0.7"/>
+    <div class="event-card rv">
+      <div class="event-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2 L12 5 M9 5h6 M6 22V11 a6 6 0 0 1 12 0 v11 M6 22h12 M10 22v-6h4v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <div class="dl"></div>
+      </div>
+      <div class="event-title">Nikah Ceremony</div>
+      <div class="event-title-ta">நிக்காஹ் திருமணம்</div>
+      <div class="event-date">Sunday · 19 July 2026</div>
+      <div class="event-day">
+        <span class="ien">Sunday Morning</span>
+        <span class="ita">ஞாயிற்றுக்கிழமை</span>
+      </div>
+      <div class="event-time">11:00 AM</div>
+      <div class="event-venue">
+        Sri Kamala Thirumana Mahal<br>
+        Virattikuppam Road, Villupuram
+      </div>
     </div>
 
-    <!-- ========== BLESSING ========== -->
-    <section id="blessing" data-testid="blessing-section">
-        <div class="stag rv">
-            <span class="ita">அல்லாஹ்வின் பெயரால்</span>
-            <span class="ien">In the Name of Allah</span>
-        </div>
+    <div class="event-card rv2">
+      <div class="event-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3 L13.5 8.5 L19 9 L14.5 12.5 L16 18 L12 15 L8 18 L9.5 12.5 L5 9 L10.5 8.5 Z" fill="currentColor" opacity=".85"/></svg>
+      </div>
+      <div class="event-title">Walima Feast</div>
+      <div class="event-title-ta">வலிமா விருந்து</div>
+      <div class="event-date">Sunday · 19 July 2026</div>
+      <div class="event-day">
+        <span class="ien">Same Day</span>
+        <span class="ita">அதே நாளில்</span>
+      </div>
+      <div class="event-time">After Nikah</div>
+      <div class="event-venue">
+        Sri Kamala Thirumana Mahal<br>
+        Virattikuppam Road, Villupuram
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="rv2">
-            <div class="sal-ar">السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</div>
-            <div class="sal-en">Assalamu Alaikum Wa Rahmathullahi Wa Barakathuhu</div>
-            <div class="sal-ta">அஸ்ஸலாமு அலைக்கும் வ ரஹ்மத்துல்லாஹி வ பரகாத்துஹு</div>
-        </div>
-
-        <div class="open-text ta-only rv3">
-            "அன்பான நண்பர்கள் மற்றும் குடும்பத்தினரே!
-            அல்லாஹ்வின் பேரருளாலும், அகிலத்தின் அருட்கொடை நபிகள் நாயகம் (ஸல்) அவர்களின் மேன்மையான வழிமுறையைப் பேணியும்,
-            இன்ஷா அல்லாஹ் ஹிஜ்ரி 1448-ஆம் ஆண்டு முஹர்ரம் மாதம் பிறை 4-ஆம் நாள் (19-07-2026), ஞாயிற்றுக்கிழமை காலை 11:00
-            மணி அளவில் நடைபெறும் நிக்காஹ் (திருமண) நிகழ்விழும் உடன் நடைபெரும் வலிமா விருந்து உபசரிப்பிலும் கலந்து கொண்டு சிறப்பிக்குமாறு உங்களை அன்புடன் அழைக்கிறோம்."
-        </div>
-        <div class="open-text en-only rv3">
-            Dear Friends &amp; Family, with the blessings of Allah and following the noble traditions of the Holy
-            Prophet (SAW), we joyfully invite you to celebrate the Nikah ceremony on the 4th of Muharram 1448 AH, which
-            corresponds to Sunday, 19th July 2026, at 11:00 AM.
-        </div>
-
-        <div class="idv" style="padding: 18px 0; max-width: 360px; margin: 0 auto;">
-            <div class="dl"></div>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2 L13.8 8.2 L20 8.2 L14.9 11.8 L16.7 18 L12 14.4 L7.3 18 L9.1 11.8 L4 8.2 L10.2 8.2 Z" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.7"/>
-            </svg>
-            <div class="dl"></div>
-        </div>
-
-        <!-- Groom -->
-        <div class="cn-blk rv">
-            <div class="nlabel">
-                <span class="ita">மணமகன்</span>
-                <span class="ien">Groom</span>
-            </div>
-            <div class="nben">F. Mohamed Usman</div>
-            <div class="nbta">F. முகமது உஸ்மான்</div>
-            <div class="nqual">B.Sc. (CS) &nbsp;·&nbsp; Software Developer</div>
-        </div>
-
-        <div class="nsep rv2">&amp;</div>
-
-        <!-- Bride -->
-        <div class="cn-blk rv3">
-            <div class="nlabel">
-                <span class="ita">மணமகள்</span>
-                <span class="ien">Bride</span>
-            </div>
-            <div class="nben">A. Saidhuma Banu <span style="font-size: clamp(14px, 3vw, 20px); opacity: 0.7; color: var(--gold-deep);">(Aalima)</span></div>
-            <div class="nbta">A. சயிதுமா பானு (ஆலிமா)</div>
-        </div>
-
-        <!-- Parents -->
-        <div class="pg rv">
-            <div class="pc">
-                <div class="pclabel">
-                    <span class="ita">மணமகன் குடும்பம்</span>
-                    <span class="ien">Groom's Family</span>
-                </div>
-                <div class="pr">
-                    <strong><span class="ita">தந்தை</span><span class="ien">Father</span></strong>
-                    <span class="nm-en">M. Fajilur Rahman</span>
-                    <span class="nm-ta">M. பஜீலுர் ரஹ்மான்</span>
-                </div>
-                <div class="pr" style="margin-top: 14px;">
-                    <strong><span class="ita">தாய்</span><span class="ien">Mother</span></strong>
-                    <span class="nm-en">F. Shamshad Begum</span>
-                    <span class="nm-ta">F. சம்ஷாத் பேகம்</span>
-                </div>
-                <div class="pa">
-                    <span class="ta-only">எண்.40/24 முத்தோப்பு,<br>விழுப்புரம் - 605 602</span>
-                    <span class="en-only">No. 40/24 Muthoppu,<br>Villupuram - 605 602</span>
-                </div>
-            </div>
-
-            <div class="pc">
-                <div class="pclabel">
-                    <span class="ita">மணமகள் குடும்பம்</span>
-                    <span class="ien">Bride's Family</span>
-                </div>
-                <div class="pr">
-                    <strong><span class="ita">தந்தை</span><span class="ien">Father</span></strong>
-                    <span class="nm-en">A. Anwar Deen</span>
-                    <span class="nm-ta">A. அன்வர் தீன்</span>
-                </div>
-                <div class="pr" style="margin-top: 14px;">
-                    <strong><span class="ita">தாய்</span><span class="ien">Mother</span></strong>
-                    <span class="nm-en">A. Sabira Begum</span>
-                    <span class="nm-ta">A. சாபிரா பேகம்</span>
-                </div>
-                <div class="pa">
-                    <span class="ta-only">எண்.97 முத்தோப்பு,<br>விழுப்புரம் - 605 602</span>
-                    <span class="en-only">No. 97 Muthoppu,<br>Villupuram - 605 602</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DIVIDER -->
-    <div class="idv rv">
-        <div class="dl"></div>
-        <svg width="48" height="48" viewBox="0 0 52 52" fill="none">
-            <polygon points="26,4 29.5,17 42,10 35.5,22 50,24 37,28.5 44,42 31,35 28,48 24,35 11,42 18,28.5 2,24 17,22 10.5,10 23,17" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.8"/>
-            <polygon points="26,10 28.5,20 38,16 33,25 44,26 33,30 38,40 28.5,36 26,46 23.5,36 13,40 18,30 8,26 18,25 13,16 23.5,20" fill="none" stroke="#B591E5" stroke-width="0.6" opacity="0.5"/>
-            <circle cx="26" cy="26" r="3" fill="#C8A24A" opacity="0.6"/>
-        </svg>
-        <div class="dl"></div>
+<!-- ====== COUNTDOWN ====== -->
+<section>
+  <div class="sec-card">
+    <div class="frame"></div>
+    <div class="stag rv">
+      <span class="ien">Counting Down To</span>
+      <span class="ita">எண்ணிக்கை தொடங்குகிறது</span>
+    </div>
+    <div class="stitle rv2">19 JULY 2026</div>
+    <div class="stitle-script rv2">our big day</div>
+    <div class="stitle-ta rv2">
+      <span class="ita">ஞாயிற்றுக்கிழமை · 19 ஜூலை 2026</span>
+      <span class="ien">Sunday Morning · 11:00 AM</span>
     </div>
 
-    <!-- ========== EVENTS ========== -->
-    <section id="events" data-testid="events-section">
-        <div class="stag rv">
-            <span class="ita">திருமண நிகழ்வுகள்</span>
-            <span class="ien">Wedding Events</span>
-        </div>
-        <div class="stitle rv">
-            <span class="ita">நிக்காஹ் &amp; வலிமா</span>
-            <span class="ien">Nikah &amp; Walima</span>
-        </div>
-
-        <div class="eg">
-            <div class="ec rv">
-                <div class="ec-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 2 L12 6 M9 6h6 M5 22V12 a7 7 0 0 1 14 0 v10 M5 22h14 M10 22v-6h4v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="12" cy="13" r="2" stroke="currentColor" stroke-width="1.2"/>
-                    </svg>
-                </div>
-                <div class="ec-title">Nikah Ceremony</div>
-                <div class="ec-subtitle">நிக்காஹ் திருமணம்</div>
-                <div class="ec-date-full">Sunday, 19 July 2026</div>
-                <div class="ec-day">
-                    <span class="ita">ஞாயிற்றுக்கிழமை</span>
-                    <span class="ien">Sunday Morning</span>
-                </div>
-                <div class="ec-time">11:00 AM</div>
-                <div class="ec-venue">
-                    Sri Kamala Thirumana Mahal<br>
-                    Virattikuppam Road,<br>Villupuram
-                </div>
-                <div class="ec-tag">
-                    <span class="ita">காலை</span>
-                    <span class="ien">Morning</span>
-                </div>
-            </div>
-
-            <div class="ec rv2">
-                <div class="ec-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 3 L13.5 8.5 L19 9 L14.5 12.5 L16 18 L12 15 L8 18 L9.5 12.5 L5 9 L10.5 8.5 Z" fill="currentColor" opacity="0.85"/>
-                    </svg>
-                </div>
-                <div class="ec-title">Walima Feast</div>
-                <div class="ec-subtitle">வலிமா விருந்து</div>
-                <div class="ec-date-full">Sunday, 19 July 2026</div>
-                <div class="ec-day">
-                    <span class="ita">அதே நாளில்</span>
-                    <span class="ien">Same Day</span>
-                </div>
-                <div class="ec-time">After Nikah</div>
-                <div class="ec-venue">
-                    Sri Kamala Thirumana Mahal<br>
-                    Virattikuppam Road,<br>Villupuram
-                </div>
-                <div class="ec-tag">
-                    <span class="ita">உபசரிப்பு</span>
-                    <span class="ien">Reception</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DIVIDER -->
-    <div class="idv rv">
-        <div class="dl"></div>
-        <svg width="48" height="48" viewBox="0 0 52 52" fill="none">
-            <circle cx="26" cy="26" r="22" fill="none" stroke="#B591E5" stroke-width="0.6" opacity="0.5"/>
-            <polygon points="26,4 29.5,17 42,10 35.5,22 50,24 37,28.5 44,42 31,35 28,48 24,35 11,42 18,28.5 2,24 17,22 10.5,10 23,17" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.85"/>
-            <circle cx="26" cy="26" r="3" fill="#C8A24A" opacity="0.7"/>
-        </svg>
-        <div class="dl"></div>
+    <div class="cg">
+      <div class="ci rv"><div class="cn" id="cd">--</div><div class="cl"><span class="ien">Days</span><span class="ita">நாள்</span></div></div>
+      <div class="ci rv2"><div class="cn" id="ch">--</div><div class="cl"><span class="ien">Hrs</span><span class="ita">மணி</span></div></div>
+      <div class="ci rv3"><div class="cn" id="cm">--</div><div class="cl"><span class="ien">Min</span><span class="ita">நிமி</span></div></div>
+      <div class="ci rv3"><div class="cn" id="cs2">--</div><div class="cl"><span class="ien">Sec</span><span class="ita">நொடி</span></div></div>
     </div>
+  </div>
+</section>
 
-    <!-- ========== RSVP ========== -->
-    <section id="rsvp" data-testid="rsvp-section">
-        <div class="stag rv">
-            <span class="ita">தொடர்பு கொள்ள</span>
-            <span class="ien">RSVP &amp; Contact</span>
-        </div>
-        <div class="stitle rv2">
-            <span class="ita">வருகை தரவும்</span>
-            <span class="ien">Join the Celebration</span>
-        </div>
-
-        <div class="ri">
-            <p class="rt ta-only rv3">தாங்கள் கண்டிப்பாக வருகை தர வேண்டுகிறேன். தொடர்பு கொள்ள WhatsApp மூலம் தெரியப்படுத்தவும்.</p>
-            <p class="rt en-only rv3">Your presence would be our greatest honor. Please confirm your attendance via WhatsApp. Looking forward to celebrating with you!</p>
-
-            <a class="wab rv" data-testid="whatsapp-rsvp-btn"
-                href="https://wa.me/919025181421?text=Assalamu%20Alaikum%2C%20I%20will%20attend%20the%20Nikah%20of%20Mohamed%20Usman%20%26%20Saidhuma%20Banu%20on%2019.07.2026"
-                target="_blank" rel="noopener">
-                <svg class="wai" viewBox="0 0 24 24" fill="white">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.116 1.516 5.849L.057 23.09a.75.75 0 00.852.852l5.241-1.459A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.877 0-3.641-.489-5.17-1.346l-.371-.213-3.11.866.866-3.11-.213-.371A10 10 0 112 12c0 5.514 4.486 10 10 10z" />
-                </svg>
-                <span class="ita">WhatsApp மூலம் உறுதிப்படுத்த</span>
-                <span class="ien">Confirm via WhatsApp</span>
-            </a>
-
-            <div class="csig rv2">
-                <span class="ita">உங்கள் நண்பன்</span>
-                <span class="ien">Your Friend</span>
-            </div>
-            <div class="cnum rv3">Usman &nbsp;·&nbsp; +91 90251 81421</div>
-        </div>
-    </section>
-
-    <!-- DIVIDER -->
-    <div class="idv rv">
-        <div class="dl"></div>
-        <svg width="48" height="48" viewBox="0 0 52 52" fill="none">
-            <polygon points="26,4 29.5,17 42,10 35.5,22 50,24 37,28.5 44,42 31,35 28,48 24,35 11,42 18,28.5 2,24 17,22 10.5,10 23,17" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.8"/>
-            <circle cx="26" cy="26" r="4" fill="none" stroke="#B591E5" stroke-width="0.8" opacity="0.6"/>
-        </svg>
-        <div class="dl"></div>
+<!-- ====== RSVP ====== -->
+<section>
+  <div class="sec-card" style="text-align:center">
+    <div class="frame"></div>
+    <div class="stag rv">
+      <span class="ien">RSVP &amp; Contact</span>
+      <span class="ita">தொடர்பு கொள்ள</span>
     </div>
+    <div class="stitle rv2">JOIN US</div>
+    <div class="stitle-script rv2">with love</div>
 
-    <!-- ========== COUNTDOWN ========== -->
-    <section id="countdown" data-testid="countdown-section">
-        <div class="stag rv">
-            <span class="ita">எண்ணிக்கை தொடங்குகிறது</span>
-            <span class="ien">Counting Down To</span>
-        </div>
-        <div class="stitle rv2">Sunday, 19 July 2026</div>
-        <div class="stitle-ta rv2">
-            <span class="ita">19 ஜூலை 2026, ஞாயிற்றுக்கிழமை</span>
-        </div>
+    <p class="open-text en-only rv3" style="margin-bottom:24px">
+      Your presence would be our greatest honor. Please confirm your attendance via WhatsApp. We look forward to celebrating this blessed day with you.
+    </p>
+    <p class="open-text ta-only rv3" style="margin-bottom:24px">
+      தாங்கள் கண்டிப்பாக வருகை தர வேண்டுகிறேன். தொடர்பு கொள்ள WhatsApp மூலம் தெரியப்படுத்தவும்.
+    </p>
 
-        <div class="cg" id="cg">
-            <div class="ci rv">
-                <div class="cn" id="cd" data-testid="cd-days">--</div>
-                <div class="cl"><span class="ita">நாட்கள்</span><span class="ien">Days</span></div>
-            </div>
-            <div class="ci rv2">
-                <div class="cn" id="ch" data-testid="cd-hours">--</div>
-                <div class="cl"><span class="ita">மணி</span><span class="ien">Hours</span></div>
-            </div>
-            <div class="ci rv3">
-                <div class="cn" id="cm" data-testid="cd-mins">--</div>
-                <div class="cl"><span class="ita">நிமிடம்</span><span class="ien">Mins</span></div>
-            </div>
-            <div class="ci rv3">
-                <div class="cn" id="cs2" data-testid="cd-secs">--</div>
-                <div class="cl"><span class="ita">நொடி</span><span class="ien">Secs</span></div>
-            </div>
-        </div>
-    </section>
+    <a class="wab rv" target="_blank" rel="noopener"
+       href="https://wa.me/919025181421?text=Assalamu%20Alaikum%2C%20I%20will%20attend%20the%20Nikah%20of%20Mohamed%20Usman%20%26%20Saidhuma%20Banu%20on%2019.07.2026">
+      <svg class="wai" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.116 1.516 5.849L.057 23.09a.75.75 0 00.852.852l5.241-1.459A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.877 0-3.641-.489-5.17-1.346l-.371-.213-3.11.866.866-3.11-.213-.371A10 10 0 112 12c0 5.514 4.486 10 10 10z"/></svg>
+      <span class="ien">Confirm via WhatsApp</span>
+      <span class="ita">WhatsApp மூலம் உறுதிப்படுத்த</span>
+    </a>
 
-    <!-- ========== FOOTER ========== -->
-    <footer data-testid="footer">
-        <div class="fc rv">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <path d="M20 14 a8 8 0 1 1 -6 -10 a6 6 0 1 0 6 10 Z" fill="currentColor" opacity="0.85"/>
-            </svg>
-        </div>
-        <div class="fn rv2">F. Mohamed Usman &nbsp;&amp;&nbsp; A. Saidhuma Banu</div>
-        <div class="fn-ta rv2">F. முகமது உஸ்மான் &nbsp;&amp;&nbsp; A. சயிதுமா பானு</div>
-        <div class="fd rv3">Sunday · 19 July 2026 · Villupuram</div>
+    <div class="contact-sig rv2">
+      <span class="ien">Your friend</span>
+      <span class="ita">உங்கள் நண்பன்</span>
+    </div>
+    <div class="contact-num rv3">Usman · +91 90251 81421</div>
+  </div>
+</section>
 
-        <div class="idv" style="max-width: 280px; margin: 0 auto 18px; padding: 0;">
-            <div class="dl"></div>
-            <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-                <polygon points="14,2 16,10 24,7 19,14 26,17 18,18 21,26 14,21 7,26 10,18 2,17 9,14 4,7 12,10" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.7"/>
-                <circle cx="14" cy="14" r="2" fill="#C8A24A" opacity="0.6"/>
-            </svg>
-            <div class="dl"></div>
-        </div>
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="footer-card">
+    <div class="frame"></div>
+    <div class="f-ornament">
+      <svg width="22" height="22" viewBox="0 0 24 24"><path d="M20 14 a8 8 0 1 1 -6 -10 a6 6 0 1 0 6 10 Z" fill="currentColor" opacity=".85"/></svg>
+    </div>
+    <div class="f-couple">F. Mohamed Usman<br><span style="font-family:'Tangerine',cursive;font-size:1.4em;color:var(--gold)">and</span><br>A. Saidhuma Banu</div>
+    <div class="f-couple-ta">F. முகமது உஸ்மான் &amp; A. சயிதுமா பானு</div>
+    <div class="f-date">Sunday · 19 July 2026</div>
+    <div class="f-dua">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</div>
+    <div class="f-dua-tr en-only">May Allah bless you both and unite you in goodness · Ameen</div>
+    <div class="f-dua-tr ta-only">அல்லாஹ் இருவருக்கும் பரக்கத் அளிப்பானாக · ஆமீன்</div>
+    <div class="f-loc">Villupuram · Tamil Nadu · 2026</div>
+  </div>
+</footer>
 
-        <div class="fdua rv">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</div>
-        <div class="fdt en-only rv2">May Allah bless you both and unite you in goodness · Ameen</div>
-        <div class="fdt ta-only rv2">அல்லாஹ் இருவருக்கும் பரக்கத் அளிப்பானாக · ஆமீன்</div>
+<script>
+function setL(l){
+  document.body.className = l==='en'?'le':'lt2';
+  document.documentElement.lang = l==='en'?'en':'ta';
+  document.querySelectorAll('.lb').forEach(b=>b.classList.remove('active'));
+  document.querySelector(`.lb[onclick="setL('${l}')"]`).classList.add('active');
+}
 
-        <div class="floc rv3">Villupuram · Tamil Nadu · 2026</div>
-    </footer>
+// Petals
+(function(){
+  const c=document.getElementById('petals');
+  const count=window.innerWidth<600?14:22;
+  for(let i=0;i<count;i++){
+    const p=document.createElement('div');
+    p.className='pt';
+    const sz=8+Math.random()*10;
+    p.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${-10-Math.random()*30}%;--d:${10+Math.random()*14}s;--x:${(Math.random()-0.5)*180}px;animation-delay:${Math.random()*14}s;`;
+    c.appendChild(p);
+  }
+})();
 
-    <script>
-        // ── Language toggle (default: English)
-        function setL(l) {
-            document.body.className = l === 'en' ? 'le' : 'lt2';
-            document.documentElement.lang = l === 'en' ? 'en' : 'ta';
-            document.querySelectorAll('.lb').forEach(b => b.classList.remove('active'));
-            const btn = document.querySelector(`.lb[onclick="setL('${l}')"]`);
-            if (btn) btn.classList.add('active');
-        }
+// Progress bar
+window.addEventListener('scroll',()=>{
+  const t=document.documentElement;
+  document.getElementById('pb').style.width=((t.scrollTop/(t.scrollHeight-t.clientHeight))*100)+'%';
+},{passive:true});
 
-        // ── Floating petals
-        (function () {
-            const c = document.getElementById('petals');
-            const count = window.innerWidth < 600 ? 14 : 24;
-            for (let i = 0; i < count; i++) {
-                const p = document.createElement('div');
-                p.className = 'pt';
-                const sz = 4 + Math.random() * 8;
-                p.style.cssText = `
-                    width:${sz}px;height:${sz}px;
-                    left:${Math.random() * 100}%;
-                    top:${-10 - Math.random() * 30}%;
-                    --d:${10 + Math.random() * 14}s;
-                    --x:${(Math.random() - 0.5) * 200}px;
-                    animation-delay:${Math.random() * 14}s;
-                    background: radial-gradient(circle at 30% 30%, #fff, ${Math.random() > 0.5 ? 'rgba(200,162,74,0.7)' : 'rgba(181,145,229,0.7)'});
-                `;
-                c.appendChild(p);
-            }
-        })();
+// Reveal
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:.12});
+document.querySelectorAll('.rv,.rv2,.rv3').forEach(el=>ro.observe(el));
 
-        // ── Scroll progress
-        window.addEventListener('scroll', () => {
-            const t = document.documentElement;
-            const pct = (t.scrollTop / (t.scrollHeight - t.clientHeight)) * 100;
-            document.getElementById('pb').style.width = pct + '%';
-        }, { passive: true });
-
-        // ── Reveal on scroll
-        const ro = new IntersectionObserver(entries => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
-        }, { threshold: 0.12 });
-        document.querySelectorAll('.rv,.rv2,.rv3').forEach(el => ro.observe(el));
-
-        // ── Countdown to 19 July 2026, 11:00 AM IST
-        function tick() {
-            const target = new Date('2026-07-19T11:00:00+05:30').getTime();
-            const diff = target - Date.now();
-            if (diff <= 0) {
-                ['cd', 'ch', 'cm', 'cs2'].forEach(id => document.getElementById(id).textContent = '00');
-                return;
-            }
-            const d = Math.floor(diff / 86400000);
-            const h = Math.floor((diff % 86400000) / 3600000);
-            const m = Math.floor((diff % 3600000) / 60000);
-            const s = Math.floor((diff % 60000) / 1000);
-            document.getElementById('cd').textContent = String(d).padStart(2, '0');
-            document.getElementById('ch').textContent = String(h).padStart(2, '0');
-            document.getElementById('cm').textContent = String(m).padStart(2, '0');
-            document.getElementById('cs2').textContent = String(s).padStart(2, '0');
-        }
-        tick();
-        setInterval(tick, 1000);
-    </script>
+// Countdown
+function tick(){
+  const t=new Date('2026-07-19T11:00:00+05:30').getTime();
+  const d=t-Date.now();
+  if(d<=0){['cd','ch','cm','cs2'].forEach(i=>document.getElementById(i).textContent='00');return;}
+  const D=Math.floor(d/86400000),H=Math.floor((d%86400000)/3600000),
+        M=Math.floor((d%3600000)/60000),S=Math.floor((d%60000)/1000);
+  cd.textContent=String(D).padStart(2,'0');
+  ch.textContent=String(H).padStart(2,'0');
+  cm.textContent=String(M).padStart(2,'0');
+  cs2.textContent=String(S).padStart(2,'0');
+}
+tick();setInterval(tick,1000);
+</script>
 </body>
-
 </html>
