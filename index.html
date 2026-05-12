@@ -1,1199 +1,928 @@
 <!DOCTYPE html>
-<html lang="ta">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikah Invitation · Usman & Saidhuma · 19-07-2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#F3EBFF">
+    <title>Nikah Invitation · Mohamed Usman & Saidhuma Banu · 19 July 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Amiri:ital,wght@0,400;0,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500&family=Noto+Serif+Tamil:wght@300;400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cinzel:wght@400;500;600&family=Amiri:ital,wght@0,400;0,700&family=Jost:wght@300;400;500&family=Noto+Serif+Tamil:wght@300;400;500;600&family=Great+Vibes&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --td: #0A2A2A;
-            --tm: #0D3030;
-            --em: #1A6B4A;
-            --go: #C9942A;
-            --gl: #E8C97A;
-            --gp: #F5E9C8;
-            --iv: #FDF6E3;
-            --id: #F0E5CC;
+            /* Light lavender + cream + gold palette */
+            --bg: #FBF7FF;
+            --bg-2: #F3EBFF;
+            --bg-3: #E9DCFB;
+            --cream: #FFF8EC;
+            --ivory: #FFFCF5;
+            --lav-50: #F6EEFF;
+            --lav-100: #E7D6FA;
+            --lav-200: #CFB3F2;
+            --lav-300: #B591E5;
+            --lav-400: #9A75D1;
+            --lav-500: #7B57B8;
+            --gold: #C8A24A;
+            --gold-soft: #E0C684;
+            --gold-deep: #A57F2F;
+            --ink: #3A2A55;
+            --ink-2: #5B477A;
+            --ink-3: #7E6B9A;
+            --line: rgba(155, 117, 209, 0.22);
+            --shadow: 0 18px 50px -22px rgba(123, 87, 184, 0.32);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
         body {
-            background: var(--td);
-            color: var(--iv);
-            font-family: 'Jost', 'Noto Serif Tamil', sans-serif;
+            background:
+                radial-gradient(1200px 600px at 50% -150px, #EADCFB 0%, transparent 60%),
+                radial-gradient(900px 500px at 100% 30%, #FFF0D6 0%, transparent 55%),
+                linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+            color: var(--ink);
+            font-family: 'Jost', 'Noto Serif Tamil', system-ui, sans-serif;
             overflow-x: hidden;
+            line-height: 1.5;
+            min-height: 100vh;
         }
 
-        /* PROGRESS */
+        /* PROGRESS BAR */
         #pb {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            width: 0%;
-            background: linear-gradient(90deg, var(--go), var(--gl));
-            z-index: 1000;
-            transition: width 0.1s;
+            position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+            background: linear-gradient(90deg, var(--lav-300), var(--gold));
+            z-index: 1000; transition: width 0.1s;
+            box-shadow: 0 0 12px rgba(200, 162, 74, 0.4);
         }
 
         /* LANG TOGGLE */
         .lt {
-            position: fixed;
-            top: 14px;
-            right: 14px;
-            z-index: 999;
-            display: flex;
-            gap: 4px;
-            background: rgba(10, 42, 42, 0.92);
-            border: 1px solid var(--go);
-            border-radius: 20px;
-            padding: 4px;
-            backdrop-filter: blur(8px);
+            position: fixed; top: 14px; right: 14px; z-index: 999;
+            display: flex; gap: 3px;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid var(--lav-100);
+            border-radius: 999px; padding: 4px;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 8px 24px -10px rgba(123, 87, 184, 0.25);
         }
-
         .lb {
-            padding: 5px 13px;
-            border: none;
-            border-radius: 16px;
-            font-family: 'Noto Serif Tamil', serif;
-            font-size: 12px;
-            cursor: pointer;
-            transition: all 0.25s;
-            color: var(--gl);
-            background: transparent;
+            padding: 6px 14px; border: none; border-radius: 999px;
+            font-family: 'Cinzel', 'Noto Serif Tamil', serif;
+            font-size: 11px; letter-spacing: 1px; cursor: pointer;
+            transition: all 0.3s; color: var(--ink-2); background: transparent;
         }
-
         .lb.active {
-            background: var(--go);
-            color: var(--td);
-            font-weight: 600;
+            background: linear-gradient(135deg, var(--lav-300), var(--lav-400));
+            color: white; box-shadow: 0 4px 14px -4px rgba(155, 117, 209, 0.6);
         }
 
-        body.le .ta {
-            display: none !important;
-        }
+        /* Language switching: keep tamil names as subtitles always visible (.ta-sub) */
+        body.le .ta-only { display: none !important; }
+        body.le .en-only { display: block; }
+        body.lt2 .en-only { display: none !important; }
+        body.lt2 .ta-only { display: block; }
+        .ita, .ien { display: inline; }
+        body.le .ita { display: none !important; }
+        body.lt2 .ien { display: none !important; }
 
-        body.le .oe {
-            display: block;
-        }
-
-        body.lt2 .en {
-            display: none !important;
-        }
-
-        body.lt2 .ot {
-            display: block;
-        }
-
-        .ita,
-        .ien {
-            display: inline;
-        }
-
-        body.le .ita {
-            display: none !important;
-        }
-
-        body.lt2 .ien {
-            display: none !important;
-        }
-
-        /* HERO */
+        /* ============== HERO ============== */
         #hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            position: relative; min-height: 100svh;
+            display: flex; flex-direction: column; align-items: center;
             overflow: hidden;
-            background: linear-gradient(180deg, #020A0A 0%, #061818 15%, #0A2A2A 40%, #0F3838 60%, #174A32 80%, #0A2018 100%);
+            background:
+                radial-gradient(60% 80% at 50% 0%, #FFF8E3 0%, transparent 60%),
+                radial-gradient(80% 60% at 50% 100%, #E0CCF8 0%, transparent 70%),
+                linear-gradient(180deg, #FBF7FF 0%, #F3E8FF 55%, #EADBFB 100%);
         }
 
-        /* Stars */
-        .stars {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
+        /* floating petals */
+        .petals { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+        .pt {
+            position: absolute; width: 10px; height: 10px; border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #fff, rgba(200,162,74,0.6));
+            opacity: 0.6; animation: float var(--d, 14s) linear infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(-10vh) translateX(0) rotate(0); opacity: 0; }
+            10% { opacity: 0.7; }
+            100% { transform: translateY(110vh) translateX(var(--x, 40px)) rotate(360deg); opacity: 0; }
         }
 
-        .s {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            animation: tw var(--d, 3s) infinite alternate;
-            opacity: var(--o, 0.8);
+        /* ornaments */
+        .orn {
+            position: absolute; opacity: 0.35;
+            animation: drift 8s ease-in-out infinite alternate;
+        }
+        .orn.o1 { top: 8%; left: 5%; }
+        .orn.o2 { top: 12%; right: 6%; animation-delay: -2s; }
+        .orn.o3 { top: 38%; left: 10%; animation-delay: -4s; }
+        .orn.o4 { top: 42%; right: 8%; animation-delay: -1s; }
+        @keyframes drift {
+            from { transform: translateY(-6px) rotate(-4deg); }
+            to { transform: translateY(8px) rotate(6deg); }
         }
 
-        @keyframes tw {
-            from {
-                opacity: var(--o, 0.8);
-                transform: scale(1);
-            }
-
-            to {
-                opacity: calc(var(--o, 0.8)*0.2);
-                transform: scale(0.6);
-            }
-        }
-
-        /* Hero content */
         .hc {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            padding: 52px 24px 0;
-            width: 100%;
+            position: relative; z-index: 10;
+            text-align: center; padding: 60px 22px 30px;
+            width: 100%; max-width: 760px; margin: 0 auto;
+        }
+
+        .crest {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 76px; height: 76px; border-radius: 50%;
+            background: radial-gradient(circle, #fff 30%, #FFF3D5 100%);
+            border: 1px solid var(--gold-soft);
+            box-shadow: 0 12px 36px -14px rgba(200, 162, 74, 0.55), inset 0 0 0 6px rgba(255,255,255,0.6);
+            margin-bottom: 22px;
         }
 
         .bism {
             font-family: 'Amiri', serif;
-            font-size: clamp(22px, 5vw, 38px);
-            color: var(--gl);
-            direction: rtl;
-            letter-spacing: 2px;
-            animation: glow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 20px rgba(201, 148, 42, 0.3);
-            }
-
-            to {
-                text-shadow: 0 0 50px rgba(201, 148, 42, 0.7), 0 0 100px rgba(201, 148, 42, 0.2);
-            }
+            font-size: clamp(20px, 4.6vw, 32px);
+            color: var(--lav-500); direction: rtl;
+            letter-spacing: 1px; line-height: 1.8;
+            text-shadow: 0 2px 10px rgba(155, 117, 209, 0.15);
         }
 
         .hs {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: clamp(9px, 2vw, 12px);
-            letter-spacing: 5px;
-            color: rgba(232, 201, 122, 0.5);
+            font-family: 'Cinzel', serif;
+            font-size: clamp(10px, 2vw, 12px);
+            letter-spacing: 6px;
+            color: var(--gold-deep);
             text-transform: uppercase;
-            margin-top: 10px;
+            margin-top: 14px;
+            display: flex; align-items: center; justify-content: center; gap: 12px;
         }
-
-        .hc-couple {
-            margin-top: 20px;
+        .hs::before, .hs::after {
+            content: ''; height: 1px; width: 32px;
+            background: linear-gradient(90deg, transparent, var(--gold-soft));
         }
+        .hs::after { background: linear-gradient(90deg, var(--gold-soft), transparent); }
 
-        .hg,
-        .hb {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: clamp(20px, 5.5vw, 44px);
-            color: var(--gl);
-            line-height: 1.2;
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-        }
+        .couple-block { margin-top: 26px; }
 
-        .hamp {
+        .name-main {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(30px, 8vw, 60px);
-            color: var(--go);
-            font-style: italic;
-            display: block;
-            line-height: 1;
-            margin: 4px 0;
+            font-weight: 500;
+            font-size: clamp(28px, 7vw, 52px);
+            color: var(--ink);
+            line-height: 1.1;
+            letter-spacing: 1px;
+        }
+        .name-ta {
+            font-family: 'Noto Serif Tamil', serif;
+            font-size: clamp(15px, 3.6vw, 22px);
+            color: var(--lav-500);
+            margin-top: 6px;
+            font-weight: 400;
+            opacity: 0.92;
         }
 
-        .hnt {
-            font-family: 'Noto Serif Tamil', serif;
-            font-size: clamp(13px, 3vw, 18px);
-            color: rgba(232, 201, 122, 0.55);
-            margin-top: 6px;
+        .amp {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(54px, 14vw, 96px);
+            color: var(--gold);
+            line-height: 0.8;
+            margin: 14px 0 10px;
+            display: block;
+            text-shadow: 0 4px 20px rgba(200, 162, 74, 0.3);
         }
 
         .htag {
-            display: inline-block;
-            margin-top: 20px;
-            border: 1px solid rgba(201, 148, 42, 0.35);
-            padding: 8px 28px;
-            font-family: 'Cinzel Decorative', serif;
-            font-size: clamp(9px, 2vw, 11px);
+            display: inline-block; margin-top: 28px;
+            border: 1px solid var(--gold-soft);
+            background: rgba(255, 255, 255, 0.55);
+            padding: 9px 26px;
+            font-family: 'Cinzel', serif;
+            font-size: clamp(10px, 2.2vw, 12px);
             letter-spacing: 4px;
-            color: var(--gl);
-            border-radius: 30px;
-            opacity: 0.9;
+            color: var(--gold-deep);
+            border-radius: 999px;
+            backdrop-filter: blur(6px);
         }
 
-        .hdate {
+        /* Beautiful date plate — no ambiguous separators */
+        .date-plate {
+            margin: 26px auto 0;
+            display: inline-flex; align-items: stretch;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid var(--lav-100);
+            border-radius: 14px;
+            padding: 4px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(8px);
+        }
+        .dp-cell {
+            padding: 10px 14px;
+            display: flex; flex-direction: column; align-items: center;
+            min-width: 56px;
+        }
+        .dp-num {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(13px, 2.5vw, 17px);
-            color: rgba(232, 201, 122, 0.45);
-            letter-spacing: 5px;
-            margin-top: 12px;
+            font-weight: 600;
+            font-size: clamp(22px, 5.6vw, 30px);
+            color: var(--ink);
+            line-height: 1;
         }
-
-        /* Mosque SVG */
-        .mosque-wrap {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            pointer-events: none;
-        }
-
-        .mosque-wrap svg {
-            width: 100%;
-            max-width: 960px;
-            height: auto;
-        }
-
-        /* Scroll hint */
-        .sh {
-            position: absolute;
-            bottom: 16px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 20;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            animation: bnc 2s ease-in-out infinite;
-        }
-
-        .sh span {
+        .dp-lbl {
+            font-family: 'Cinzel', serif;
             font-size: 9px;
-            letter-spacing: 3px;
-            color: rgba(201, 148, 42, 0.4);
+            letter-spacing: 2px;
+            color: var(--gold-deep);
+            margin-top: 6px;
             text-transform: uppercase;
         }
-
-        .sha {
-            width: 18px;
-            height: 18px;
-            border-right: 1px solid rgba(201, 148, 42, 0.4);
-            border-bottom: 1px solid rgba(201, 148, 42, 0.4);
-            transform: rotate(45deg);
+        .dp-divider {
+            width: 1px; align-self: stretch;
+            background: linear-gradient(180deg, transparent, var(--lav-100), transparent);
+            margin: 6px 0;
         }
 
-        @keyframes bnc {
-
-            0%,
-            100% {
-                transform: translateX(-50%) translateY(0);
-            }
-
-            50% {
-                transform: translateX(-50%) translateY(7px);
-            }
+        .venue-pill {
+            margin-top: 16px;
+            display: inline-flex; align-items: center; gap: 8px;
+            font-family: 'Cinzel', serif;
+            font-size: clamp(10px, 2vw, 11px);
+            letter-spacing: 4px;
+            color: var(--lav-500);
         }
+        .venue-pill svg { opacity: 0.7; }
 
-        /* Lanterns */
-        .lantern {
-            position: absolute;
-            z-index: 5;
+        /* Mosque (lightened) */
+        .mosque-wrap {
+            position: relative; width: 100%;
+            margin-top: 26px;
+            display: flex; justify-content: center; align-items: flex-end;
             pointer-events: none;
         }
+        .mosque-wrap svg { width: 100%; max-width: 880px; height: auto; }
 
-        .l1 {
-            left: 6%;
-            top: 12%;
+        .sh {
+            display: flex; flex-direction: column; align-items: center;
+            gap: 6px; margin: 16px 0 24px;
+            animation: bnc 2.2s ease-in-out infinite;
+        }
+        .sh span {
+            font-family: 'Cinzel', serif;
+            font-size: 9px; letter-spacing: 4px;
+            color: var(--lav-400); text-transform: uppercase;
+        }
+        .sha {
+            width: 14px; height: 14px;
+            border-right: 1.5px solid var(--lav-300);
+            border-bottom: 1.5px solid var(--lav-300);
+            transform: rotate(45deg);
+        }
+        @keyframes bnc {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(7px); }
         }
 
-        .l2 {
-            right: 8%;
-            top: 18%;
+        /* REVEAL */
+        .rv, .rv2, .rv3 {
+            opacity: 0; transform: translateY(28px);
+            transition: opacity .9s ease, transform .9s ease;
         }
-
-        .l3 {
-            left: 18%;
-            top: 52%;
-        }
-
-        .l4 {
-            right: 15%;
-            top: 48%;
-        }
-
-        .lantern svg {
-            animation: sway 4s ease-in-out infinite alternate;
-        }
-
-        .l2 svg {
-            animation-delay: -2s;
-        }
-
-        .l3 svg {
-            animation-delay: -1s;
-        }
-
-        .l4 svg {
-            animation-delay: -3s;
-        }
-
-        @keyframes sway {
-            from {
-                transform: rotate(-7deg);
-            }
-
-            to {
-                transform: rotate(7deg);
-            }
-        }
-
-        .lg {
-            animation: lg 2.5s ease-in-out infinite alternate;
-        }
-
-        @keyframes lg {
-            from {
-                opacity: 0.5;
-                filter: drop-shadow(0 0 4px rgba(201, 148, 42, 0.3));
-            }
-
-            to {
-                opacity: 1;
-                filter: drop-shadow(0 0 14px rgba(201, 148, 42, 0.9));
-            }
-        }
-
-        /* REVEAL ANIMATIONS */
-        .rv {
-            opacity: 0;
-            transform: translateY(28px);
-            transition: opacity 0.85s ease, transform 0.85s ease;
-        }
-
-        .rv.vis {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .rv2 {
-            opacity: 0;
-            transform: translateY(28px);
-            transition: opacity 0.85s ease 0.15s, transform 0.85s ease 0.15s;
-        }
-
-        .rv2.vis {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .rv3 {
-            opacity: 0;
-            transform: translateY(28px);
-            transition: opacity 0.85s ease 0.3s, transform 0.85s ease 0.3s;
-        }
-
-        .rv3.vis {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .rv2 { transition-delay: .15s; }
+        .rv3 { transition-delay: .3s; }
+        .rv.vis, .rv2.vis, .rv3.vis { opacity: 1; transform: translateY(0); }
 
         /* DIVIDER */
         .idv {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            justify-content: center;
-            padding: 28px 0;
+            display: flex; align-items: center; gap: 16px;
+            justify-content: center; padding: 28px 24px;
         }
-
         .dl {
-            flex: 1;
-            max-width: 180px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--go), transparent);
+            flex: 1; max-width: 160px; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-soft), transparent);
         }
 
-        /* SECTIONS */
-        section {
-            padding: 80px 24px;
-            position: relative;
-        }
+        section { padding: 70px 22px; position: relative; }
 
         .stag {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 10px;
-            letter-spacing: 5px;
-            color: var(--go);
-            text-transform: uppercase;
-            margin-bottom: 24px;
-        }
-
-        .stitle {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: clamp(20px, 5vw, 32px);
-            color: var(--gl);
-            margin-bottom: 8px;
-        }
-
-        /* BLESSING SECTION */
-        #blessing {
-            background: linear-gradient(180deg, #071818, #0A2A2A);
+            font-family: 'Cinzel', serif; font-size: 10px;
+            letter-spacing: 5px; color: var(--gold-deep);
+            text-transform: uppercase; margin-bottom: 12px;
             text-align: center;
+        }
+        .stitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: clamp(26px, 6vw, 40px);
+            color: var(--ink); margin-bottom: 8px;
+            text-align: center; line-height: 1.2;
+        }
+        .stitle-ta {
+            font-family: 'Noto Serif Tamil', serif;
+            font-size: clamp(14px, 3vw, 18px);
+            color: var(--lav-500);
+            text-align: center; margin-bottom: 18px;
+            opacity: 0.85;
+        }
+
+        /* BLESSING */
+        #blessing {
+            background:
+                radial-gradient(60% 60% at 50% 0%, #FFF6E1 0%, transparent 60%),
+                linear-gradient(180deg, #FBF7FF 0%, #F6EEFF 100%);
         }
 
         .sal-ar {
             font-family: 'Amiri', serif;
-            font-size: clamp(16px, 4vw, 26px);
-            direction: rtl;
-            color: var(--gl);
-            margin-bottom: 6px;
-            opacity: 0.9;
+            font-size: clamp(18px, 4.2vw, 28px);
+            direction: rtl; color: var(--lav-500);
+            margin-bottom: 8px; text-align: center;
+            line-height: 1.6;
         }
-
-        .sal-en {
-            font-size: clamp(11px, 2.5vw, 14px);
-            color: rgba(232, 201, 122, 0.55);
-            font-style: italic;
-            letter-spacing: 1px;
-            margin-bottom: 6px;
+        .sal-en, .sal-ta {
+            font-size: clamp(11px, 2.5vw, 13px);
+            color: var(--ink-3); font-style: italic;
+            letter-spacing: 1.5px; margin-bottom: 6px; text-align: center;
         }
-
-        .sal-ta {
-            font-family: 'Noto Serif Tamil', serif;
-            font-size: clamp(11px, 2.5vw, 14px);
-            color: rgba(232, 201, 122, 0.55);
-            font-style: italic;
-            margin-bottom: 32px;
-        }
+        .sal-ta { font-family: 'Noto Serif Tamil', serif; margin-bottom: 28px; }
 
         .open-text {
-            max-width: 640px;
-            margin: 0 auto;
+            max-width: 640px; margin: 0 auto;
             font-size: clamp(13px, 2.8vw, 15px);
-            line-height: 2.1;
-            color: rgba(253, 246, 227, 0.8);
+            line-height: 2; color: var(--ink-2);
+            text-align: center;
         }
+        .open-text.ta-only { font-family: 'Noto Serif Tamil', serif; line-height: 2.2; }
 
-        .open-text.ta {
-            font-family: 'Noto Serif Tamil', serif;
-        }
-
-        /* Big couple names */
-        .cn-blk {
-            margin: 44px 0 20px;
-        }
-
+        /* Couple names block */
+        .cn-blk { margin: 40px auto 18px; text-align: center; max-width: 600px; }
         .nlabel {
-            font-size: 10px;
-            letter-spacing: 4px;
-            color: rgba(201, 148, 42, 0.55);
-            text-transform: uppercase;
-            margin-bottom: 6px;
-            font-family: 'Cinzel Decorative', serif;
+            font-family: 'Cinzel', serif;
+            font-size: 10px; letter-spacing: 5px;
+            color: var(--gold-deep); text-transform: uppercase;
+            margin-bottom: 12px;
+            display: inline-flex; align-items: center; gap: 12px;
         }
-
+        .nlabel::before, .nlabel::after {
+            content: ''; width: 24px; height: 1px;
+            background: var(--gold-soft);
+        }
         .nben {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: clamp(20px, 5vw, 36px);
-            color: var(--gl);
-            line-height: 1.2;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: clamp(24px, 5.5vw, 38px);
+            color: var(--ink); line-height: 1.2;
         }
-
         .nbta {
             font-family: 'Noto Serif Tamil', serif;
-            font-size: clamp(15px, 3.5vw, 22px);
-            color: rgba(232, 201, 122, 0.6);
-            margin-top: 3px;
+            font-size: clamp(16px, 3.6vw, 22px);
+            color: var(--lav-500); margin-top: 6px;
         }
-
         .nqual {
-            font-size: 12px;
-            color: rgba(201, 148, 42, 0.45);
-            letter-spacing: 1.5px;
-            margin-top: 5px;
-        }
-
-        .nsep {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(42px, 10vw, 72px);
-            color: var(--go);
+            font-size: 12px; color: var(--ink-3);
+            letter-spacing: 1.5px; margin-top: 8px;
             font-style: italic;
-            line-height: 1;
-            margin: 8px 0;
+        }
+        .nsep {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(58px, 14vw, 96px);
+            color: var(--gold); line-height: 0.8;
+            text-align: center; margin: 6px 0;
         }
 
-        /* Parents grid */
+        /* Parents */
         .pg {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            max-width: 660px;
-            margin: 36px auto 0;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 18px; max-width: 680px;
+            margin: 40px auto 0;
         }
-
-        @media(max-width:500px) {
-            .pg {
-                grid-template-columns: 1fr;
-            }
+        @media (max-width: 560px) {
+            .pg { grid-template-columns: 1fr; }
         }
-
         .pc {
-            background: rgba(201, 148, 42, 0.05);
-            border: 1px solid rgba(201, 148, 42, 0.18);
-            border-radius: 4px;
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.65);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 22px 20px;
             text-align: left;
+            box-shadow: 0 8px 24px -14px rgba(123, 87, 184, 0.25);
+            backdrop-filter: blur(6px);
+            position: relative;
+            overflow: hidden;
         }
-
+        .pc::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--lav-200), var(--gold-soft), var(--lav-200));
+        }
         .pclabel {
-            font-size: 10px;
-            letter-spacing: 3px;
-            color: var(--go);
-            text-transform: uppercase;
-            margin-bottom: 12px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(201, 148, 42, 0.12);
-            font-family: 'Cinzel Decorative', serif;
+            font-family: 'Cinzel', serif;
+            font-size: 10px; letter-spacing: 3px;
+            color: var(--gold-deep); text-transform: uppercase;
+            margin-bottom: 14px; padding-bottom: 12px;
+            border-bottom: 1px dashed var(--line);
         }
-
         .pr {
-            font-size: 12.5px;
-            color: rgba(253, 246, 227, 0.72);
+            font-size: 13px; color: var(--ink-2);
             line-height: 1.9;
         }
-
         .pr strong {
-            color: var(--gl);
-            font-weight: 500;
+            color: var(--ink); font-weight: 500;
+            font-size: 11px; letter-spacing: 1px;
+            text-transform: uppercase;
         }
-
+        .pr .nm-en {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px; color: var(--ink);
+            font-weight: 500; display: block;
+        }
+        .pr .nm-ta {
+            font-family: 'Noto Serif Tamil', serif;
+            font-size: 12px; color: var(--lav-500);
+            opacity: 0.85; display: block; margin-top: 2px;
+        }
         .pa {
-            font-size: 11px;
-            color: rgba(201, 148, 42, 0.5);
-            line-height: 1.8;
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed rgba(201, 148, 42, 0.12);
+            font-size: 12px; color: var(--ink-3);
+            line-height: 1.7; margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--line);
         }
+        .pa .ta-only { font-family: 'Noto Serif Tamil', serif; }
 
-        .pa a {
-            color: var(--gl);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        /* EVENTS SECTION */
+        /* EVENTS */
         #events {
-            background: #061818;
-            text-align: center;
+            background:
+                radial-gradient(60% 60% at 50% 100%, #FFF1DA 0%, transparent 60%),
+                linear-gradient(180deg, #F6EEFF 0%, #EFE2FB 100%);
         }
-
         .eg {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            max-width: 680px;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 20px; max-width: 720px;
             margin: 32px auto 0;
         }
-
-        @media(max-width:500px) {
-            .eg {
-                grid-template-columns: 1fr;
-            }
+        @media (max-width: 560px) {
+            .eg { grid-template-columns: 1fr; }
         }
-
         .ec {
-            background: linear-gradient(135deg, #0F3535 0%, #0A2A2A 100%);
-            border: 1px solid rgba(201, 148, 42, 0.22);
-            border-radius: 4px;
-            padding: 30px 20px;
-            position: relative;
-            overflow: hidden;
-            clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+            background: linear-gradient(155deg, #FFFFFF 0%, #FBF3FF 100%);
+            border: 1px solid var(--lav-100);
+            border-radius: 18px;
+            padding: 30px 22px;
+            text-align: center;
+            position: relative; overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform .35s ease, box-shadow .35s ease;
         }
-
+        .ec:hover { transform: translateY(-4px); box-shadow: 0 24px 60px -22px rgba(123, 87, 184, 0.45); }
         .ec::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 80px;
-            height: 80px;
-            background: radial-gradient(circle at top right, rgba(201, 148, 42, 0.07), transparent);
-        }
-
-        .ec-icon {
-            font-size: 30px;
-            margin-bottom: 14px;
-        }
-
-        .ec-title {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: clamp(13px, 3vw, 16px);
-            color: var(--gl);
-            margin-bottom: 16px;
-            letter-spacing: 1px;
-        }
-
-        .ec-date {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(22px, 5vw, 32px);
-            color: var(--go);
-            font-weight: 300;
-            letter-spacing: 3px;
-        }
-
-        .ec-day {
-            font-size: 11px;
-            color: rgba(232, 201, 122, 0.45);
-            letter-spacing: 2px;
-            margin: 4px 0 10px;
-            text-transform: uppercase;
-        }
-
-        .ec-time {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(16px, 3.5vw, 21px);
-            color: var(--gl);
-        }
-
-        .ec-venue {
-            font-size: 12px;
-            color: rgba(253, 246, 227, 0.55);
-            line-height: 1.7;
-            margin-top: 10px;
-        }
-
-        .ec-tag {
-            display: inline-block;
-            margin-top: 12px;
-            background: rgba(201, 148, 42, 0.1);
-            border: 1px solid rgba(201, 148, 42, 0.2);
-            color: rgba(201, 148, 42, 0.7);
-            font-size: 10px;
-            letter-spacing: 2px;
-            padding: 4px 14px;
-            border-radius: 20px;
-            text-transform: uppercase;
-        }
-
-        /* INVITE TEXT BLOCK */
-        .itb {
-            background: rgba(201, 148, 42, 0.05);
-            border-left: 3px solid var(--go);
-            padding: 18px 22px;
-            border-radius: 0 4px 4px 0;
-            margin: 28px auto 0;
-            max-width: 640px;
-            text-align: left;
-        }
-
-        .itb p {
-            font-size: clamp(12px, 2.8vw, 14px);
-            color: rgba(253, 246, 227, 0.75);
-            line-height: 2.1;
-        }
-
-        .itb p.ta {
-            font-family: 'Noto Serif Tamil', serif;
-        }
-
-        /* RSVP SECTION */
-        #rsvp {
-            background: linear-gradient(135deg, #071A1A, #0A2A2A);
-            text-align: center;
-        }
-
-        .ri {
-            max-width: 480px;
-            margin: 0 auto;
-        }
-
-        .rt {
-            font-size: clamp(13px, 3vw, 15px);
-            color: rgba(253, 246, 227, 0.65);
-            line-height: 1.9;
-            margin: 16px 0 32px;
-        }
-
-        .rt.ta {
-            font-family: 'Noto Serif Tamil', serif;
-        }
-
-        .wab {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #1A7A4A;
-            color: white;
-            text-decoration: none;
-            padding: 15px 34px;
-            border-radius: 4px;
-            font-family: 'Cinzel Decorative', serif;
-            font-size: clamp(11px, 2.5vw, 13px);
-            letter-spacing: 2px;
-            transition: all 0.3s;
-            border: 1px solid rgba(201, 148, 42, 0.3);
-            box-shadow: 0 4px 20px rgba(26, 122, 74, 0.3);
-        }
-
-        .wab:hover {
-            background: #1E9A5A;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(26, 122, 74, 0.45);
-        }
-
-        .wai {
-            width: 22px;
-            height: 22px;
-        }
-
-        .csig {
-            margin-top: 28px;
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            color: rgba(201, 148, 42, 0.5);
-            font-size: clamp(15px, 3vw, 18px);
-        }
-
-        .cnum {
-            margin-top: 6px;
-            font-family: 'Cinzel Decorative', serif;
-            font-size: clamp(16px, 3.5vw, 22px);
-            color: var(--gl);
-            letter-spacing: 2px;
-        }
-
-        /* COUNTDOWN SECTION */
-        #countdown {
-            background: #020A0A;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            padding: 80px 24px;
-        }
-
-        #countdown::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image:
-                radial-gradient(1.5px 1.5px at 10% 20%, rgba(255, 255, 255, 0.55) 0%, transparent 100%),
-                radial-gradient(1px 1px at 28% 65%, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
-                radial-gradient(2px 2px at 50% 35%, rgba(201, 148, 42, 0.4) 0%, transparent 100%),
-                radial-gradient(1px 1px at 72% 80%, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
-                radial-gradient(1.5px 1.5px at 88% 25%, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
-                radial-gradient(1px 1px at 18% 80%, rgba(255, 255, 255, 0.45) 0%, transparent 100%),
-                radial-gradient(1px 1px at 60% 12%, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
-                radial-gradient(1.5px 1.5px at 82% 55%, rgba(201, 148, 42, 0.35) 0%, transparent 100%),
-                radial-gradient(1px 1px at 42% 90%, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
-                radial-gradient(1px 1px at 5% 45%, rgba(255, 255, 255, 0.5) 0%, transparent 100%),
-                radial-gradient(1px 1px at 35% 15%, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
-                radial-gradient(1px 1px at 95% 70%, rgba(255, 255, 255, 0.35) 0%, transparent 100%);
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(80px 80px at 100% 0%, rgba(200, 162, 74, 0.18), transparent);
             pointer-events: none;
         }
-
-        .cg {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: clamp(12px, 3vw, 36px);
-            margin-top: 32px;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1;
+        .ec-icon {
+            width: 56px; height: 56px; margin: 0 auto 14px;
+            display: flex; align-items: center; justify-content: center;
+            background: radial-gradient(circle, #fff, var(--lav-50));
+            border-radius: 50%;
+            border: 1px solid var(--gold-soft);
+            color: var(--gold-deep);
         }
-
-        .ci {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-width: 70px;
+        .ec-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: clamp(18px, 4vw, 22px);
+            color: var(--ink); margin-bottom: 6px;
+            letter-spacing: 1px;
         }
-
-        .cn {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: clamp(32px, 8vw, 62px);
-            color: var(--gl);
-            line-height: 1;
-            text-shadow: 0 0 30px rgba(201, 148, 42, 0.35);
+        .ec-subtitle {
+            font-family: 'Noto Serif Tamil', serif;
+            font-size: 13px; color: var(--lav-500);
+            margin-bottom: 16px; opacity: 0.85;
         }
-
-        .cl {
-            font-size: 10px;
-            letter-spacing: 3px;
-            color: rgba(201, 148, 42, 0.5);
+        .ec-date-full {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: clamp(20px, 4.6vw, 26px);
+            color: var(--gold-deep);
+            margin: 10px 0 4px;
+            letter-spacing: 1px;
+        }
+        .ec-day {
+            font-family: 'Cinzel', serif;
+            font-size: 11px; color: var(--ink-3);
+            letter-spacing: 3px; margin-bottom: 12px;
             text-transform: uppercase;
-            margin-top: 8px;
+        }
+        .ec-time {
+            display: inline-block;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: clamp(16px, 3.6vw, 20px);
+            color: var(--ink);
+            background: rgba(232, 219, 250, 0.4);
+            padding: 6px 16px;
+            border-radius: 999px;
+            border: 1px solid var(--lav-100);
+        }
+        .ec-venue {
+            font-size: 13px; color: var(--ink-2);
+            line-height: 1.7; margin-top: 14px;
+        }
+        .ec-tag {
+            display: inline-block; margin-top: 14px;
+            background: rgba(200, 162, 74, 0.12);
+            border: 1px solid var(--gold-soft);
+            color: var(--gold-deep);
+            font-family: 'Cinzel', serif;
+            font-size: 10px; letter-spacing: 2px;
+            padding: 5px 14px;
+            border-radius: 999px;
+            text-transform: uppercase;
         }
 
-        .cs {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: clamp(32px, 8vw, 62px);
-            color: rgba(201, 148, 42, 0.3);
-            line-height: 1;
-            padding-bottom: 18px;
-            align-self: flex-end;
+        /* RSVP */
+        #rsvp {
+            background:
+                radial-gradient(60% 60% at 50% 0%, #FFF3D5 0%, transparent 60%),
+                linear-gradient(180deg, #EFE2FB 0%, #F6EEFF 100%);
+        }
+        .ri { max-width: 520px; margin: 0 auto; text-align: center; }
+        .rt {
+            font-size: clamp(13px, 3vw, 15px);
+            color: var(--ink-2); line-height: 1.9;
+            margin: 14px auto 28px; max-width: 460px;
+        }
+        .rt.ta-only { font-family: 'Noto Serif Tamil', serif; }
+
+        .wab {
+            display: inline-flex; align-items: center; gap: 12px;
+            background: linear-gradient(135deg, #1FA855 0%, #128C3B 100%);
+            color: white; text-decoration: none;
+            padding: 16px 30px;
+            border-radius: 999px;
+            font-family: 'Cinzel', serif;
+            font-size: clamp(11px, 2.5vw, 13px);
+            letter-spacing: 2px;
+            transition: all 0.35s;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 14px 36px -10px rgba(31, 168, 85, 0.5);
+        }
+        .wab:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 22px 50px -10px rgba(31, 168, 85, 0.6);
+        }
+        .wai { width: 20px; height: 20px; }
+
+        .csig {
+            margin-top: 32px;
+            font-family: 'Great Vibes', cursive;
+            color: var(--lav-500);
+            font-size: clamp(20px, 4vw, 26px);
+        }
+        .cnum {
+            margin-top: 4px;
+            font-family: 'Cinzel', serif;
+            font-size: clamp(13px, 3vw, 17px);
+            color: var(--ink); letter-spacing: 2px;
+        }
+
+        /* COUNTDOWN */
+        #countdown {
+            background:
+                radial-gradient(60% 60% at 50% 50%, #FFF8E3 0%, transparent 70%),
+                linear-gradient(180deg, #F6EEFF 0%, #EADBFB 100%);
+            text-align: center;
+        }
+        .cg {
+            display: flex; justify-content: center; align-items: flex-end;
+            gap: clamp(8px, 2.4vw, 22px);
+            margin-top: 28px; flex-wrap: nowrap;
+        }
+        .ci {
+            display: flex; flex-direction: column; align-items: center;
+            min-width: 64px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid var(--lav-100);
+            border-radius: 14px;
+            padding: 14px 8px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(6px);
+        }
+        .cn {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: clamp(28px, 7vw, 52px);
+            color: var(--ink); line-height: 1;
+        }
+        .cl {
+            font-family: 'Cinzel', serif;
+            font-size: 9px; letter-spacing: 2px;
+            color: var(--gold-deep);
+            text-transform: uppercase; margin-top: 8px;
         }
 
         /* FOOTER */
         footer {
-            background: #020A0A;
-            padding: 56px 24px 40px;
+            background:
+                radial-gradient(60% 60% at 50% 0%, #FFF6E1 0%, transparent 60%),
+                linear-gradient(180deg, #EADBFB 0%, #DCC7F5 100%);
+            padding: 56px 22px 40px;
             text-align: center;
-            border-top: 1px solid rgba(201, 148, 42, 0.12);
+            border-top: 1px solid var(--line);
         }
-
         .fc {
-            font-size: 40px;
-            color: var(--go);
-            opacity: 0.65;
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 54px; height: 54px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fff, #FFF3D5);
+            border: 1px solid var(--gold-soft);
             margin-bottom: 18px;
+            color: var(--gold-deep);
         }
-
         .fn {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: clamp(14px, 3.5vw, 22px);
-            color: var(--gl);
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .fd {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(15px, 3.5vw, 20px);
-            color: rgba(201, 148, 42, 0.55);
-            letter-spacing: 4px;
-            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: clamp(18px, 4.4vw, 26px);
+            color: var(--ink); margin-bottom: 6px; line-height: 1.4;
         }
-
+        .fn-ta {
+            font-family: 'Noto Serif Tamil', serif;
+            font-size: clamp(13px, 3vw, 16px);
+            color: var(--lav-500); margin-bottom: 14px;
+            opacity: 0.9;
+        }
+        .fd {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(12px, 2.6vw, 14px);
+            color: var(--gold-deep);
+            letter-spacing: 4px; margin-bottom: 22px;
+        }
         .fdua {
             font-family: 'Amiri', serif;
-            font-size: clamp(16px, 3.5vw, 22px);
-            direction: rtl;
-            color: var(--gl);
-            opacity: 0.8;
-            margin-bottom: 6px;
+            font-size: clamp(15px, 3.4vw, 20px);
+            direction: rtl; color: var(--lav-500);
+            margin-bottom: 8px; line-height: 1.7;
         }
-
         .fdt {
-            font-size: 12px;
-            color: rgba(201, 148, 42, 0.4);
-            font-style: italic;
-            margin-bottom: 24px;
+            font-size: 12px; color: var(--ink-3);
+            font-style: italic; margin-bottom: 22px;
+        }
+        .fdt.ta-only { font-family: 'Noto Serif Tamil', serif; }
+        .floc {
+            font-family: 'Cinzel', serif;
+            font-size: 11px; letter-spacing: 5px;
+            color: var(--ink-3); text-transform: uppercase;
+            opacity: 0.75;
         }
 
-        .floc {
-            font-size: 11px;
-            letter-spacing: 5px;
-            color: rgba(201, 148, 42, 0.25);
-            text-transform: uppercase;
+        @media (max-width: 380px) {
+            .dp-cell { padding: 8px 10px; min-width: 48px; }
+            .ci { min-width: 56px; padding: 12px 6px; }
         }
     </style>
 </head>
 
-<body class="lt2">
+<body class="le">
 
-    <!-- Progress bar -->
     <div id="pb"></div>
 
     <!-- Language toggle -->
-    <div class="lt">
-        <button class="lb" onclick="setL('ta')">தமிழ்</button>
-        <button class="lb active" onclick="setL('en')">English</button>
+    <div class="lt" data-testid="lang-toggle">
+        <button class="lb" data-testid="lang-ta" onclick="setL('ta')">தமிழ்</button>
+        <button class="lb active" data-testid="lang-en" onclick="setL('en')">English</button>
     </div>
 
     <!-- ========== HERO ========== -->
-    <section id="hero">
+    <section id="hero" data-testid="hero-section">
 
-        <!-- Stars -->
-        <div class="stars" id="stars"></div>
+        <!-- Floating petals -->
+        <div class="petals" id="petals"></div>
 
-        <!-- Lanterns -->
-        <div class="lantern l1">
-            <svg width="38" height="70" viewBox="0 0 38 70" fill="none">
-                <line x1="19" y1="0" x2="19" y2="8" stroke="#C9942A" stroke-width="1.5" />
-                <rect x="8" y="8" width="22" height="4" rx="2" fill="#C9942A" opacity="0.8" />
-                <path d="M6 12 Q6 42 19 50 Q32 42 32 12 Z" fill="#0F3535" stroke="#C9942A" stroke-width="1" />
-                <ellipse cx="19" cy="12" rx="14" ry="3" fill="#C9942A" opacity="0.6" />
-                <ellipse cx="19" cy="50" rx="14" ry="3" fill="#C9942A" opacity="0.6" />
-                <rect x="10" y="50" width="18" height="3" rx="1.5" fill="#C9942A" opacity="0.7" />
-                <ellipse cx="19" cy="31" rx="6" ry="7" fill="#C9942A" opacity="0.15" class="lg" />
-                <!-- Geometric cuts -->
-                <line x1="19" y1="12" x2="19" y2="50" stroke="#C9942A" stroke-width="0.5" opacity="0.3" />
-                <line x1="6" y1="31" x2="32" y2="31" stroke="#C9942A" stroke-width="0.5" opacity="0.3" />
-                <!-- Tassels -->
-                <line x1="15" y1="53" x2="13" y2="63" stroke="#C9942A" stroke-width="0.8" opacity="0.5" />
-                <line x1="19" y1="53" x2="19" y2="65" stroke="#C9942A" stroke-width="0.8" opacity="0.5" />
-                <line x1="23" y1="53" x2="25" y2="63" stroke="#C9942A" stroke-width="0.8" opacity="0.5" />
-                <circle cx="13" cy="64" r="2" fill="#C9942A" opacity="0.4" />
-                <circle cx="19" cy="66" r="2" fill="#C9942A" opacity="0.4" />
-                <circle cx="25" cy="64" r="2" fill="#C9942A" opacity="0.4" />
+        <!-- Decorative ornaments -->
+        <div class="orn o1">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+                <circle cx="22" cy="22" r="18" stroke="#C8A24A" stroke-width="0.7" opacity="0.7" fill="none"/>
+                <path d="M22 4 L24 20 L40 22 L24 24 L22 40 L20 24 L4 22 L20 20 Z" fill="#C8A24A" opacity="0.4"/>
             </svg>
         </div>
-        <div class="lantern l2">
-            <svg width="32" height="60" viewBox="0 0 32 60" fill="none">
-                <line x1="16" y1="0" x2="16" y2="7" stroke="#C9942A" stroke-width="1.2" />
-                <rect x="7" y="7" width="18" height="3" rx="1.5" fill="#C9942A" opacity="0.7" />
-                <path d="M5 10 Q5 36 16 43 Q27 36 27 10 Z" fill="#0F3535" stroke="#C9942A" stroke-width="1" />
-                <ellipse cx="16" cy="10" rx="12" ry="2.5" fill="#C9942A" opacity="0.6" />
-                <ellipse cx="16" cy="43" rx="12" ry="2.5" fill="#C9942A" opacity="0.6" />
-                <ellipse cx="16" cy="26" rx="5" ry="6" fill="#C9942A" opacity="0.12" class="lg" />
-                <line x1="16" y1="10" x2="16" y2="43" stroke="#C9942A" stroke-width="0.4" opacity="0.3" />
-                <line x1="5" y1="26" x2="27" y2="26" stroke="#C9942A" stroke-width="0.4" opacity="0.3" />
-                <line x1="13" y1="46" x2="11" y2="55" stroke="#C9942A" stroke-width="0.7" opacity="0.4" />
-                <line x1="16" y1="46" x2="16" y2="58" stroke="#C9942A" stroke-width="0.7" opacity="0.4" />
-                <line x1="19" y1="46" x2="21" y2="55" stroke="#C9942A" stroke-width="0.7" opacity="0.4" />
+        <div class="orn o2">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+                <path d="M19 3 Q26 12 19 19 Q12 12 19 3 Z M19 35 Q26 26 19 19 Q12 26 19 35 Z M3 19 Q12 12 19 19 Q12 26 3 19 Z M35 19 Q26 12 19 19 Q26 26 35 19 Z" fill="#B591E5" opacity="0.4"/>
+                <circle cx="19" cy="19" r="3" fill="#C8A24A" opacity="0.6"/>
             </svg>
         </div>
-        <div class="lantern l3">
-            <svg width="30" height="56" viewBox="0 0 30 56" fill="none">
-                <line x1="15" y1="0" x2="15" y2="7" stroke="#C9942A" stroke-width="1" />
-                <rect x="6" y="7" width="18" height="3" rx="1.5" fill="#C9942A" opacity="0.6" />
-                <path d="M4 10 Q4 34 15 41 Q26 34 26 10 Z" fill="#0F3535" stroke="#C9942A" stroke-width="0.8" />
-                <ellipse cx="15" cy="10" rx="11" ry="2.5" fill="#C9942A" opacity="0.5" />
-                <ellipse cx="15" cy="41" rx="11" ry="2.5" fill="#C9942A" opacity="0.5" />
-                <ellipse cx="15" cy="25" rx="4" ry="5" fill="#C9942A" opacity="0.1" class="lg" />
+        <div class="orn o3">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="12" stroke="#C8A24A" stroke-width="0.6" opacity="0.6" fill="none"/>
+                <circle cx="16" cy="16" r="6" stroke="#B591E5" stroke-width="0.6" opacity="0.6" fill="none"/>
+                <circle cx="16" cy="16" r="2" fill="#C8A24A" opacity="0.7"/>
             </svg>
         </div>
-        <div class="lantern l4">
-            <svg width="35" height="64" viewBox="0 0 35 64" fill="none">
-                <line x1="17" y1="0" x2="17" y2="8" stroke="#C9942A" stroke-width="1.2" />
-                <rect x="7" y="8" width="20" height="3" rx="1.5" fill="#C9942A" opacity="0.7" />
-                <path d="M5 11 Q5 39 17 47 Q29 39 29 11 Z" fill="#0F3535" stroke="#C9942A" stroke-width="0.9" />
-                <ellipse cx="17" cy="11" rx="13" ry="2.5" fill="#C9942A" opacity="0.55" />
-                <ellipse cx="17" cy="47" rx="13" ry="2.5" fill="#C9942A" opacity="0.55" />
-                <ellipse cx="17" cy="29" rx="5" ry="6" fill="#C9942A" opacity="0.12" class="lg" />
-                <line x1="17" y1="11" x2="17" y2="47" stroke="#C9942A" stroke-width="0.4" opacity="0.25" />
-                <line x1="5" y1="29" x2="29" y2="29" stroke="#C9942A" stroke-width="0.4" opacity="0.25" />
-                <line x1="14" y1="50" x2="12" y2="60" stroke="#C9942A" stroke-width="0.7" opacity="0.4" />
-                <line x1="17" y1="50" x2="17" y2="62" stroke="#C9942A" stroke-width="0.7" opacity="0.4" />
-                <line x1="20" y1="50" x2="22" y2="60" stroke="#C9942A" stroke-width="0.7" opacity="0.4" />
+        <div class="orn o4">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <polygon points="20,3 23,14 35,14 25,21 28,33 20,26 12,33 15,21 5,14 17,14" stroke="#C8A24A" stroke-width="0.7" fill="none" opacity="0.7"/>
             </svg>
         </div>
 
-        <!-- Hero Text -->
         <div class="hc">
-            <div class="bism">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِِ</div>
-            <div class="hs">
-                <span class="ita">நிக்காஹ் (எ) திருமண அழைப்பிதழ்</span>
-                <span class="ien">Nikah - Wedding Invitation</span>
+            <div class="crest rv">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <path d="M28 20 a10 10 0 1 1 -8 -10 a8 8 0 1 0 8 10 Z" fill="#C8A24A" opacity="0.85"/>
+                    <circle cx="30" cy="13" r="2" fill="#C8A24A" opacity="0.7"/>
+                </svg>
             </div>
-            <div class="hc-couple">
-                <div class="hg ita">F. முகமது உஸ்மான்</div>
-                <div class="hg ien">F. MOHAMED USMAN</div>
-                <span class="hamp">&</span>
-                <div class="hb ita">A. சயிதுமா பானு</div>
-                <div class="hb ien">A. SAIDHUMA BANU</div>
+
+            <div class="bism rv">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+
+            <div class="hs rv2">
+                <span class="ita">நிக்காஹ் அழைப்பிதழ்</span>
+                <span class="ien">Nikah · Wedding Invitation</span>
             </div>
-            <div class="htag">
+
+            <div class="couple-block rv2">
+                <div class="name-main">F. Mohamed Usman</div>
+                <div class="name-ta">F. முகமது உஸ்மான்</div>
+
+                <span class="amp">&amp;</span>
+
+                <div class="name-main">A. Saidhuma Banu</div>
+                <div class="name-ta">A. சயிதுமா பானு</div>
+            </div>
+
+            <div class="htag rv3">
                 <span class="ita">நிக்காஹ் திருமணம்</span>
-                <span class="ien">NIKAH CEREMONY</span>
+                <span class="ien">Nikah Ceremony</span>
             </div>
-            <div class="hdate">19 · 07 · 2026 &nbsp;|&nbsp; VILLUPURAM</div>
+
+            <!-- Beautiful date plate replacing "19 · 07 · 2026 | VILLUPURAM" -->
+            <div class="date-plate rv3" data-testid="date-plate">
+                <div class="dp-cell">
+                    <div class="dp-num">19</div>
+                    <div class="dp-lbl">Day</div>
+                </div>
+                <div class="dp-divider"></div>
+                <div class="dp-cell">
+                    <div class="dp-num">July</div>
+                    <div class="dp-lbl">Month</div>
+                </div>
+                <div class="dp-divider"></div>
+                <div class="dp-cell">
+                    <div class="dp-num">2026</div>
+                    <div class="dp-lbl">Year</div>
+                </div>
+            </div>
+
+            <div class="venue-pill rv3">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2a8 8 0 0 0-8 8c0 5.5 8 12 8 12s8-6.5 8-12a8 8 0 0 0-8-8Z" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>Villupuram · Tamil Nadu</span>
+            </div>
         </div>
 
-        <!-- Mosque SVG -->
+        <!-- Mosque (lightened) -->
         <div class="mosque-wrap">
             <svg viewBox="0 0 960 340" xmlns="http://www.w3.org/2000/svg" fill="none">
                 <defs>
-                    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#0A2A2A" stop-opacity="0" />
-                        <stop offset="100%" stop-color="#0A2018" stop-opacity="1" />
-                    </linearGradient>
                     <linearGradient id="wallg" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#0F3535" />
-                        <stop offset="100%" stop-color="#0A2A2A" />
+                        <stop offset="0%" stop-color="#FBF7FF" />
+                        <stop offset="100%" stop-color="#EADBFB" />
                     </linearGradient>
                     <linearGradient id="domeg" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#174A32" />
-                        <stop offset="100%" stop-color="#0F3535" />
+                        <stop offset="0%" stop-color="#E7D6FA" />
+                        <stop offset="100%" stop-color="#CFB3F2" />
+                    </linearGradient>
+                    <linearGradient id="goldg" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#E0C684" />
+                        <stop offset="100%" stop-color="#C8A24A" />
                     </linearGradient>
                 </defs>
 
-                <!-- Ground -->
-                <rect x="0" y="300" width="960" height="40" fill="url(#sky)" />
+                <!-- Ground glow -->
+                <ellipse cx="480" cy="305" rx="380" ry="14" fill="#C8A24A" opacity="0.1"/>
 
-                <!-- === LEFT MINARET === -->
-                <!-- Base -->
-                <rect x="100" y="220" width="44" height="80" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.6" />
-                <!-- Mid section -->
-                <rect x="104" y="180" width="36" height="42" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.5" />
-                <!-- Balcony platform -->
-                <rect x="97" y="176" width="50" height="6" rx="1" fill="#C9942A" opacity="0.5" />
-                <!-- Upper shaft -->
-                <rect x="108" y="120" width="28" height="60" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.5" />
-                <!-- Upper balcony -->
-                <rect x="102" y="116" width="40" height="5" rx="1" fill="#C9942A" opacity="0.5" />
-                <!-- Neck -->
-                <rect x="114" y="92" width="16" height="28" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.5" />
-                <!-- Minaret dome -->
-                <ellipse cx="122" cy="90" rx="14" ry="8" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.5" />
-                <path d="M108 90 Q122 60 136 90" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.5" />
-                <!-- Crescent finial -->
-                <line x1="122" y1="60" x2="122" y2="50" stroke="#C9942A" stroke-width="1" />
-                <path d="M118 44 Q122 38 128 44 Q124 50 118 44" fill="#C9942A" opacity="0.8" />
-                <!-- Arched windows -->
-                <path d="M110 140 Q122 130 134 140 L134 155 L110 155 Z" fill="#C9942A" opacity="0.08" stroke="#C9942A"
-                    stroke-width="0.5" />
-                <path d="M110 200 Q122 193 134 200 L134 212 L110 212 Z" fill="#C9942A" opacity="0.07" stroke="#C9942A"
-                    stroke-width="0.5" />
-                <!-- Geometric details -->
-                <line x1="100" y1="240" x2="144" y2="240" stroke="#C9942A" stroke-width="0.4" opacity="0.4" />
-                <line x1="100" y1="258" x2="144" y2="258" stroke="#C9942A" stroke-width="0.4" opacity="0.4" />
+                <!-- LEFT MINARET -->
+                <rect x="100" y="220" width="44" height="80" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.8"/>
+                <rect x="104" y="180" width="36" height="42" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <rect x="97" y="176" width="50" height="6" rx="1" fill="url(#goldg)" opacity="0.85"/>
+                <rect x="108" y="120" width="28" height="60" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <rect x="102" y="116" width="40" height="5" rx="1" fill="url(#goldg)" opacity="0.85"/>
+                <rect x="114" y="92" width="16" height="28" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <ellipse cx="122" cy="90" rx="14" ry="8" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <path d="M108 90 Q122 60 136 90" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <line x1="122" y1="60" x2="122" y2="50" stroke="#C8A24A" stroke-width="1"/>
+                <path d="M118 44 Q122 38 128 44 Q124 50 118 44" fill="#C8A24A" opacity="0.9"/>
+                <path d="M110 140 Q122 130 134 140 L134 155 L110 155 Z" fill="#B591E5" opacity="0.2" stroke="#C8A24A" stroke-width="0.6"/>
+                <path d="M110 200 Q122 193 134 200 L134 212 L110 212 Z" fill="#B591E5" opacity="0.2" stroke="#C8A24A" stroke-width="0.6"/>
 
-                <!-- === RIGHT MINARET === -->
-                <rect x="816" y="220" width="44" height="80" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.6" />
-                <rect x="820" y="180" width="36" height="42" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.5" />
-                <rect x="813" y="176" width="50" height="6" rx="1" fill="#C9942A" opacity="0.5" />
-                <rect x="824" y="120" width="28" height="60" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.5" />
-                <rect x="818" y="116" width="40" height="5" rx="1" fill="#C9942A" opacity="0.5" />
-                <rect x="830" y="92" width="16" height="28" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.5" />
-                <ellipse cx="838" cy="90" rx="14" ry="8" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.5" />
-                <path d="M824 90 Q838 60 852 90" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.5" />
-                <line x1="838" y1="60" x2="838" y2="50" stroke="#C9942A" stroke-width="1" />
-                <path d="M834 44 Q838 38 844 44 Q840 50 834 44" fill="#C9942A" opacity="0.8" />
-                <path d="M826 140 Q838 130 850 140 L850 155 L826 155 Z" fill="#C9942A" opacity="0.08" stroke="#C9942A"
-                    stroke-width="0.5" />
-                <path d="M826 200 Q838 193 850 200 L850 212 L826 212 Z" fill="#C9942A" opacity="0.07" stroke="#C9942A"
-                    stroke-width="0.5" />
-                <line x1="816" y1="240" x2="860" y2="240" stroke="#C9942A" stroke-width="0.4" opacity="0.4" />
-                <line x1="816" y1="258" x2="860" y2="258" stroke="#C9942A" stroke-width="0.4" opacity="0.4" />
+                <!-- RIGHT MINARET -->
+                <rect x="816" y="220" width="44" height="80" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.8"/>
+                <rect x="820" y="180" width="36" height="42" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <rect x="813" y="176" width="50" height="6" rx="1" fill="url(#goldg)" opacity="0.85"/>
+                <rect x="824" y="120" width="28" height="60" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <rect x="818" y="116" width="40" height="5" rx="1" fill="url(#goldg)" opacity="0.85"/>
+                <rect x="830" y="92" width="16" height="28" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <ellipse cx="838" cy="90" rx="14" ry="8" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <path d="M824 90 Q838 60 852 90" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <line x1="838" y1="60" x2="838" y2="50" stroke="#C8A24A" stroke-width="1"/>
+                <path d="M834 44 Q838 38 844 44 Q840 50 834 44" fill="#C8A24A" opacity="0.9"/>
+                <path d="M826 140 Q838 130 850 140 L850 155 L826 155 Z" fill="#B591E5" opacity="0.2" stroke="#C8A24A" stroke-width="0.6"/>
+                <path d="M826 200 Q838 193 850 200 L850 212 L826 212 Z" fill="#B591E5" opacity="0.2" stroke="#C8A24A" stroke-width="0.6"/>
 
-                <!-- === SIDE MINARETS (smaller) === -->
-                <!-- Left small -->
-                <rect x="230" y="240" width="30" height="60" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.5" />
-                <rect x="226" y="236" width="38" height="5" rx="1" fill="#C9942A" opacity="0.4" />
-                <rect x="234" y="200" width="22" height="40" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.4" />
-                <rect x="229" y="196" width="32" height="5" rx="1" fill="#C9942A" opacity="0.4" />
-                <rect x="238" y="172" width="14" height="28" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.4" />
-                <ellipse cx="245" cy="170" rx="10" ry="6" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.4" />
-                <path d="M235 170 Q245 148 255 170" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.4" />
-                <line x1="245" y1="148" x2="245" y2="140" stroke="#C9942A" stroke-width="0.8" />
-                <path d="M242 135 Q245 130 249 135 Q246 140 242 135" fill="#C9942A" opacity="0.7" />
-                <!-- Right small -->
-                <rect x="700" y="240" width="30" height="60" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.5" />
-                <rect x="696" y="236" width="38" height="5" rx="1" fill="#C9942A" opacity="0.4" />
-                <rect x="704" y="200" width="22" height="40" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.4" />
-                <rect x="699" y="196" width="32" height="5" rx="1" fill="#C9942A" opacity="0.4" />
-                <rect x="708" y="172" width="14" height="28" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.4" />
-                <ellipse cx="715" cy="170" rx="10" ry="6" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.4" />
-                <path d="M705 170 Q715 148 725 170" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.4" />
-                <line x1="715" y1="148" x2="715" y2="140" stroke="#C9942A" stroke-width="0.8" />
-                <path d="M712 135 Q715 130 719 135 Q716 140 712 135" fill="#C9942A" opacity="0.7" />
+                <!-- SIDE MINARETS -->
+                <rect x="230" y="240" width="30" height="60" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <rect x="226" y="236" width="38" height="5" rx="1" fill="url(#goldg)" opacity="0.7"/>
+                <rect x="234" y="200" width="22" height="40" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.6"/>
+                <rect x="229" y="196" width="32" height="5" rx="1" fill="url(#goldg)" opacity="0.7"/>
+                <rect x="238" y="172" width="14" height="28" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.6"/>
+                <ellipse cx="245" cy="170" rx="10" ry="6" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.6"/>
+                <path d="M235 170 Q245 148 255 170" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.6"/>
+                <line x1="245" y1="148" x2="245" y2="140" stroke="#C8A24A" stroke-width="0.9"/>
+                <path d="M242 135 Q245 130 249 135 Q246 140 242 135" fill="#C8A24A" opacity="0.85"/>
 
-                <!-- === MAIN BODY / WALL === -->
-                <rect x="144" y="200" width="672" height="100" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.6" />
-                <!-- Wall decorative band -->
-                <rect x="144" y="200" width="672" height="5" fill="#C9942A" opacity="0.2" />
-                <rect x="144" y="293" width="672" height="4" fill="#C9942A" opacity="0.2" />
-                <!-- Repeating arched windows along wall -->
-                <path d="M180 240 Q200 228 220 240 L220 270 L180 270 Z" fill="#C9942A" opacity="0.07" stroke="#C9942A"
-                    stroke-width="0.5" />
-                <path d="M240 240 Q260 228 280 240 L280 270 L240 270 Z" fill="#C9942A" opacity="0.07" stroke="#C9942A"
-                    stroke-width="0.5" />
-                <path d="M680 240 Q700 228 720 240 L720 270 L680 270 Z" fill="#C9942A" opacity="0.07" stroke="#C9942A"
-                    stroke-width="0.5" />
-                <path d="M740 240 Q760 228 780 240 L780 270 L740 270 Z" fill="#C9942A" opacity="0.07" stroke="#C9942A"
-                    stroke-width="0.5" />
+                <rect x="700" y="240" width="30" height="60" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <rect x="696" y="236" width="38" height="5" rx="1" fill="url(#goldg)" opacity="0.7"/>
+                <rect x="704" y="200" width="22" height="40" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.6"/>
+                <rect x="699" y="196" width="32" height="5" rx="1" fill="url(#goldg)" opacity="0.7"/>
+                <rect x="708" y="172" width="14" height="28" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.6"/>
+                <ellipse cx="715" cy="170" rx="10" ry="6" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.6"/>
+                <path d="M705 170 Q715 148 725 170" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.6"/>
+                <line x1="715" y1="148" x2="715" y2="140" stroke="#C8A24A" stroke-width="0.9"/>
+                <path d="M712 135 Q715 130 719 135 Q716 140 712 135" fill="#C8A24A" opacity="0.85"/>
 
-                <!-- === CENTRAL IWAN / ENTRANCE === -->
-                <!-- Iwan frame -->
-                <rect x="380" y="160" width="200" height="140" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.8" />
-                <!-- Iwan arch -->
-                <path d="M380 200 Q480 130 580 200" fill="url(#domeg)" stroke="#C9942A" stroke-width="1" />
-                <!-- Arch inner shadow -->
-                <path d="M390 205 Q480 145 570 205" fill="#0A2018" stroke="#C9942A" stroke-width="0.5" opacity="0.5" />
-                <!-- Geometric lattice in iwan -->
-                <path d="M420 210 Q480 175 540 210 L540 300 L420 300 Z" fill="#061212" stroke="#C9942A"
-                    stroke-width="0.5" opacity="0.6" />
-                <!-- Arched gate door -->
-                <rect x="445" y="245" width="70" height="55" rx="2" fill="#040E0E" stroke="#C9942A"
-                    stroke-width="0.6" />
-                <path d="M445 260 Q480 245 515 260" fill="#040E0E" stroke="#C9942A" stroke-width="0.6" />
-                <!-- Door knob/handle -->
-                <circle cx="508" cy="270" r="2.5" fill="#C9942A" opacity="0.6" />
-                <!-- Iwan side columns -->
-                <rect x="378" y="200" width="8" height="100" fill="#C9942A" opacity="0.15" stroke="#C9942A"
-                    stroke-width="0.4" />
-                <rect x="574" y="200" width="8" height="100" fill="#C9942A" opacity="0.15" stroke="#C9942A"
-                    stroke-width="0.4" />
-                <!-- Geometric ornament above iwan -->
-                <polygon points="480,155 486,168 500,168 489,176 493,190 480,182 467,190 471,176 460,168 474,168"
-                    fill="none" stroke="#C9942A" stroke-width="0.8" opacity="0.5" />
+                <!-- MAIN WALL -->
+                <rect x="144" y="200" width="672" height="100" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.8"/>
+                <rect x="144" y="200" width="672" height="5" fill="url(#goldg)" opacity="0.5"/>
+                <rect x="144" y="293" width="672" height="4" fill="url(#goldg)" opacity="0.5"/>
+                <path d="M180 240 Q200 228 220 240 L220 270 L180 270 Z" fill="#B591E5" opacity="0.18" stroke="#C8A24A" stroke-width="0.6"/>
+                <path d="M240 240 Q260 228 280 240 L280 270 L240 270 Z" fill="#B591E5" opacity="0.18" stroke="#C8A24A" stroke-width="0.6"/>
+                <path d="M680 240 Q700 228 720 240 L720 270 L680 270 Z" fill="#B591E5" opacity="0.18" stroke="#C8A24A" stroke-width="0.6"/>
+                <path d="M740 240 Q760 228 780 240 L780 270 L740 270 Z" fill="#B591E5" opacity="0.18" stroke="#C8A24A" stroke-width="0.6"/>
 
-                <!-- === MAIN DOME === -->
-                <!-- Drum -->
-                <rect x="430" y="110" width="100" height="55" rx="4" fill="url(#wallg)" stroke="#C9942A"
-                    stroke-width="0.6" />
-                <!-- Drum windows -->
-                <path d="M443 128 Q460 118 477 128 L477 145 L443 145 Z" fill="#C9942A" opacity="0.07" stroke="#C9942A"
-                    stroke-width="0.4" />
-                <path d="M483 128 Q500 118 517 128 L517 145 L483 145 Z" fill="#C9942A" opacity="0.07" stroke="#C9942A"
-                    stroke-width="0.4" />
-                <!-- Main dome shape -->
-                <ellipse cx="480" cy="110" rx="60" ry="15" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.7" />
-                <path d="M420 110 Q480 45 540 110" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.8" />
-                <!-- Dome highlight ribs -->
-                <path d="M460 108 Q480 62 480 45" stroke="#C9942A" stroke-width="0.4" opacity="0.3" />
-                <path d="M500 108 Q480 62 480 45" stroke="#C9942A" stroke-width="0.4" opacity="0.3" />
-                <path d="M445 100 Q480 62 480 45" stroke="#C9942A" stroke-width="0.3" opacity="0.2" />
-                <path d="M515 100 Q480 62 480 45" stroke="#C9942A" stroke-width="0.3" opacity="0.2" />
-                <!-- Dome finial neck -->
-                <rect x="476" y="38" width="8" height="10" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.5" />
-                <!-- Crescent moon finial -->
-                <line x1="480" y1="38" x2="480" y2="26" stroke="#C9942A" stroke-width="1.2" />
-                <path d="M474 20 Q480 12 488 20 Q483 27 474 20" fill="#C9942A" opacity="0.9" />
-                <circle cx="484" cy="14" r="2" fill="#C9942A" opacity="0.5" />
+                <!-- CENTRAL IWAN -->
+                <rect x="380" y="160" width="200" height="140" fill="url(#wallg)" stroke="#C8A24A" stroke-width="1"/>
+                <path d="M380 200 Q480 130 580 200" fill="url(#domeg)" stroke="#C8A24A" stroke-width="1.1"/>
+                <path d="M390 205 Q480 145 570 205" fill="#E9DCFB" stroke="#C8A24A" stroke-width="0.6" opacity="0.7"/>
+                <path d="M420 210 Q480 175 540 210 L540 300 L420 300 Z" fill="#F6EEFF" stroke="#C8A24A" stroke-width="0.6" opacity="0.85"/>
+                <rect x="445" y="245" width="70" height="55" rx="2" fill="#E7D6FA" stroke="#C8A24A" stroke-width="0.8"/>
+                <path d="M445 260 Q480 245 515 260" fill="#E7D6FA" stroke="#C8A24A" stroke-width="0.8"/>
+                <circle cx="508" cy="270" r="2.5" fill="#C8A24A" opacity="0.85"/>
+                <rect x="378" y="200" width="8" height="100" fill="#C8A24A" opacity="0.25"/>
+                <rect x="574" y="200" width="8" height="100" fill="#C8A24A" opacity="0.25"/>
+                <polygon points="480,155 486,168 500,168 489,176 493,190 480,182 467,190 471,176 460,168 474,168" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.7"/>
 
-                <!-- === SIDE DOMES === -->
-                <!-- Left side dome -->
-                <rect x="300" y="185" width="70" height="25" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.5" />
-                <ellipse cx="335" cy="185" rx="40" ry="10" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.5" />
-                <path d="M295 185 Q335 148 375 185" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.6" />
-                <line x1="335" y1="148" x2="335" y2="138" stroke="#C9942A" stroke-width="0.8" />
-                <path d="M331 134 Q335 128 340 134 Q336 139 331 134" fill="#C9942A" opacity="0.7" />
-                <!-- Right side dome -->
-                <rect x="590" y="185" width="70" height="25" fill="url(#wallg)" stroke="#C9942A" stroke-width="0.5" />
-                <ellipse cx="625" cy="185" rx="40" ry="10" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.5" />
-                <path d="M585 185 Q625 148 665 185" fill="url(#domeg)" stroke="#C9942A" stroke-width="0.6" />
-                <line x1="625" y1="148" x2="625" y2="138" stroke="#C9942A" stroke-width="0.8" />
-                <path d="M621 134 Q625 128 630 134 Q626 139 621 134" fill="#C9942A" opacity="0.7" />
+                <!-- MAIN DOME -->
+                <rect x="430" y="110" width="100" height="55" rx="4" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.8"/>
+                <path d="M443 128 Q460 118 477 128 L477 145 L443 145 Z" fill="#B591E5" opacity="0.2" stroke="#C8A24A" stroke-width="0.5"/>
+                <path d="M483 128 Q500 118 517 128 L517 145 L483 145 Z" fill="#B591E5" opacity="0.2" stroke="#C8A24A" stroke-width="0.5"/>
+                <ellipse cx="480" cy="110" rx="60" ry="15" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.9"/>
+                <path d="M420 110 Q480 45 540 110" fill="url(#domeg)" stroke="#C8A24A" stroke-width="1"/>
+                <path d="M460 108 Q480 62 480 45" stroke="#C8A24A" stroke-width="0.5" opacity="0.5"/>
+                <path d="M500 108 Q480 62 480 45" stroke="#C8A24A" stroke-width="0.5" opacity="0.5"/>
+                <rect x="476" y="38" width="8" height="10" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.6"/>
+                <line x1="480" y1="38" x2="480" y2="26" stroke="#C8A24A" stroke-width="1.4"/>
+                <path d="M474 20 Q480 12 488 20 Q483 27 474 20" fill="#C8A24A" opacity="0.95"/>
+                <circle cx="484" cy="14" r="2" fill="#C8A24A" opacity="0.7"/>
 
-                <!-- GROUND / FLOOR -->
-                <rect x="60" y="295" width="840" height="10" fill="url(#wallg)" opacity="0.7" />
-                <!-- Reflecting pool / courtyard line -->
-                <rect x="144" y="296" width="672" height="3" fill="#C9942A" opacity="0.12" />
+                <!-- SIDE DOMES -->
+                <rect x="300" y="185" width="70" height="25" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <ellipse cx="335" cy="185" rx="40" ry="10" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <path d="M295 185 Q335 148 375 185" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.8"/>
+                <line x1="335" y1="148" x2="335" y2="138" stroke="#C8A24A" stroke-width="0.9"/>
+                <path d="M331 134 Q335 128 340 134 Q336 139 331 134" fill="#C8A24A" opacity="0.85"/>
 
-                <!-- Ambient glow under dome -->
-                <ellipse cx="480" cy="300" rx="200" ry="8" fill="#C9942A" opacity="0.04" />
+                <rect x="590" y="185" width="70" height="25" fill="url(#wallg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <ellipse cx="625" cy="185" rx="40" ry="10" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.7"/>
+                <path d="M585 185 Q625 148 665 185" fill="url(#domeg)" stroke="#C8A24A" stroke-width="0.8"/>
+                <line x1="625" y1="148" x2="625" y2="138" stroke="#C8A24A" stroke-width="0.9"/>
+                <path d="M621 134 Q625 128 630 134 Q626 139 621 134" fill="#C8A24A" opacity="0.85"/>
+
+                <rect x="60" y="295" width="840" height="10" fill="url(#wallg)" opacity="0.85"/>
+                <rect x="144" y="296" width="672" height="3" fill="url(#goldg)" opacity="0.4"/>
             </svg>
         </div>
 
-        <!-- Scroll hint -->
         <div class="sh">
             <span>scroll</span>
             <div class="sha"></div>
         </div>
     </section>
 
-    <!-- ========== ISLAMIC DIVIDER ========== -->
+    <!-- DIVIDER -->
     <div class="idv rv">
         <div class="dl"></div>
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-            <polygon
-                points="26,4 29.5,17 42,10 35.5,22 50,24 37,28.5 44,42 31,35 28,48 24,35 11,42 18,28.5 2,24 17,22 10.5,10 23,17"
-                fill="none" stroke="#C9942A" stroke-width="0.8" opacity="0.8" />
-            <circle cx="26" cy="26" r="6" fill="none" stroke="#C9942A" stroke-width="0.8" opacity="0.5" />
-            <circle cx="26" cy="26" r="2" fill="#C9942A" opacity="0.5" />
+        <svg width="48" height="48" viewBox="0 0 52 52" fill="none">
+            <polygon points="26,4 29.5,17 42,10 35.5,22 50,24 37,28.5 44,42 31,35 28,48 24,35 11,42 18,28.5 2,24 17,22 10.5,10 23,17" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.85"/>
+            <circle cx="26" cy="26" r="6" fill="none" stroke="#B591E5" stroke-width="0.8" opacity="0.6"/>
+            <circle cx="26" cy="26" r="2" fill="#C8A24A" opacity="0.7"/>
         </svg>
         <div class="dl"></div>
     </div>
 
-    <!-- ========== BLESSING SECTION ========== -->
-    <section id="blessing">
+    <!-- ========== BLESSING ========== -->
+    <section id="blessing" data-testid="blessing-section">
         <div class="stag rv">
             <span class="ita">அல்லாஹ்வின் பெயரால்</span>
             <span class="ien">In the Name of Allah</span>
@@ -1205,137 +934,131 @@
             <div class="sal-ta">அஸ்ஸலாமு அலைக்கும் வ ரஹ்மத்துல்லாஹி வ பரகாத்துஹு</div>
         </div>
 
-        <!-- Opening text -->
-        <div class="open-text ta rv3">
+        <div class="open-text ta-only rv3">
             "அன்பான நண்பர்கள் மற்றும் குடும்பத்தினரே!
             அல்லாஹ்வின் பேரருளாலும், அகிலத்தின் அருட்கொடை நபிகள் நாயகம் (ஸல்) அவர்களின் மேன்மையான வழிமுறையைப் பேணியும்,
             இன்ஷா அல்லாஹ் ஹிஜ்ரி 1448-ஆம் ஆண்டு முஹர்ரம் மாதம் பிறை 4-ஆம் நாள் (19-07-2026), ஞாயிற்றுக்கிழமை காலை 11:00
             மணி அளவில் நடைபெறும் நிக்காஹ் (திருமண) நிகழ்விழும் உடன் நடைபெரும் வலிமா விருந்து உபசரிப்பிலும் கலந்து கொண்டு சிறப்பிக்குமாறு உங்களை அன்புடன் அழைக்கிறோம்."
         </div>
-        <div class="open-text en rv3">
+        <div class="open-text en-only rv3">
             Dear Friends &amp; Family, with the blessings of Allah and following the noble traditions of the Holy
             Prophet (SAW), we joyfully invite you to celebrate the Nikah ceremony on the 4th of Muharram 1448 AH, which
             corresponds to Sunday, 19th July 2026, at 11:00 AM.
         </div>
 
-        <div class="idv" style="padding:16px 0;max-width:400px;margin:0 auto;">
+        <div class="idv" style="padding: 18px 0; max-width: 360px; margin: 0 auto;">
             <div class="dl"></div>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2 L13.8 8.2 L20 8.2 L14.9 11.8 L16.7 18 L12 14.4 L7.3 18 L9.1 11.8 L4 8.2 L10.2 8.2 Z"
-                    fill="none" stroke="#C9942A" stroke-width="0.8" opacity="0.6" />
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2 L13.8 8.2 L20 8.2 L14.9 11.8 L16.7 18 L12 14.4 L7.3 18 L9.1 11.8 L4 8.2 L10.2 8.2 Z" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.7"/>
             </svg>
             <div class="dl"></div>
         </div>
 
-        <!-- Couple Names -->
+        <!-- Groom -->
         <div class="cn-blk rv">
             <div class="nlabel">
                 <span class="ita">மணமகன்</span>
-                <span class="ien">GROOM</span>
+                <span class="ien">Groom</span>
             </div>
             <div class="nben">F. Mohamed Usman</div>
-            <div class="nbta">முகமது உஸ்மான்</div>
-            <div class="nqual">B.Sc.(CS) &nbsp;·&nbsp; Software Developer</div>
+            <div class="nbta">F. முகமது உஸ்மான்</div>
+            <div class="nqual">B.Sc. (CS) &nbsp;·&nbsp; Software Developer</div>
         </div>
 
-        <div class="nsep rv2">&</div>
+        <div class="nsep rv2">&amp;</div>
 
+        <!-- Bride -->
         <div class="cn-blk rv3">
             <div class="nlabel">
                 <span class="ita">மணமகள்</span>
-                <span class="ien">BRIDE</span>
+                <span class="ien">Bride</span>
             </div>
-            <div class="nben">A. Saidhuma Banu <span style="font-size:clamp(14px,3vw,20px);opacity:0.6;">(Aalima)</span>
-            </div>
-            <div class="nbta">சயிதுமா பானு (ஆலிமா)</div>
+            <div class="nben">A. Saidhuma Banu <span style="font-size: clamp(14px, 3vw, 20px); opacity: 0.7; color: var(--gold-deep);">(Aalima)</span></div>
+            <div class="nbta">A. சயிதுமா பானு (ஆலிமா)</div>
         </div>
 
-        <!-- Parents Grid -->
+        <!-- Parents -->
         <div class="pg rv">
-            <!-- Groom's Family -->
             <div class="pc">
                 <div class="pclabel">
                     <span class="ita">மணமகன் குடும்பம்</span>
                     <span class="ien">Groom's Family</span>
                 </div>
                 <div class="pr">
-                    <strong><span class="ita">தந்தை:</span><span class="ien">Father:</span></strong><br>
-                    M. Fajilur Rahman<br>
-                    <span class="ita" style="opacity:0.6;font-size:11px;">M. பஜீலுர் ரஹ்மான்</span>
+                    <strong><span class="ita">தந்தை</span><span class="ien">Father</span></strong>
+                    <span class="nm-en">M. Fajilur Rahman</span>
+                    <span class="nm-ta">M. பஜீலுர் ரஹ்மான்</span>
                 </div>
-                <div class="pr" style="margin-top:8px;">
-                    <strong><span class="ita">தாய்:</span><span class="ien">Mother:</span></strong><br>
-                    F. Shamshad Begum<br>
-                    <span class="ita" style="opacity:0.6;font-size:11px;">F. சம்ஷாத் பேகம்</span>
+                <div class="pr" style="margin-top: 14px;">
+                    <strong><span class="ita">தாய்</span><span class="ien">Mother</span></strong>
+                    <span class="nm-en">F. Shamshad Begum</span>
+                    <span class="nm-ta">F. சம்ஷாத் பேகம்</span>
                 </div>
                 <div class="pa">
-                    <span class="ita">எண்.40/24 முத்தோப்பு,<br>விழுப்புரம் - 605 602</span>
-                    <span class="ien">No.40/24 Muthoppu,<br>Villupuram - 605 602</span>
+                    <span class="ta-only">எண்.40/24 முத்தோப்பு,<br>விழுப்புரம் - 605 602</span>
+                    <span class="en-only">No. 40/24 Muthoppu,<br>Villupuram - 605 602</span>
                 </div>
             </div>
 
-            <!-- Bride's Family -->
             <div class="pc">
                 <div class="pclabel">
                     <span class="ita">மணமகள் குடும்பம்</span>
                     <span class="ien">Bride's Family</span>
                 </div>
                 <div class="pr">
-                    <strong><span class="ita">தந்தை:</span><span class="ien">Father:</span></strong><br>
-                    A. Anwar Deen<br>
-                    <span class="ita" style="opacity:0.6;font-size:11px;">A. அன்வர் தீன்</span>
+                    <strong><span class="ita">தந்தை</span><span class="ien">Father</span></strong>
+                    <span class="nm-en">A. Anwar Deen</span>
+                    <span class="nm-ta">A. அன்வர் தீன்</span>
                 </div>
-                <div class="pr" style="margin-top:8px;">
-                    <strong><span class="ita">தாய்:</span><span class="ien">Mother:</span></strong><br>
-                    A. Sabira Begum<br>
-                    <span class="ita" style="opacity:0.6;font-size:11px;">A. சாபிரா பேகம்</span>
+                <div class="pr" style="margin-top: 14px;">
+                    <strong><span class="ita">தாய்</span><span class="ien">Mother</span></strong>
+                    <span class="nm-en">A. Sabira Begum</span>
+                    <span class="nm-ta">A. சாபிரா பேகம்</span>
                 </div>
                 <div class="pa">
-                    <span class="ita">எண்.97 முத்தோப்பு,<br>விழுப்புரம் - 605 602</span>
-                    <span class="ien">No.97 Muthoppu,<br>Villupuram - 605 602</span>
+                    <span class="ta-only">எண்.97 முத்தோப்பு,<br>விழுப்புரம் - 605 602</span>
+                    <span class="en-only">No. 97 Muthoppu,<br>Villupuram - 605 602</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== DIVIDER ========== -->
+    <!-- DIVIDER -->
     <div class="idv rv">
         <div class="dl"></div>
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-            <polygon
-                points="26,4 29.5,17 42,10 35.5,22 50,24 37,28.5 44,42 31,35 28,48 24,35 11,42 18,28.5 2,24 17,22 10.5,10 23,17"
-                fill="none" stroke="#C9942A" stroke-width="0.8" opacity="0.7" />
-            <polygon
-                points="26,10 28.5,20 38,16 33,25 44,26 33,30 38,40 28.5,36 26,46 23.5,36 13,40 18,30 8,26 18,25 13,16 23.5,20"
-                fill="none" stroke="#C9942A" stroke-width="0.5" opacity="0.3" />
-            <circle cx="26" cy="26" r="3" fill="#C9942A" opacity="0.4" />
+        <svg width="48" height="48" viewBox="0 0 52 52" fill="none">
+            <polygon points="26,4 29.5,17 42,10 35.5,22 50,24 37,28.5 44,42 31,35 28,48 24,35 11,42 18,28.5 2,24 17,22 10.5,10 23,17" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.8"/>
+            <polygon points="26,10 28.5,20 38,16 33,25 44,26 33,30 38,40 28.5,36 26,46 23.5,36 13,40 18,30 8,26 18,25 13,16 23.5,20" fill="none" stroke="#B591E5" stroke-width="0.6" opacity="0.5"/>
+            <circle cx="26" cy="26" r="3" fill="#C8A24A" opacity="0.6"/>
         </svg>
         <div class="dl"></div>
     </div>
 
-    <!-- ========== EVENTS SECTION ========== -->
-    <section id="events">
-        <div class="stag rv" style="text-align:center;">
+    <!-- ========== EVENTS ========== -->
+    <section id="events" data-testid="events-section">
+        <div class="stag rv">
             <span class="ita">திருமண நிகழ்வுகள்</span>
             <span class="ien">Wedding Events</span>
         </div>
-        <div class="stitle rv" style="text-align:center;">
+        <div class="stitle rv">
             <span class="ita">நிக்காஹ் &amp; வலிமா</span>
             <span class="ien">Nikah &amp; Walima</span>
         </div>
 
         <div class="eg">
-            <!-- Nikah Card -->
             <div class="ec rv">
-                <div class="ec-icon">🕌</div>
-                <div class="ec-title">
-                    <span class="ita">நிக்காஹ் திருமணம்</span>
-                    <span class="ien">Nikah Ceremony</span>
+                <div class="ec-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2 L12 6 M9 6h6 M5 22V12 a7 7 0 0 1 14 0 v10 M5 22h14 M10 22v-6h4v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="13" r="2" stroke="currentColor" stroke-width="1.2"/>
+                    </svg>
                 </div>
-                <div class="ec-date">19 · 07 · 2026</div>
+                <div class="ec-title">Nikah Ceremony</div>
+                <div class="ec-subtitle">நிக்காஹ் திருமணம்</div>
+                <div class="ec-date-full">Sunday, 19 July 2026</div>
                 <div class="ec-day">
                     <span class="ita">ஞாயிற்றுக்கிழமை</span>
-                    <span class="ien">Sunday</span>
+                    <span class="ien">Sunday Morning</span>
                 </div>
                 <div class="ec-time">11:00 AM</div>
                 <div class="ec-venue">
@@ -1348,14 +1071,15 @@
                 </div>
             </div>
 
-            <!-- Walima Card -->
             <div class="ec rv2">
-                <div class="ec-icon">✨</div>
-                <div class="ec-title">
-                    <span class="ita">வலிமா விருந்து</span>
-                    <span class="ien">Walima Feast</span>
+                <div class="ec-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 3 L13.5 8.5 L19 9 L14.5 12.5 L16 18 L12 15 L8 18 L9.5 12.5 L5 9 L10.5 8.5 Z" fill="currentColor" opacity="0.85"/>
+                    </svg>
                 </div>
-                <div class="ec-date">19 · 07 · 2026</div>
+                <div class="ec-title">Walima Feast</div>
+                <div class="ec-subtitle">வலிமா விருந்து</div>
+                <div class="ec-date-full">Sunday, 19 July 2026</div>
                 <div class="ec-day">
                     <span class="ita">அதே நாளில்</span>
                     <span class="ien">Same Day</span>
@@ -1373,24 +1097,22 @@
         </div>
     </section>
 
-    <!-- ========== DIVIDER ========== -->
+    <!-- DIVIDER -->
     <div class="idv rv">
         <div class="dl"></div>
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-            <circle cx="26" cy="26" r="22" fill="none" stroke="#C9942A" stroke-width="0.5" opacity="0.4" />
-            <polygon
-                points="26,4 29.5,17 42,10 35.5,22 50,24 37,28.5 44,42 31,35 28,48 24,35 11,42 18,28.5 2,24 17,22 10.5,10 23,17"
-                fill="none" stroke="#C9942A" stroke-width="0.8" opacity="0.8" />
-            <circle cx="26" cy="26" r="3" fill="#C9942A" opacity="0.5" />
+        <svg width="48" height="48" viewBox="0 0 52 52" fill="none">
+            <circle cx="26" cy="26" r="22" fill="none" stroke="#B591E5" stroke-width="0.6" opacity="0.5"/>
+            <polygon points="26,4 29.5,17 42,10 35.5,22 50,24 37,28.5 44,42 31,35 28,48 24,35 11,42 18,28.5 2,24 17,22 10.5,10 23,17" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.85"/>
+            <circle cx="26" cy="26" r="3" fill="#C8A24A" opacity="0.7"/>
         </svg>
         <div class="dl"></div>
     </div>
 
-    <!-- ========== RSVP SECTION ========== -->
-    <section id="rsvp" style="background:linear-gradient(135deg,#061818,#0A2A2A);text-align:center;">
+    <!-- ========== RSVP ========== -->
+    <section id="rsvp" data-testid="rsvp-section">
         <div class="stag rv">
             <span class="ita">தொடர்பு கொள்ள</span>
-            <span class="ien">RSVP &amp; CONTACT</span>
+            <span class="ien">RSVP &amp; Contact</span>
         </div>
         <div class="stitle rv2">
             <span class="ita">வருகை தரவும்</span>
@@ -1398,22 +1120,18 @@
         </div>
 
         <div class="ri">
-            <p class="rt ta rv3">தாங்கள் கண்டிப்பாக வருகை தர வேண்டுகிறேன். தொடர்பு கொள்ள WhatsApp மூலம்
-                தெரியப்படுத்தவும்.</p>
-            <p class="rt en rv3">Your presence would be our greatest honor. Please confirm your attendance via WhatsApp.
-                Looking forward to celebrating with you!</p>
+            <p class="rt ta-only rv3">தாங்கள் கண்டிப்பாக வருகை தர வேண்டுகிறேன். தொடர்பு கொள்ள WhatsApp மூலம் தெரியப்படுத்தவும்.</p>
+            <p class="rt en-only rv3">Your presence would be our greatest honor. Please confirm your attendance via WhatsApp. Looking forward to celebrating with you!</p>
 
-            <a class="wab rv"
+            <a class="wab rv" data-testid="whatsapp-rsvp-btn"
                 href="https://wa.me/919025181421?text=Assalamu%20Alaikum%2C%20I%20will%20attend%20the%20Nikah%20of%20Mohamed%20Usman%20%26%20Saidhuma%20Banu%20on%2019.07.2026"
-                target="_blank">
+                target="_blank" rel="noopener">
                 <svg class="wai" viewBox="0 0 24 24" fill="white">
-                    <path
-                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                    <path
-                        d="M12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.116 1.516 5.849L.057 23.09a.75.75 0 00.852.852l5.241-1.459A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.877 0-3.641-.489-5.17-1.346l-.371-.213-3.11.866.866-3.11-.213-.371A10 10 0 112 12c0 5.514 4.486 10 10 10z" />
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.55 4.116 1.516 5.849L.057 23.09a.75.75 0 00.852.852l5.241-1.459A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.877 0-3.641-.489-5.17-1.346l-.371-.213-3.11.866.866-3.11-.213-.371A10 10 0 112 12c0 5.514 4.486 10 10 10z" />
                 </svg>
-                <span class="ita">WhatsApp மூலம் உறுதிப்படுத்த இங்கே கிளிக் செய்யவும்</span>
-                <span class="ien">Confirm via WhatsApp Click here</span>
+                <span class="ita">WhatsApp மூலம் உறுதிப்படுத்த</span>
+                <span class="ien">Confirm via WhatsApp</span>
             </a>
 
             <div class="csig rv2">
@@ -1424,102 +1142,111 @@
         </div>
     </section>
 
-    <!-- ========== DIVIDER ========== -->
-    <div class="idv rv" style="background:#020A0A;padding:0;margin:0;">
-        <div class="idv" style="background:#020A0A;padding:20px 0;margin:0;width:100%;max-width:none;">
-            <div class="dl"></div>
-            <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-                <polygon
-                    points="26,4 29.5,17 42,10 35.5,22 50,24 37,28.5 44,42 31,35 28,48 24,35 11,42 18,28.5 2,24 17,22 10.5,10 23,17"
-                    fill="none" stroke="#C9942A" stroke-width="0.8" opacity="0.7" />
-                <circle cx="26" cy="26" r="4" fill="none" stroke="#C9942A" stroke-width="0.8" opacity="0.5" />
-            </svg>
-            <div class="dl"></div>
-        </div>
+    <!-- DIVIDER -->
+    <div class="idv rv">
+        <div class="dl"></div>
+        <svg width="48" height="48" viewBox="0 0 52 52" fill="none">
+            <polygon points="26,4 29.5,17 42,10 35.5,22 50,24 37,28.5 44,42 31,35 28,48 24,35 11,42 18,28.5 2,24 17,22 10.5,10 23,17" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.8"/>
+            <circle cx="26" cy="26" r="4" fill="none" stroke="#B591E5" stroke-width="0.8" opacity="0.6"/>
+        </svg>
+        <div class="dl"></div>
     </div>
 
-    <!-- ========== COUNTDOWN SECTION ========== -->
-    <section id="countdown">
-        <div class="stag rv" style="position:relative;z-index:1;">
+    <!-- ========== COUNTDOWN ========== -->
+    <section id="countdown" data-testid="countdown-section">
+        <div class="stag rv">
             <span class="ita">எண்ணிக்கை தொடங்குகிறது</span>
-            <span class="ien">COUNTING DOWN TO</span>
+            <span class="ien">Counting Down To</span>
         </div>
-        <div class="stitle rv2" style="position:relative;z-index:1;">19 · 07 · 2026</div>
+        <div class="stitle rv2">Sunday, 19 July 2026</div>
+        <div class="stitle-ta rv2">
+            <span class="ita">19 ஜூலை 2026, ஞாயிற்றுக்கிழமை</span>
+        </div>
 
         <div class="cg" id="cg">
             <div class="ci rv">
-                <div class="cn" id="cd">--</div>
+                <div class="cn" id="cd" data-testid="cd-days">--</div>
                 <div class="cl"><span class="ita">நாட்கள்</span><span class="ien">Days</span></div>
             </div>
-            <div class="cs rv">:</div>
             <div class="ci rv2">
-                <div class="cn" id="ch">--</div>
-                <div class="cl"><span class="ita">மணிகள்</span><span class="ien">Hours</span></div>
+                <div class="cn" id="ch" data-testid="cd-hours">--</div>
+                <div class="cl"><span class="ita">மணி</span><span class="ien">Hours</span></div>
             </div>
-            <div class="cs rv2">:</div>
             <div class="ci rv3">
-                <div class="cn" id="cm">--</div>
-                <div class="cl"><span class="ita">நிமிடங்கள்</span><span class="ien">Mins</span></div>
+                <div class="cn" id="cm" data-testid="cd-mins">--</div>
+                <div class="cl"><span class="ita">நிமிடம்</span><span class="ien">Mins</span></div>
             </div>
-            <div class="cs rv3">:</div>
             <div class="ci rv3">
-                <div class="cn" id="cs2">--</div>
-                <div class="cl"><span class="ita">வினாடிகள்</span><span class="ien">Secs</span></div>
+                <div class="cn" id="cs2" data-testid="cd-secs">--</div>
+                <div class="cl"><span class="ita">நொடி</span><span class="ien">Secs</span></div>
             </div>
-        </div>
-
-        <div style="margin-top:28px;font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(201,148,42,0.4);font-size:clamp(14px,3vw,18px);position:relative;z-index:1;"
-            class="rv">
         </div>
     </section>
 
     <!-- ========== FOOTER ========== -->
-    <footer>
-        <div class="fc rv">☽</div>
-        <div class="fn rv2">F. Mohamed Usman &amp; A. Saidhuma Banu</div>
-        <div class="fd rv3">19 · 07 · 2026</div>
-        <div class="idv" style="max-width:300px;margin:0 auto 20px;padding:0;">
+    <footer data-testid="footer">
+        <div class="fc rv">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M20 14 a8 8 0 1 1 -6 -10 a6 6 0 1 0 6 10 Z" fill="currentColor" opacity="0.85"/>
+            </svg>
+        </div>
+        <div class="fn rv2">F. Mohamed Usman &nbsp;&amp;&nbsp; A. Saidhuma Banu</div>
+        <div class="fn-ta rv2">F. முகமது உஸ்மான் &nbsp;&amp;&nbsp; A. சயிதுமா பானு</div>
+        <div class="fd rv3">Sunday · 19 July 2026 · Villupuram</div>
+
+        <div class="idv" style="max-width: 280px; margin: 0 auto 18px; padding: 0;">
             <div class="dl"></div>
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <polygon points="14,2 16,10 24,7 19,14 26,17 18,18 21,26 14,21 7,26 10,18 2,17 9,14 4,7 12,10"
-                    fill="none" stroke="#C9942A" stroke-width="0.8" opacity="0.6" />
-                <circle cx="14" cy="14" r="2" fill="#C9942A" opacity="0.4" />
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+                <polygon points="14,2 16,10 24,7 19,14 26,17 18,18 21,26 14,21 7,26 10,18 2,17 9,14 4,7 12,10" fill="none" stroke="#C8A24A" stroke-width="0.9" opacity="0.7"/>
+                <circle cx="14" cy="14" r="2" fill="#C8A24A" opacity="0.6"/>
             </svg>
             <div class="dl"></div>
         </div>
+
         <div class="fdua rv">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</div>
-        <div class="fdt rv2">
-            <span class="ita">அல்லாஹ் இருவருக்கும் பரக்கத் அளிப்பானாக · ஆமீன்</span>
-            <span class="ien">May Allah bless you both and unite you in goodness · Ameen</span>
-        </div>
+        <div class="fdt en-only rv2">May Allah bless you both and unite you in goodness · Ameen</div>
+        <div class="fdt ta-only rv2">அல்லாஹ் இருவருக்கும் பரக்கத் அளிப்பானாக · ஆமீன்</div>
+
         <div class="floc rv3">Villupuram · Tamil Nadu · 2026</div>
     </footer>
 
     <script>
-        // ── Language toggle
+        // ── Language toggle (default: English)
         function setL(l) {
             document.body.className = l === 'en' ? 'le' : 'lt2';
+            document.documentElement.lang = l === 'en' ? 'en' : 'ta';
             document.querySelectorAll('.lb').forEach(b => b.classList.remove('active'));
-            document.querySelector(`.lb[onclick="setL('${l}')"]`).classList.add('active');
+            const btn = document.querySelector(`.lb[onclick="setL('${l}')"]`);
+            if (btn) btn.classList.add('active');
         }
 
-        // ── Stars
+        // ── Floating petals
         (function () {
-            const c = document.getElementById('stars');
-            for (let i = 0; i < 90; i++) {
-                const s = document.createElement('div');
-                s.className = 's';
-                const sz = Math.random() * 2 + 0.5;
-                s.style.cssText = `width:${sz}px;height:${sz}px;left:${Math.random() * 100}%;top:${Math.random() * 70}%;--d:${2 + Math.random() * 5}s;--o:${0.3 + Math.random() * 0.7};animation-delay:${Math.random() * 5}s;`;
-                c.appendChild(s);
+            const c = document.getElementById('petals');
+            const count = window.innerWidth < 600 ? 14 : 24;
+            for (let i = 0; i < count; i++) {
+                const p = document.createElement('div');
+                p.className = 'pt';
+                const sz = 4 + Math.random() * 8;
+                p.style.cssText = `
+                    width:${sz}px;height:${sz}px;
+                    left:${Math.random() * 100}%;
+                    top:${-10 - Math.random() * 30}%;
+                    --d:${10 + Math.random() * 14}s;
+                    --x:${(Math.random() - 0.5) * 200}px;
+                    animation-delay:${Math.random() * 14}s;
+                    background: radial-gradient(circle at 30% 30%, #fff, ${Math.random() > 0.5 ? 'rgba(200,162,74,0.7)' : 'rgba(181,145,229,0.7)'});
+                `;
+                c.appendChild(p);
             }
         })();
 
-        // ── Scroll progress bar
+        // ── Scroll progress
         window.addEventListener('scroll', () => {
             const t = document.documentElement;
-            document.getElementById('pb').style.width = ((t.scrollTop / (t.scrollHeight - t.clientHeight)) * 100) + '%';
-        });
+            const pct = (t.scrollTop / (t.scrollHeight - t.clientHeight)) * 100;
+            document.getElementById('pb').style.width = pct + '%';
+        }, { passive: true });
 
         // ── Reveal on scroll
         const ro = new IntersectionObserver(entries => {
@@ -1527,11 +1254,10 @@
         }, { threshold: 0.12 });
         document.querySelectorAll('.rv,.rv2,.rv3').forEach(el => ro.observe(el));
 
-        // ── Countdown
+        // ── Countdown to 19 July 2026, 11:00 AM IST
         function tick() {
             const target = new Date('2026-07-19T11:00:00+05:30').getTime();
-            const now = Date.now();
-            const diff = target - now;
+            const diff = target - Date.now();
             if (diff <= 0) {
                 ['cd', 'ch', 'cm', 'cs2'].forEach(id => document.getElementById(id).textContent = '00');
                 return;
@@ -1545,13 +1271,8 @@
             document.getElementById('cm').textContent = String(m).padStart(2, '0');
             document.getElementById('cs2').textContent = String(s).padStart(2, '0');
         }
-        tick(); setInterval(tick, 1000);
-
-        // ── Parallax hero text on scroll
-        window.addEventListener('scroll', () => {
-            const hc = document.querySelector('.hc');
-            if (hc) hc.style.transform = `translateY(${window.scrollY * 0.3}px)`;
-        });
+        tick();
+        setInterval(tick, 1000);
     </script>
 </body>
 
