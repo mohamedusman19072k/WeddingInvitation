@@ -242,6 +242,24 @@
             border-top: none
         }
 
+        /* Floral arch SVG container */
+        .arch {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 170px;
+            pointer-events: none;
+            z-index: 3;
+            overflow: hidden;
+        }
+
+        .arch svg {
+            width: 100%;
+            height: 100%;
+            display: block
+        }
+
         .corner {
             position: absolute;
             width: 110px;
@@ -274,7 +292,7 @@
             transform: scaleY(-1)
         }
 
-        /* Initials */
+        /* Initials on arch */
         .initials {
             position: absolute;
             top: 46px;
@@ -1143,6 +1161,10 @@
 
         @media (max-width: 600px) {
 
+            .arch {
+                height: 150px;
+            }
+
             .initials {
                 top: 54px;
                 padding: 0 42px;
@@ -1189,6 +1211,69 @@
                 <span class="ini">U</span>
                 <span class="ini">S</span>
             </div>
+
+            <!-- Floral arch (top) -->
+            <svg class="arch" viewBox="0 0 520 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <!-- left flowers -->
+                <g transform="translate(50,40)">
+                    <circle cx="0" cy="0" r="14" fill="#F4D5D0" opacity=".9" />
+                    <circle cx="0" cy="0" r="8" fill="#fff" opacity=".7" />
+                    <circle cx="3" cy="0" r="3" fill="#D9A7A1" />
+                    <circle cx="-18" cy="14" r="10" fill="#F8E6E3" opacity=".95" />
+                    <circle cx="-18" cy="14" r="5" fill="#fff" opacity=".7" />
+                    <circle cx="14" cy="20" r="11" fill="#F4D5D0" opacity=".9" />
+                    <circle cx="14" cy="20" r="6" fill="#fff" opacity=".7" />
+                    <circle cx="16" cy="20" r="2.5" fill="#C9A14A" />
+                    <!-- leaves -->
+                    <ellipse cx="-25" cy="-8" rx="9" ry="3" fill="#B8A878" opacity=".7"
+                        transform="rotate(-25 -25 -8)" />
+                    <ellipse cx="22" cy="-5" rx="8" ry="2.5" fill="#B8A878" opacity=".6" transform="rotate(35 22 -5)" />
+                </g>
+                <g transform="translate(95,15)">
+                    <circle cx="0" cy="0" r="12" fill="#F8E6E3" opacity=".9" />
+                    <circle cx="0" cy="0" r="6" fill="#fff" />
+                    <circle cx="0" cy="0" r="2" fill="#C9A14A" />
+                    <ellipse cx="15" cy="10" rx="7" ry="2.5" fill="#B8A878" opacity=".6" transform="rotate(20 15 10)" />
+                </g>
+                <!-- center top flowers -->
+                <g transform="translate(240,18)">
+                    <circle cx="0" cy="0" r="16" fill="#F4D5D0" opacity=".95" />
+                    <circle cx="0" cy="0" r="9" fill="#fff" opacity=".7" />
+                    <circle cx="0" cy="0" r="3" fill="#D9A7A1" />
+                    <circle cx="22" cy="6" r="11" fill="#F8E6E3" opacity=".9" />
+                    <circle cx="22" cy="6" r="5" fill="#fff" opacity=".7" />
+                    <circle cx="-22" cy="8" r="10" fill="#F4D5D0" opacity=".85" />
+                    <circle cx="-22" cy="8" r="5" fill="#fff" opacity=".7" />
+                    <ellipse cx="35" cy="-4" rx="9" ry="3" fill="#B8A878" opacity=".7" transform="rotate(30 35 -4)" />
+                    <ellipse cx="-32" cy="-6" rx="9" ry="3" fill="#B8A878" opacity=".6"
+                        transform="rotate(-30 -32 -6)" />
+                </g>
+                <!-- right top flowers -->
+                <g transform="translate(420,40)">
+                    <circle cx="0" cy="0" r="14" fill="#F4D5D0" opacity=".9" />
+                    <circle cx="0" cy="0" r="7" fill="#fff" opacity=".7" />
+                    <circle cx="0" cy="0" r="2.5" fill="#D9A7A1" />
+                    <circle cx="18" cy="14" r="10" fill="#F8E6E3" opacity=".95" />
+                    <circle cx="18" cy="14" r="5" fill="#fff" opacity=".7" />
+                    <circle cx="-14" cy="20" r="11" fill="#F4D5D0" opacity=".9" />
+                    <circle cx="-14" cy="20" r="6" fill="#fff" opacity=".7" />
+                    <circle cx="-14" cy="20" r="2" fill="#C9A14A" />
+                    <ellipse cx="25" cy="-8" rx="9" ry="3" fill="#B8A878" opacity=".7" transform="rotate(25 25 -8)" />
+                    <ellipse cx="-22" cy="-5" rx="8" ry="2.5" fill="#B8A878" opacity=".6"
+                        transform="rotate(-35 -22 -5)" />
+                </g>
+                <g transform="translate(465,80)">
+                    <circle cx="0" cy="0" r="9" fill="#F8E6E3" opacity=".85" />
+                    <circle cx="0" cy="0" r="4" fill="#fff" />
+                    <ellipse cx="-12" cy="10" rx="7" ry="2.5" fill="#B8A878" opacity=".6"
+                        transform="rotate(-25 -12 10)" />
+                </g>
+                <g transform="translate(60,110)">
+                    <circle cx="0" cy="0" r="8" fill="#F4D5D0" opacity=".8" />
+                    <circle cx="0" cy="0" r="3.5" fill="#fff" />
+                    <ellipse cx="12" cy="6" rx="6" ry="2" fill="#B8A878" opacity=".55" transform="rotate(20 12 6)" />
+                </g>
+            </svg>
 
             <!-- bottom corner florals -->
             <svg class="corner bl" viewBox="0 0 140 140" aria-hidden="true">
